@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fitset</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/hide.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="flex-container">
+	<div id="nav">
+		<div id="profile">
+			<div id="avatar"><span>AC</span>
+				<div id="profile-arrow" class="closed"></div>
+				<div id="name">Alex Chau</div>
+			</div>
+			<div id="profile-menu" style="display:none;">
+				<ul class="profile-menu">
+					<li><a href="#"><i class="fas fa-user fa-fw"></i>Manage Profile</a></li>
+					<li><a href="#"><i class="fas fa-credit-card fa-fw"></i>Manage Billing</a></li>
+					<li><a href="#"><i class="fas fa-hands-helping fa-fw"></i>Get Help</a></li>
+					<li><a href="#"><i class="fas fa-sign-out-alt fa-fw"></i>Logout</a></li>
+				</ul>
+			</div>
+			<div id="credits">55 Credits</div>
+			<div id="add-credits"><i class="fas fa-plus"></i></div>
+		</div>
+		<ul>
+			<li><a href="index.html"><i class="fas fa-calendar-alt fa-fw"></i>Classes</a></li>
+			<li class="active"><a href="studios.html"><i class="fas fa-map-marker-alt fa-fw"></i>Studios</a></li>
+			<li><a href="bookings.html"><i class="fas fa-calendar-check fa-fw"></i>Bookings</a></li>
+			<li><a href="#"><i class="fas fa-comment-alt fa-fw"></i>FAQ</a></li>
+			<li><a href="#"><i class="fas fa-gift fa-fw"></i>Gift &amp; Get $20</a></li>
+		</ul>
+		<div id="logo"></div>
+	</div>
+	<div id="filter">
+		<div class="filter-type">
+			<h1><a href="#" id="filter-locations">Locations</a>
+				<div id="filter-locations-arrow" class="icon closed"></div>
+			</h1>
+			<div id="filter-locations-options" style="display: block;">
+				<ul>
+					<li><a href="#">Select All</a></li>
+					<li><a href="#">Central Edmonton</a></li>
+					<li><a href="#">Northeast Edmonton</a></li>
+					<li><a href="#">Northwest Edmonton</a></li>
+					<li><a href="#">Southeast Edmonton</a></li>
+					<li><a href="#">Southwest Edmonton</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="filter-type">
+			<h1><a href="#" id="filter-activities">Activities<span class="number">(1)</span></a><a href="#"><span class="clear">Clear</span></a>
+				<div id="filter-activities-arrow" class="icon closed"></div>
+			</h1>
+			<div id="filter-activities-options" style="display: block;">
+				<ul>
+					<li class="diagonal-fill"><a href="#">Select All</a></li>
+					<li><a href="#">Yoga</a></li>
+					<li class="selected"><a href="#">Barre</a></li>
+					<li><a href="#">Pilates</a></li>
+					<li><a href="#">Dance</a></li>
+					<li><a href="#">Boxing</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="filter-type">
+			<h1><a href="#" id="filter-studios">Studios</a>
+				<div id="filter-studios-arrow" class="icon closed"></div>
+			</h1>
+			<div id="filter-studios-options" style="display: block;">
+				<div class="button filter">
+					<div class="on">All</div>
+					<div class="separator"></div>
+					<div class="off"><i class="fas fa-heart"></i></div>
+				</div>
+				<ul>
+					<li><a href="#">Select All</a></li>
+					<li><a href="#">B Core Flow</a></li>
+					<li><a href="#">B Barre 45</a></li>
+					<li><a href="#">B Barre 60</a></li>
+					<li><a href="#">B Strong</a></li>
+					<li><a href="#">Boom Sculpt</a></li>
+					<li><a href="#">Sculpt Barre</a></li>
+					<li><a href="#">Spin &amp; Tone</a></li>
+					<li><a href="#">Xtend Barre</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="filter-type">
+			<h1><a href="#" id="filter-amenities">Amenities</a>
+				<div id="filter-amenities-arrow" class="icon closed"></div>
+			</h1>
+			<div id="filter-amenities-options" style="display: none;">
+				<ul>
+					<li><a href="#">Select All</a></li>
+					<li><a href="#">Showers</a></li>
+					<li><a href="#">Lockers</a></li>
+					<li><a href="#">Mats</a></li>
+					<li><a href="#">Towels</a></li>
+					<li><a href="#">Parking</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="map"></div>
+</div>
+</body>
+</html>

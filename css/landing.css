@@ -1,0 +1,112 @@
+@import url(reset.css);
+@import url(https://use.fontawesome.com/releases/v5.2.0/css/all.css);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
+.slick-prev:before, .slick-next:before, .slick-dots li button:before { font-family: 'Font Awesome 5 Free' !important; font-weight: 900 !important; }
+
+body { font: 1em "Source Sans Pro", Helvetica, sans-serif; }
+
+h1, h2, h3, h4 { color: rgba(0, 0, 0, 0.8); }
+
+h1 { font-size: 3.0rem; font-weight: 700; padding-bottom: 0.5rem; }
+
+h2 { font-size: 1.6rem; font-weight: 300; padding-bottom: 0.5rem; }
+
+h3 { font-size: 2.0rem; font-weight: 700; padding-bottom: 0.5rem; }
+
+h4 { font-size: 1.5rem; font-weight: 700; padding-bottom: 0.5rem; }
+
+p { font-size: 1.1rem; line-height: 1.9rem; padding-bottom: 0.5rem; color: rgba(0, 0, 0, 0.6); }
+
+.clock { left: 0; right: 0; margin: 30px auto; width: 300px; }
+
+.flip-clock-label { display: none; }
+
+.flip-clock-dot { background: #cbcbcb; }
+
+.button { display: inline-block; margin-top: 10px; padding: 10px 35px; border-radius: 3px; background: #f96332; font-size: 1.5rem; font-weight: 700; color: white; transition: 0.3s ease-in-out; }
+.button:hover { transform: scale(1.2); }
+
+#top { position: relative; padding: 20px; background: url(../images/fitset-trial-header.jpg) 50% 60% no-repeat; background-size: cover; height: 550px; }
+#top #logo { position: absolute; top: 20px; left: 20px; background: url(../images/fitset-logo.svg) no-repeat; width: 100px; height: 50px; }
+#top h1, #top h2, #top h3 { color: white; }
+#top .section { position: absolute; bottom: 0; left: 0; right: 0; }
+
+.dark-background { background: rgba(0, 0, 0, 0.05); }
+.dark-background.purple { background: #331b4d; }
+.dark-background.purple h1 { color: white; }
+.dark-background.purple .how-it-works { display: flex; }
+.dark-background.final { background: url(../images/fitset-trial-footer.jpg); background-size: cover; background-position: 50% 50%; }
+.dark-background.footer { background: rgba(0, 0, 0, 0.9); }
+
+.section { display: flex; flex-wrap: wrap; margin: auto; padding: 60px 30px; max-width: 1000px; }
+.section .left { flex: 1; align-items: center; text-align: center; }
+.section .left img { width: 550px; padding-right: 40px; }
+.section .right { flex: 1; display: flex; align-items: center; }
+.section .center { flex: 1; text-align: center; }
+
+.steps { display: flex; }
+.steps .step { flex: 1; margin: 30px 15px; text-align: center; }
+.steps .step i { font-size: 3.0rem; color: #f96332; margin-bottom: 25px; }
+.steps .step h1 { color: white; font-size: 1.5rem; }
+.steps .step p { color: rgba(255, 255, 255, 0.8); }
+.steps .arrow { flex: 0.1; display: flex; align-items: center; }
+.steps .arrow i { font-size: 1.3rem; color: rgba(255, 255, 255, 0.5); }
+
+.quotes { max-width: 720px; padding: 0 20px; margin: auto; }
+.quotes h3 { font-size: 1.6rem; font-weight: 700; color: rgba(0, 0, 0, 0.6); padding: 0 20px; margin-bottom: 10px; }
+.quotes i { padding: 10px 0 20px; font-size: 2.0rem; color: #f96332; }
+.quotes p { font-size: 1.5rem; color: rgba(0, 0, 0, 0.6); }
+.quotes p.thin { margin-top: -0.5rem; font-size: 1.0rem; font-weight: 300; }
+
+.locations { display: flex; flex-wrap: wrap; margin-bottom: 5px; }
+.locations .location { padding: 10px; text-align: left; flex: 1; }
+.locations .location h1 { font-size: 1.4rem; font-weight: 300; color: #f96332; }
+.locations .location div { padding: 5px 0; font-weight: 300; color: rgba(0, 0, 0, 0.6); }
+
+.final h1, .final h2, .final p { color: white; }
+.final .cta { max-width: 300px; margin: 40px auto 20px auto; padding: 40px; background: white; border-radius: 3px; box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2); }
+.final .cta h1 { font-size: 1.4rem; color: rgba(0, 0, 0, 0.6); }
+.final .cta h2 { font-size: 4.0rem; line-height: 3.5rem; font-weight: 600; color: #331b4d; }
+.final .cta p { padding: 0; margin: 0; color: rgba(0, 0, 0, 0.6); }
+
+.featured { background: #331b4d; }
+.featured h2 { color: white; }
+.featured .logos { display: flex; align-items: center; }
+.featured .logos div { flex: auto; margin-top: 20px; }
+
+.footer .section { padding: 20px 0; }
+.footer h1 { color: white; }
+.footer .links { display: flex; max-width: 400px; margin: auto; }
+.footer .links div { flex: auto; margin: 20px auto; text-align: center; color: rgba(255, 255, 255, 0.6); }
+.footer .links div a { color: rgba(255, 255, 255, 0.6); text-decoration: none; }
+
+.slick-prev, .slick-next { margin-top: -40px; }
+
+.slick-prev:before { content: '\f060' !important; color: rgba(0, 0, 0, 0.2) !important; }
+
+.slick-next:before { content: '\f061' !important; color: rgba(0, 0, 0, 0.2) !important; }
+
+.slick-dots li button:before { content: '\f111' !important; font-size: 0.5rem !important; color: rgba(0, 0, 0, 0.6) !important; }
+
+@media screen and (max-width: 1200px) { .left img { width: 450px !important; } }
+@media screen and (max-width: 1000px) { .left img { max-width: 375px !important; width: 100% !important; }
+  .locations .location { min-width: 300px; text-align: center; }
+  .section .steps { display: block; }
+  .section .steps .arrow { display: none; } }
+@media screen and (max-width: 800px) { .section { display: block; }
+  .section .left img { padding: 0; margin-bottom: 20px; }
+  .section .right { text-align: center; }
+  .section .logos { display: block; }
+  .section .logos div { width: 300px; margin: auto; }
+  .locations { display: block; }
+  .locations .location { min-width: 0; } }
+@media screen and (max-width: 375px) { h1 { font-size: 1.7rem; }
+  .section { padding: 30px 15px; }
+  .section .logos { display: block; }
+  .section .logos div { width: 200px; margin: auto; }
+  #top { height: 400px; }
+  #top .section { padding: 30px 0; }
+  .clock { margin-bottom: 10px; }
+  .quotes h3 { font-size: 1.2rem; }
+  .section .links { display: block; }
+  .section .links div { width: 200px; } }
