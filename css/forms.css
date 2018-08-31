@@ -1,5 +1,5 @@
 @import url(https://use.fontawesome.com/releases/v5.2.0/css/all.css);
-html.full-background { background: url(../images/fitset-trial-header.jpg) no-repeat 50% 50%; background-attachment: fixed; background-size: cover; }
+html.full-background { background: url(../images/fitset-background-four.jpg) no-repeat 50% 50%; background-attachment: fixed; background-size: cover; }
 
 #logo.shift { position: absolute; top: 20px; left: 20px; background: url(../images/fitset-logo.svg) no-repeat; width: 100px; height: 50px; }
 
@@ -9,11 +9,13 @@ html.full-background { background: url(../images/fitset-trial-header.jpg) no-rep
 #form a { color: #ef483e; text-decoration: none; }
 #form h1 { font-size: 1.6rem; line-height: 2.0rem; font-weight: 700; padding: 0; }
 #form .center { text-align: center; margin-bottom: 5px; }
+#form .center .check i { margin: 15px 0; font-size: 9.0rem; color: #36b47a; }
 #form .credit-card-accept { text-align: center; }
-#form .credit-card-accept i { margin: 0 10px 10px 0; font-size: 2rem; color: rgba(0, 0, 0, 0.4); }
-#form .field input { margin-bottom: 15px; padding: 7px; width: 100%; box-sizing: border-box; font-size: 0.9rem; color: rgba(0, 0, 0, 0.6); border-radius: 3px; border: 1px solid rgba(0, 0, 0, 0.2); }
+#form .credit-card-accept img { width: 60px; margin: 0 5px 10px 5px; }
+#form .field input { margin-bottom: 15px; padding: 7px; width: 100%; box-sizing: border-box; font-size: 1.0rem; font-weight: 300; color: rgba(0, 0, 0, 0.6); border-radius: 3px; border: 1px solid rgba(0, 0, 0, 0.2); }
+#form .field input#postal-code-CA { text-transform: uppercase; }
 #form .field select { width: 100%; box-sizing: border-box; }
-#form .field p { line-height: 1.4rem; }
+#form .field label { margin-bottom: 3px; font-size: 1.1rem; display: inline-block; }
 #form ::placeholder { opacity: 0.5; }
 #form .checkbox { margin-bottom: 15px; }
 #form .checkbox input[type="checkbox"] { position: absolute; }
@@ -21,13 +23,14 @@ html.full-background { background: url(../images/fitset-trial-header.jpg) no-rep
 #form .error { border: 1px dotted #ef483e; color: #ef483e; margin-bottom: 15px; text-align: center; padding: 10px; display: none; }
 #form .button { width: 100%; margin: 0 0 10px 0; box-sizing: border-box; text-align: center; animation: none; }
 #form .terms p { font-size: 0.9rem; line-height: 1.4rem; }
-#form .terms a { color: rgba(0, 0, 0, 0.6); }
 #form .terms a:hover { text-decoration: underline; }
 
-#form .credits { text-align: center; border-radius: 20px; background: linear-gradient(to bottom right, #ef483e, #2f1945); max-width: 240px; margin: 20px auto; padding: 20px; }
-#form .credits h1 { font-size: 8.0rem; line-height: 10.0rem !important; font-weight: 700; color: white; margin-top: -30px; }
-#form .credits h2 { font-size: 2.2rem; line-height: 2.8rem; font-weight: 300; margin-top: -20px; color: white; }
-#form .credits p { font-size: 1.2rem; line-height: 1.6rem; font-weight: 300; color: white; }
+#form .offer { position: relative; height: 250px; margin: 20px 0; }
+
+#form .credits { width: 250px; height: 250px; position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); margin: auto; text-align: center; border-radius: 250px; background: linear-gradient(to bottom right, #2f1945, #ef483e); }
+#form .credits h1 { font-size: 8.5rem; line-height: 9.0rem; font-weight: 700; color: white; margin-top: 5px; }
+#form .credits h2 { font-size: 2.0rem; line-height: 2.8rem; font-weight: 300; margin-top: -15px; color: white; }
+#form .credits p { margin-top: -10px; font-weight: 300; color: white; }
 
 @media screen and (max-width: 480px) { #logo.shift { top: 10px; left: 50%; transform: translateX(-50%); }
   #form { margin-top: 50px; } }

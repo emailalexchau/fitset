@@ -13,6 +13,7 @@
 </script>
 <link href="css/landing.css" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/vanillatextmask.js"></script>
 <title>Edmonton Fitness Studio Pass: Redeem Free 2 Week Trial | Fitset</title>
 </head>
 
@@ -21,21 +22,26 @@
 <div id="wrapper">
 	<div id="form">
 		<div class="center">
-			<h1>Redeem your trial</h1>
+			<h1>Complete your trial</h1>
 			<p>Enter your billing information</p>
 		</div>
-		<div class="credit-card-accept"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-discover"></i></div>
-		<div class="field">
-			<p>Credit card number</p>
-			<input id="credit-card-number" placeholder="---- ---- ---- ----" type="text">
+		<div class="credit-card-accept">
+			<img src="images/visa.png" alt=""/>
+			<img src="images/mastercard.png" alt=""/>
+			<img src="images/amex.png" alt=""/>
+			<img src="images/discover.png" alt=""/>
 		</div>
 		<div class="field">
-			<p>Expiration date</p>
-			<input id="credit-card-exp-date" placeholder="MM/YY" type="text">
+			<label for="credit-card-number">Credit card number</label>
+			<input id="credit-card-number" placeholder="4242 4242 4242 4242" type="text">
 		</div>
 		<div class="field">
-			<p>Postal Code</p>
-			<input id="city" placeholder="e.g. T5H 6Z3" type="email">
+			<label for="credit-card-exp-date">Expiration date (MM/YY)</label>
+			<input id="credit-card-exp-date" placeholder="12/20" type="text">
+		</div>
+		<div class="field">
+			<label for="postal-code-CA">Postal Code</label>
+			<input id="postal-code-CA" placeholder="T5H 6Z3" type="text">
 		</div>
 		<div class="checkbox">
 			<input type="checkbox" id="agree">
@@ -49,10 +55,54 @@
 		<div class="button">Complete</div>
 		</a>
 		<div class="terms">
-			<p>By signing up for Fitset I agree to receive 20 complimentary credits, enough for 3-5 classes, valid for 14 days. I understand in 14 days my membership will automatically renew for $45 + gst per month (25 booking credits plan) unless I cancel.</p>
+			<p>By signing up for Fitset I agree to receive 20 complimentary credits, enough for 2-3 classes, valid for 14 days. The average class cost in your area is 9 credits.</p>
+			<p>I understand in 14 days my membership will automatically renew for $45 plus gst per month (25 booking credits plan) unless I cancel.</p>
 			<p>Your credit card will be charged $15 for late cancellations and no shows. Studio cancellation policies are shown before you make a booking.</p>
 		</div>
 	</div>
 </div>
+	<script>
+	// Credit card number input mask
+	var creditCardNumberMask = [/\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/]
+	var creditCardNumberInput = document.querySelector('#credit-card-number')
+	var maskedInputController = vanillaTextMask.maskInput({
+		inputElement: creditCardNumberInput,
+		mask: creditCardNumberMask,
+
+	})
+	// Credit card expiration date input mask
+	var creditCardExpDateMask = [/[0-1]/i, /[0-2]/i, '/', /[0-2]/i, /\d/]
+	var creditCardExpDateInput = document.querySelector('#credit-card-exp-date')
+	var maskedInputController = vanillaTextMask.maskInput({
+		inputElement: creditCardExpDateInput,
+		mask: creditCardExpDateMask,
+	})
+	// Canadian postal code input mask
+	var postalCodeCAMask = [/[A-Z]/i, /\d/, /[A-Z]/i, ' ', /\d/, /[A-Z]/i, /\d/]
+	var postalCodeCAInput = document.querySelector('#postal-code-CA')
+	var maskedInputController = vanillaTextMask.maskInput({
+		inputElement: postalCodeCAInput,
+		mask: postalCodeCAMask,
+	})
+</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

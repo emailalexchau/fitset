@@ -2,16 +2,12 @@
 %font-awesome { font-family: 'Font Awesome 5 Free' !important; font-weight: 900 !important; }
 $brand-primary-color: #ef483e;
 $brand-secondary-color: #2f1945;
-$transparent-black-extra-extra-thin: rgba(0,0,0,0.025);
-$transparent-black-extra-thin: rgba(0,0,0,0.1);
+$green: #36b47a;
 $transparent-black-thin: rgba(0,0,0,0.2);
-$transparent-black-medium-thin: rgba(0,0,0,0.4);
 $transparent-black-medium: rgba(0,0,0,0.6);
-$transparent-black-thick: rgba(0,0,0,0.8);
-$transparent-black-extra-thick: rgba(0,0,0,0.9);
 
 html.full-background {
-	background: url(../images/fitset-trial-header.jpg) no-repeat 50% 50%;
+	background: url(../images/fitset-background-four.jpg) no-repeat 50% 50%;
 	background-attachment: fixed;
 	background-size: cover;
 }
@@ -50,13 +46,17 @@ html.full-background {
 	.center {
 		text-align: center;
 		margin-bottom: 5px;
+		.check i {
+			margin: 15px 0;
+			font-size: 9.0rem;
+			color: $green;
+		}
 	}
 	.credit-card-accept {
 		text-align: center;
-		i {
-			margin: 0 10px 10px 0;
-			font-size: 2rem;
-			color: $transparent-black-medium-thin;
+		img {
+			width: 60px;
+			margin: 0 5px 10px 5px;
 		}
 	}	
 	.field {
@@ -65,17 +65,23 @@ html.full-background {
 			padding: 7px;
 			width: 100%;
 			box-sizing: border-box;
-			font-size: 0.9rem;
+			font-size: 1.0rem;
+			font-weight: 300;
 			color: $transparent-black-medium;
 			border-radius: 3px;
 			border: 1px solid $transparent-black-thin;
+			&#postal-code-CA {
+				text-transform: uppercase;
+			}
 		}
 		select {
 			width: 100%;
 			box-sizing: border-box;
 		}
-		p {
-			line-height: 1.4rem;
+		label {
+			margin-bottom: 3px;
+			font-size: 1.1rem;
+			display: inline-block;
 		}
 	}
 	::placeholder { opacity: 0.5; }
@@ -111,39 +117,46 @@ html.full-background {
 			font-size: 0.9rem;
 			line-height: 1.4rem;
 		}
-		a {
-			color: $transparent-black-medium;
-			&:hover {
-				text-decoration: underline;
-			}
+		a:hover {
+			text-decoration: underline;
 		}
 	}
 }
 
+#form .offer {
+	position: relative;
+	height: 250px;
+	margin: 20px 0;
+}
+
 #form .credits {
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translateY(-50%);
+	margin: auto;
 	text-align: center;
-	border-radius: 20px;
-	background: linear-gradient(to bottom right, $brand-primary-color, $brand-secondary-color);
-	max-width: 240px;
-	margin: 20px auto;
-	padding: 20px;
+	border-radius: 250px;
+	background: linear-gradient(to bottom right,$brand-secondary-color,$brand-primary-color);
 	h1 {
-		font-size: 8.0rem;
-		line-height: 10.0rem !important;
+		font-size: 8.5rem;
+		line-height: 9.0rem;
 		font-weight: 700;
 		color: white;
-		margin-top: -30px;
+		margin-top: 5px;
 	}
 	h2 {
-		font-size: 2.2rem;
+		font-size: 2.0rem;
 		line-height: 2.8rem;
 		font-weight: 300;
-		margin-top: -20px;
+		margin-top: -15px;
 		color: white;
 	}
 	p {
-		font-size: 1.2rem;
-		line-height: 1.6rem;
+		margin-top: -10px;
 		font-weight: 300;
 		color: white;
 	}

@@ -22,26 +22,27 @@ h4 { font-size: 1.5rem; font-weight: 700; padding-bottom: 0.5rem; }
 
 p { font-size: 1.2rem; line-height: 1.6rem; padding-bottom: 0.5rem; color: rgba(0, 0, 0, 0.6); font-weight: 300; }
 
+strong { font-weight: 700; }
+
 .clock { left: 0; right: 0; margin: 30px auto; width: 300px; }
 
 .flip-clock-label { display: none; }
 
 .flip-clock-dot { background: #cbcbcb; }
 
-.button { position: relative; display: inline-block; z-index: 100; margin-top: 10px; padding: 10px 35px; border-radius: 3px; background: #ef483e; font-size: 1.5rem; font-weight: 700; color: white; }
-.button:before { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: inline-block; background: #2f1945; border-radius: inherit; content: ''; opacity: 0; z-index: -100; transition: opacity 0.3s ease-in-out; }
-.button:hover:before { opacity: 0.2; }
+.button { position: relative; display: inline-block; margin-top: 10px; padding: 10px 35px; border-radius: 3px; background: #ef483e; font-size: 1.5rem; font-weight: 700; color: white; transition: 0.25s ease-in-out; }
+.button:hover { background: #2f1945; }
 
-#top { position: relative; padding: 20px; background: url(../images/fitset-trial-header.jpg) 50% 60% no-repeat; background-size: cover; height: 550px; }
+#top { position: relative; padding: 20px; background: url(../images/fitset-background-one.jpg) 50% 50% no-repeat; background-size: cover; height: 550px; }
 #top #logo { position: absolute; top: 20px; left: 20px; background: url(../images/fitset-logo.svg) no-repeat; width: 100px; height: 50px; }
 #top h1, #top h2, #top h3 { color: white; }
 #top .section { position: absolute; bottom: 0; left: 0; right: 0; }
 
 .dark-background { background: rgba(0, 0, 0, 0.05); }
-.dark-background.purple { background: #2f1945; }
+.dark-background.purple { background: linear-gradient(to bottom right, #2f1945, #ef483e); }
 .dark-background.purple h1 { color: white; }
 .dark-background.purple .how-it-works { display: flex; }
-.dark-background.final { background: url(../images/fitset-trial-footer.jpg); background-size: cover; background-position: 50% 50%; }
+.dark-background.cta { background: url(../images/fitset-background-four.jpg); background-size: cover; background-position: 50% 50%; }
 .dark-background.footer { background: rgba(0, 0, 0, 0.9); }
 
 .section { display: flex; flex-wrap: wrap; margin: auto; padding: 60px 30px; max-width: 1000px; }
@@ -69,11 +70,12 @@ p { font-size: 1.2rem; line-height: 1.6rem; padding-bottom: 0.5rem; color: rgba(
 .locations .location h1 { font-size: 1.4rem; font-weight: 300; color: #ef483e; }
 .locations .location div { padding: 5px 0; font-weight: 300; color: rgba(0, 0, 0, 0.6); }
 
-.final h1, .final h2, .final p { color: white; }
-.final .cta { max-width: 300px; margin: 40px auto 20px auto; padding: 40px; background: white; border-radius: 3px; box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2); }
-.final .cta h1 { font-size: 1.4rem; color: rgba(0, 0, 0, 0.6); }
-.final .cta h2 { font-size: 4.0rem; line-height: 3.5rem; font-weight: 600; color: #2f1945; }
-.final .cta p { padding: 0; margin: 0; color: rgba(0, 0, 0, 0.6); }
+.cta h1, .cta h2, .cta p { color: white; }
+.cta .cta { position: relative; max-width: 220px; margin: 40px auto 20px auto; padding: 40px; background: white; border-radius: 3px; box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2); }
+.cta .cta h1 { font-size: 5.0rem; line-height: 4.5rem; font-weight: 600; color: #2f1945; }
+.cta .cta h1 .superscript { display: inline-block; font-size: 3.0rem; vertical-align: top; margin-top: -0.6rem; }
+.cta .cta p { padding: 10px 0; margin: 0; color: rgba(0, 0, 0, 0.6); }
+.cta .cta:before { position: absolute; width: 180px; top: -20px; left: 0; right: 0; margin: auto; padding: 5px; background: #2f1945; border-radius: 3px; content: '2 Weeks Free'; font-size: 1.5rem; font-weight: 300; text-transform: uppercase; color: white; }
 
 .featured { background: #2f1945; }
 .featured h2 { color: white; }
