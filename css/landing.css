@@ -1,6 +1,11 @@
 @import url(reset.css);
+@import url(forms.css);
 @import url(https://use.fontawesome.com/releases/v5.2.0/css/all.css);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
+@import url(flipclock.css);
+@import url(slick.css);
+@import url(slick-theme.css);
+@import url(slick-theme.css);
 .slick-prev:before, .slick-next:before, .slick-dots li button:before { font-family: 'Font Awesome 5 Free' !important; font-weight: 900 !important; }
 
 body { font: 1em "Source Sans Pro", Helvetica, sans-serif; }
@@ -15,7 +20,7 @@ h3 { font-size: 2.0rem; font-weight: 700; padding-bottom: 0.5rem; }
 
 h4 { font-size: 1.5rem; font-weight: 700; padding-bottom: 0.5rem; }
 
-p { font-size: 1.1rem; line-height: 1.9rem; padding-bottom: 0.5rem; color: rgba(0, 0, 0, 0.6); }
+p { font-size: 1.2rem; line-height: 1.6rem; padding-bottom: 0.5rem; color: rgba(0, 0, 0, 0.6); font-weight: 300; }
 
 .clock { left: 0; right: 0; margin: 30px auto; width: 300px; }
 
@@ -23,8 +28,9 @@ p { font-size: 1.1rem; line-height: 1.9rem; padding-bottom: 0.5rem; color: rgba(
 
 .flip-clock-dot { background: #cbcbcb; }
 
-.button { display: inline-block; margin-top: 10px; padding: 10px 35px; border-radius: 3px; background: #f96332; font-size: 1.5rem; font-weight: 700; color: white; transition: 0.3s ease-in-out; }
-.button:hover { transform: scale(1.2); }
+.button { position: relative; display: inline-block; z-index: 100; margin-top: 10px; padding: 10px 35px; border-radius: 3px; background: #ef483e; font-size: 1.5rem; font-weight: 700; color: white; }
+.button:before { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: inline-block; background: #2f1945; border-radius: inherit; content: ''; opacity: 0; z-index: -100; transition: opacity 0.3s ease-in-out; }
+.button:hover:before { opacity: 0.2; }
 
 #top { position: relative; padding: 20px; background: url(../images/fitset-trial-header.jpg) 50% 60% no-repeat; background-size: cover; height: 550px; }
 #top #logo { position: absolute; top: 20px; left: 20px; background: url(../images/fitset-logo.svg) no-repeat; width: 100px; height: 50px; }
@@ -32,7 +38,7 @@ p { font-size: 1.1rem; line-height: 1.9rem; padding-bottom: 0.5rem; color: rgba(
 #top .section { position: absolute; bottom: 0; left: 0; right: 0; }
 
 .dark-background { background: rgba(0, 0, 0, 0.05); }
-.dark-background.purple { background: #331b4d; }
+.dark-background.purple { background: #2f1945; }
 .dark-background.purple h1 { color: white; }
 .dark-background.purple .how-it-works { display: flex; }
 .dark-background.final { background: url(../images/fitset-trial-footer.jpg); background-size: cover; background-position: 50% 50%; }
@@ -46,7 +52,7 @@ p { font-size: 1.1rem; line-height: 1.9rem; padding-bottom: 0.5rem; color: rgba(
 
 .steps { display: flex; }
 .steps .step { flex: 1; margin: 30px 15px; text-align: center; }
-.steps .step i { font-size: 3.0rem; color: #f96332; margin-bottom: 25px; }
+.steps .step i { font-size: 3.0rem; color: #ef483e; margin-bottom: 25px; }
 .steps .step h1 { color: white; font-size: 1.5rem; }
 .steps .step p { color: rgba(255, 255, 255, 0.8); }
 .steps .arrow { flex: 0.1; display: flex; align-items: center; }
@@ -54,22 +60,22 @@ p { font-size: 1.1rem; line-height: 1.9rem; padding-bottom: 0.5rem; color: rgba(
 
 .quotes { max-width: 720px; padding: 0 20px; margin: auto; }
 .quotes h3 { font-size: 1.6rem; font-weight: 700; color: rgba(0, 0, 0, 0.6); padding: 0 20px; margin-bottom: 10px; }
-.quotes i { padding: 10px 0 20px; font-size: 2.0rem; color: #f96332; }
+.quotes i { padding: 10px 0 20px; font-size: 2.0rem; color: #ef483e; }
 .quotes p { font-size: 1.5rem; color: rgba(0, 0, 0, 0.6); }
 .quotes p.thin { margin-top: -0.5rem; font-size: 1.0rem; font-weight: 300; }
 
 .locations { display: flex; flex-wrap: wrap; margin-bottom: 5px; }
 .locations .location { padding: 10px; text-align: left; flex: 1; }
-.locations .location h1 { font-size: 1.4rem; font-weight: 300; color: #f96332; }
+.locations .location h1 { font-size: 1.4rem; font-weight: 300; color: #ef483e; }
 .locations .location div { padding: 5px 0; font-weight: 300; color: rgba(0, 0, 0, 0.6); }
 
 .final h1, .final h2, .final p { color: white; }
 .final .cta { max-width: 300px; margin: 40px auto 20px auto; padding: 40px; background: white; border-radius: 3px; box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2); }
 .final .cta h1 { font-size: 1.4rem; color: rgba(0, 0, 0, 0.6); }
-.final .cta h2 { font-size: 4.0rem; line-height: 3.5rem; font-weight: 600; color: #331b4d; }
+.final .cta h2 { font-size: 4.0rem; line-height: 3.5rem; font-weight: 600; color: #2f1945; }
 .final .cta p { padding: 0; margin: 0; color: rgba(0, 0, 0, 0.6); }
 
-.featured { background: #331b4d; }
+.featured { background: #2f1945; }
 .featured h2 { color: white; }
 .featured .logos { display: flex; align-items: center; }
 .featured .logos div { flex: auto; margin-top: 20px; }

@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="full-background">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" id="vp" content="width=device-width, initial-scale=1">
+<script>
+	window.onload = function () {
+		if ( screen.width < 320 ) {
+			var mvp = document.getElementById( 'vp' );
+			mvp.setAttribute( 'content', 'width=320' );
+		}
+	}
+</script>
+<link href="css/landing.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<title>Edmonton Fitness Studio Pass: Redeem Free 2 Week Trial | Fitset</title>
+</head>
+
+<body>
+<div id="logo" class="shift"></div>
+<div id="wrapper">
+	<div id="form">
+		<div class="center">
+			<h1>Redeem your trial</h1>
+			<p>Enter your billing information</p>
+		</div>
+		<div class="credit-card-accept"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-discover"></i></div>
+		<div class="field">
+			<p>Credit card number</p>
+			<input id="credit-card-number" placeholder="---- ---- ---- ----" type="text">
+		</div>
+		<div class="field">
+			<p>Expiration date</p>
+			<input id="credit-card-exp-date" placeholder="MM/YY" type="text">
+		</div>
+		<div class="field">
+			<p>Postal Code</p>
+			<input id="city" placeholder="e.g. T5H 6Z3" type="email">
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" id="agree">
+			<label for="subscribe">I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</label>
+			<br>
+			<input type="checkbox" id="subscribe">
+			<label for="subscribe">Send me email updates and offers about Fitset.</label>
+		</div>
+		<div class="error">Oops. Please enter a valid credit card number.</div>
+		<a href="bonus.html">
+		<div class="button">Complete</div>
+		</a>
+		<div class="terms">
+			<p>By signing up for Fitset I agree to receive 20 complimentary credits, enough for 3-5 classes, valid for 14 days. I understand in 14 days my membership will automatically renew for $45 + gst per month (25 booking credits plan) unless I cancel.</p>
+			<p>Your credit card will be charged $15 for late cancellations and no shows. Studio cancellation policies are shown before you make a booking.</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
