@@ -5,10 +5,9 @@
 $font-stack: 'Source Sans Pro', Helvetica, sans-serif;
 $light-background: #efedf1;
 
-$brand-primary-color: #f96332;
-$brand-primary-color-hover: #ff8c65;
-$brand-secondary-color: #331b4d;
-$brand-secondary-color-hover: #594a6e;
+$brand-primary-color: #ef483e;
+$brand-primary-color-hover: #ff4d42;
+$brand-secondary-color: #2f1945;
 
 $transparent-black-extra-extra-thin: rgba(0,0,0,0.025);
 $transparent-black-extra-thin: rgba(0,0,0,0.1);
@@ -364,8 +363,8 @@ body {
 					border:1px solid $brand-secondary-color;
 				}
 				&.diagonal-fill:before {
-					background-image: linear-gradient(135deg, white 50%, $brand-secondary-color 50%);
-					border:1px solid $brand-secondary-color;
+					background-image: linear-gradient(135deg, $light-background 50%, $brand-secondary-color 50%);
+					border:1px solid #605f60;
 				}
 			}
 		}
@@ -464,7 +463,7 @@ body {
 		}
 	}
 	.button {
-		@include button($transparent-black-medium, $transparent-black-medium-thin, white);
+		@include button($transparent-black-medium-thin, $transparent-black-thin, white);
 	}
 }
 
