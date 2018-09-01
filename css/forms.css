@@ -20,9 +20,9 @@ html.full-background { background: url(../images/fitset-background-four.jpg) no-
 #form .center .check i { margin: 15px 0; font-size: 9.0rem; color: #36b47a; }
 #form .credit-card-accept { text-align: center; }
 #form .credit-card-accept img { width: 60px; height: 37px; margin: 0 5px 10px 5px; }
-#form .field input { margin-bottom: 15px; padding: 7px; width: 100%; box-sizing: border-box; font-size: 1.0rem; font-weight: 300; color: rgba(0, 0, 0, 0.6); border-radius: 3px; border: 1px solid rgba(0, 0, 0, 0.2); }
+#form .field input { -webkit-appearance: none; -moz-appearance: none; appearance: none; margin-bottom: 15px; padding: 7px; width: 100%; box-sizing: border-box; font-size: 1.0rem; font-weight: 300; color: rgba(0, 0, 0, 0.6); border-radius: 3px; border: 1px solid rgba(0, 0, 0, 0.2); }
 #form .field input#postal-code-CA { text-transform: uppercase; }
-#form .field select { width: 100%; box-sizing: border-box; }
+#form .field select { -webkit-appearance: none; -moz-appearance: none; appearance: none; width: 100%; box-sizing: border-box; }
 #form .field label { margin-bottom: 3px; font-size: 1.1rem; display: inline-block; }
 #form .field .flex { display: flex; }
 #form .field .flex div { flex: 1; }

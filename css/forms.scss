@@ -96,6 +96,9 @@ html.full-background {
 	}	
 	.field {
 		input {
+			-webkit-appearance: none;
+    		-moz-appearance: none;
+    		appearance: none;
 			margin-bottom: 15px;
 			padding: 7px;
 			width: 100%;
@@ -110,6 +113,9 @@ html.full-background {
 			}
 		}
 		select {
+			-webkit-appearance: none;
+    		-moz-appearance: none;
+    		appearance: none;
 			width: 100%;
 			box-sizing: border-box;
 		}
