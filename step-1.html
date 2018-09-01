@@ -38,28 +38,15 @@
 			<input id="email" placeholder="hermione@hogwarts.com" type="email">
 		</div>
 		<div class="field">
-			<label for="phone">Phone number</label>
-			<input id="phone" placeholder="(780) 555-1234" type="text">
-		</div>
-		<div class="field">
 			<label for="password">Password</label>
 			<input id="password" type="password">
 		</div>
 		<div class="error">Oops. You forgot to enter your first name.</div>
-		<a href="billing.html">
+		<a href="step-2.html">
 		<div class="button">Next step</div>
 		</a>
 	</div>
 </div>
-<script>
-	// Phone input mask
-	var phoneMask = ['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]
-	var phoneInput = document.querySelector('#phone')
-	var maskedInputController = vanillaTextMask.maskInput({
-		inputElement: phoneInput,
-		mask: phoneMask
-	})
-</script>
 </body>
 </html>
 

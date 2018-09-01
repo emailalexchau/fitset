@@ -3,6 +3,8 @@
 $brand-primary-color: #ef483e;
 $brand-secondary-color: #2f1945;
 $green: #36b47a;
+$transparent-black-extra-extra-thin: rgba(0,0,0,0.025);
+$transparent-black-extra-thin: rgba(0,0,0,0.1);
 $transparent-black-thin: rgba(0,0,0,0.2);
 $transparent-black-medium: rgba(0,0,0,0.6);
 
@@ -20,11 +22,11 @@ html.full-background {
 	height: 50px;
 }
 #wrapper {
-	margin: 0 10px;
+	margin: 0 15px;
 }
 #form {
 	position: relative;
-	margin: 75px auto 20px auto;
+	margin: 75px auto 15px auto;
 	padding: 20px 20px 15px 20px;
 	width: 100%;
 	max-width: 450px;
@@ -54,9 +56,12 @@ html.full-background {
 		content: 'Step Two';
 	}
 	&.step-3:before {
-		content: 'Last Step';
+		content: 'Step Three';
 	}
 	&.step-4:before {
+		content: 'Final Step';
+	}
+	&.step-5:before {
 		content: 'Yay!';
 	}
 	a {
@@ -112,6 +117,19 @@ html.full-background {
 			font-size: 1.1rem;
 			display: inline-block;
 		}
+		.flex {
+			display: flex;
+			div {
+				flex: 1;
+				img {
+					width: 60px;
+				}
+			}
+			div:last-of-type {
+				flex: 0 1 auto;
+				margin-left: 10px;
+			}
+		}
 	}
 	::placeholder { opacity: 0.5; }
 	.checkbox {
@@ -120,7 +138,7 @@ html.full-background {
 			position: absolute;
 		}
 		input[type="checkbox"] ~ label { 
-			padding-left:1.4em;
+			padding-left: 1.5rem;
 			font-size: 0.9rem;
 			vertical-align: top;
 			display:inline-block;
@@ -188,6 +206,47 @@ html.full-background {
 		margin-top: -10px;
 		font-weight: 300;
 		color: white;
+	}
+}
+
+
+/* Custom Select */
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	/* Reset Select Above */
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid $transparent-black-thin;
+	padding: 8px;
+	margin: 0;
+	color: $transparent-black-medium;
+	cursor: pointer;
+	font-size: 1.0rem;
+	font-weight: 300;
+}
+select::-ms-expand {
+	display: none;
+}
+.select {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin-bottom: 15px;
+	&:after {
+		@extend %font-awesome;
+		content: '\f0d7';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		padding: 8px;
+		background: $transparent-black-extra-thin;
+		border-radius: 0 3px 3px 0;
+		color: $transparent-black-medium;
+		pointer-events: none;
 	}
 }
 
