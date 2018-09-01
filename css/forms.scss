@@ -24,7 +24,7 @@ html.full-background {
 }
 #form {
 	position: relative;
-	margin: 70px auto 20px auto;
+	margin: 75px auto 20px auto;
 	padding: 20px 20px 15px 20px;
 	width: 100%;
 	max-width: 450px;
@@ -191,14 +191,11 @@ html.full-background {
 	}
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 550px) {
 	#logo.shift {
-		top:10px;
+		top:15px;
 		left:50%;
 		transform: translateX(-50%);
-	}
-	#form {
-		margin-top: 67px;
 	}
 }
 
