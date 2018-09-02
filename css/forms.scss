@@ -95,7 +95,10 @@ html.full-background {
 		}
 	}	
 	.field {
-		input[type="text"] {
+		input[type="text"],
+		input[type="email"],
+		input[type="password"]
+		{
 			-webkit-appearance: none;
     		-moz-appearance: none;
     		appearance: none;
