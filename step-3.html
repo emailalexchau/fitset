@@ -76,6 +76,14 @@
 		inputElement: creditCardExpirationInput,
 		mask: creditCardExpirationMask,
 	})
+	// Credit card expiration date input mask
+	var cvvMask = [/[0-9]/i, /[0-9]/i, /[0-9]/i, /[0-9]/i]
+	var cvvInput = document.querySelector('#credit-card-cvv')
+	var maskedInputController = vanillaTextMask.maskInput({
+		inputElement: cvvInput,
+		mask: cvvMask,
+		guide: false
+	})
 </script>
 </body>
 </html>

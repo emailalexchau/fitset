@@ -6,9 +6,9 @@
 @import url(slick.css);
 @import url(slick-theme.css);
 @import url(slick-theme.css);
-.slick-prev:before, .slick-next:before, .slick-dots li button:before { font-family: 'Font Awesome 5 Free' !important; font-weight: 900 !important; }
+.accordion:after, .slick-prev:before, .slick-next:before, .slick-dots li button:before { font-family: 'Font Awesome 5 Free' !important; font-weight: 900 !important; }
 
-body { font: 1em "Source Sans Pro", Helvetica, sans-serif; }
+body, button { font: 1em "Source Sans Pro", Helvetica, sans-serif; }
 
 h1, h2, h3, h4 { color: rgba(0, 0, 0, 0.8); }
 
@@ -76,6 +76,13 @@ strong { font-weight: 700; }
 .cta .cta h1 .superscript { display: inline-block; font-size: 3.0rem; vertical-align: top; margin-top: -0.6rem; }
 .cta .cta p { padding: 10px 0; margin: 0; color: rgba(0, 0, 0, 0.6); }
 .cta .cta:before { position: absolute; width: 160px; top: -20px; left: 0; right: 0; margin: auto; padding: 5px; background: #2f1945; border-radius: 3px; content: '2 Weeks Free'; font-size: 1.4rem; font-weight: 300; color: white; }
+
+.accordion { /* Begin Reset Button Style */ width: 100%; border: none; outline: none; background: white; text-align: left; cursor: pointer; /* End Reset Button Style */ padding: 15px 0 10px 0; border-top: 1px solid rgba(0, 0, 0, 0.1); font-size: 1.4rem; font-weight: 300; color: rgba(0, 0, 0, 0.6); }
+.accordion:first-of-type { border-top: none; }
+.accordion:after { content: '\f0d7'; float: right; color: rgba(0, 0, 0, 0.4); transition: all 0.2s ease-in-out; }
+.accordion.active:after { transform: rotate(-180deg); }
+
+.panel { max-height: 0; overflow: hidden; margin-bottom: 5px; transition: max-height 0.2s ease-in-out; }
 
 .featured { background: #2f1945; }
 .featured h2 { color: white; }

@@ -36,6 +36,7 @@
 		<div>
 			<h1>86 fitness studios. One membership.</h1>
 			<p>Get access to Edmonton's top studios with Fitset. Try yoga, spin, boxing, barre, dance, strength training, and more.</p>
+			<p>Did you know Fitset is an Edmonton-based service? Supporting local never got easier.</p>
 			<a href="step-1.html">
 			<div class="button">Get Deal</div>
 			</a> </div>
@@ -145,15 +146,44 @@
 		<div class="center">
 			<h1>Ready to grab your free two week trial?</h1>
 			<h2>This offer won't last forever, so hurry!</h2>
-			<div class="cta">	
+			<div class="cta">
 				<h1>$0<span class="superscript">.00</span></h1>
-				<p>Includes <strong>20 free credits</strong> to<br>book about <strong>2-3 classes</strong></p>
+				<p>Includes <strong>20 free credits</strong> to<br>
+					book about <strong>2-3 classes</strong></p>
 				<a href="step-1.html">
 				<div class="button">Get Deal</div>
-				</a>
-			</div>
+				</a> </div>
 			<h2>The average class cost in Edmonton is 9 credits.</h2>
 		</div>
+	</div>
+</div>
+<div class="section">
+	<div class="center">
+		<h2>Common questions about your trial</h2>
+	</div>
+	<button class="accordion">When does my free trial start?</button>
+	<div class="panel">
+		<p>Your free trial starts immediately after you sign-up.</p>
+	</div>
+	<button class="accordion">How does the free trial work?</button>
+	<div class="panel">
+		<p>Your membership gets you all the features and benefits of a regular membership with zero-booking restrictions. You are given 20 complimentary credits to use in your free two week trial, enough to book about 2 classes.</p>
+	</div>
+	<button class="accordion">What are credits?</button>
+	<div class="panel">
+		<p>Credits are used to book classes at your favourite studios. The average class cost in Edmonton is about 9 credits, but you'll find great classes or open gym access as low as 5 credits. More popular classes and studio locations cost a little bit more, while less popular class times cost a little bit less.</p>
+	</div>
+	<button class="accordion">Do credits rollover into the next month?</button>
+	<div class="panel">
+		<p>Yes, up to 10 unused credits rollover into the next month so you can use them up when your schedule allows.</p>
+	</div>
+	<button class="accordion">Does my trial auto-renew into a membership?</button>
+	<div class="panel">
+		<p>Yes, at the end of your 14-day trial, your membership renews into our lowest cost membership at $45 plus gst and gets you 25 monthly credits. Packages with more class credits are available to upgrade to at any time.</p>
+	</div>
+	<button class="accordion">How do I cancel my membership??</button>
+	<div class="panel">
+		<p>To cancel your membership, click through to your profile and put your membership on hold or simply cancel your membership. If done before your trial ends, you won't be charged.</p>
 	</div>
 </div>
 <div class="dark-background featured">
@@ -204,6 +234,19 @@
 			speed: 200
 		});
 	});
+	// FAQ Accordion
+	var accordion = document.getElementsByClassName("accordion");
+	for (var i = 0; i < accordion.length; i++) {
+		accordion[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+			} else {
+				panel.style.maxHeight = panel.scrollHeight + "px";
+			} 
+		});
+	}
 </script>
 </body>
 </html>

@@ -89,6 +89,4 @@ $(document).ready(function(){
 			$("#profile-arrow").addClass("closed");
 		}
 	});
-	
-
 });

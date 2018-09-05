@@ -26,7 +26,7 @@ $transparent-white-thick:rgba(255,255,255,0.8);
 
 %font-awesome { font-family: 'Font Awesome 5 Free' !important; font-weight: 900 !important; }
 
-body { font: 1.0em $font-stack; }
+body, button { font: 1.0em $font-stack; }
 
 h1, h2, h3, h4 {
 	color: $transparent-black-thick;
@@ -282,6 +282,41 @@ strong { font-weight: 700; }
 			color: white;
 		}
 	}
+}
+
+.accordion {
+	/* Begin Reset Button Style */
+	width: 100%;
+	border: none;
+	outline: none;
+	background: white;
+	text-align: left;
+	cursor: pointer;
+	/* End Reset Button Style */
+	padding: 15px 0 10px 0;
+	border-top: 1px solid $transparent-black-extra-thin;
+	font-size: 1.4rem;
+	font-weight: 300;
+	color: $transparent-black-medium;
+	&:first-of-type {
+		border-top: none;
+	}
+	&:after {
+		@extend %font-awesome;
+		content: '\f0d7';
+		float: right;
+		color: $transparent-black-medium-thin;
+		transition: all 0.2s ease-in-out;
+	}
+	&.active:after {
+		transform: rotate(-180deg);
+	}
+}
+.panel {
+	max-height: 0;
+	overflow: hidden;
+	margin-bottom: 5px;
+	transition: max-height 0.2s ease-in-out;
 }
 
 .featured {
