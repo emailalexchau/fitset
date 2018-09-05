@@ -11,7 +11,7 @@
 		}
 	}
 </script>
-<link href="css/landing.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/vanillatextmask.js"></script>
 <title>Edmonton Fitness Studio Pass: Redeem Free 2 Week Trial | Fitset</title>
@@ -22,61 +22,71 @@
 <div id="wrapper">
 	<div id="form" class="step-2">
 		<div class="center">
-			<h1>Redeem your trial</h1>
-			<p>Enter your address</p>
+			<h1>Complete your trial</h1>
+			<p>Enter your billing information</p>
+		</div>
+		<div class="credit-card-accept"><img src="images/visa.png" width="67" height="37" alt=""/><img src="images/mastercard.png" width="67" height="37" alt=""/><img src="images/amex.png" width="67" height="37" alt=""/><img src="images/discover.png" width="67" height="37" alt=""/> </div>
+		<div class="field">
+			<label for="credit-card-number">Credit card number</label>
+			<input id="credit-card-number" placeholder="4242 4242 4242 4242" type="text">
 		</div>
 		<div class="field">
-			<label for="address-line-1">Address line one</label>
-			<input id="address-line-1" placeholder="10000 Jasper Avenue" type="text">
+			<label for="credit-card-expiration">Expiration date (MM/YY)</label>
+			<input id="credit-card-expiration" placeholder="12/20" type="text">
 		</div>
 		<div class="field">
-			<label for="address-line-2">Address line two (optional)</label>
-			<input id="address-line-2" placeholder="" type="text">
-		</div>
-		<div class="field">
-			<label for="city">City</label>
-			<input id="city" placeholder="Edmonton" type="text">
-		</div>
-		<div class="field">
-			<label for="province">Province</label>
-			<div class="select">
-				<select>
-					<option value="AB">Alberta</option>
-					<option value="BC">British Columbia</option>
-					<option value="MB">Manitoba</option>
-					<option value="NB">New Brunswick</option>
-					<option value="NL">Newfoundland and Labrador</option>
-					<option value="NS">Nova Scotia</option>
-					<option value="ON">Ontario</option>
-					<option value="PE">Prince Edward Island</option>
-					<option value="QC">Quebec</option>
-					<option value="SK">Saskatchewan</option>
-					<option value="NT">Northwest Territories</option>
-					<option value="NU">Nunavut</option>
-					<option value="YT">Yukon</option>
-				</select>
+			<label for="credit-card-cvv">CVV code</label>
+			<div class="flex">
+				<div>
+					<input id="credit-card-cvv" placeholder="424" type="text">
+				</div>
+				<div><img src="images/cvv.png" width="67" height="37" alt=""/></div>
 			</div>
 		</div>
 		<div class="field">
 			<label for="postal-code-CA">Postal Code</label>
 			<input id="postal-code-CA" placeholder="T5T 5T5" type="text">
 		</div>
-		<div class="field">
-			<label for="phone">Phone number</label>
-			<input id="phone" placeholder="1 (780) 555-5555" type="text">
+		<div class="checkbox">
+			<input type="checkbox" id="agree">
+			<label for="subscribe">I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</label>
+			<br>
+			<input type="checkbox" id="subscribe">
+			<label for="subscribe">Send me email updates and offers about Fitset.</label>
 		</div>
-		<div class="error">Oops. You forgot to enter your first name.</div>
+		<div class="error">Oops. Please enter a valid credit card number.</div>
 		<a href="step-3.html">
-		<div class="button">Next step</div>
-		</a> </div>
+		<div class="button">Complete</div>
+		</a>
+		<div class="terms">
+			<p>By signing up for Fitset I agree to receive 20 complimentary credits, enough for 2-3 classes, valid for 14 days. The average class cost in your area is 9 credits.</p>
+			<p>I understand in 14 days my membership will automatically renew for $45 plus gst per month (25 booking credits plan) unless I cancel.</p>
+			<p>Your credit card will be charged $15 for late cancellations and no shows. Studio cancellation policies are shown before you make a booking.</p>
+		</div>
+	</div>
 </div>
 <script>
-	// Phone input mask
-	var phoneMask = [/[1-9]/, ' ', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]
-	var phoneInput = document.querySelector('#phone')
+	// Credit card number input mask
+	var creditCardNumberMask = [/\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/]
+	var creditCardNumberInput = document.querySelector('#credit-card-number')
 	var maskedInputController = vanillaTextMask.maskInput({
-		inputElement: phoneInput,
-		mask: phoneMask
+		inputElement: creditCardNumberInput,
+		mask: creditCardNumberMask,
+	})
+	// Credit card expiration date input mask
+	var creditCardExpirationMask = [/[0-1]/i, /[0-2]/i, '/', /[0-2]/i, /\d/]
+	var creditCardExpirationInput = document.querySelector('#credit-card-expiration')
+	var maskedInputController = vanillaTextMask.maskInput({
+		inputElement: creditCardExpirationInput,
+		mask: creditCardExpirationMask,
+	})
+	// Credit card expiration date input mask
+	var cvvMask = [/[0-9]/i, /[0-9]/i, /[0-9]/i, /[0-9]/i]
+	var cvvInput = document.querySelector('#credit-card-cvv')
+	var maskedInputController = vanillaTextMask.maskInput({
+		inputElement: cvvInput,
+		mask: cvvMask,
+		guide: false
 	})
 	// Canadian postal code input mask
 	var postalCodeCAMask = [/[A-Z]/i, /\d/, /[A-Z]/i, ' ', /\d/, /[A-Z]/i, /\d/]

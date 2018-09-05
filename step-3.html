@@ -11,9 +11,8 @@
 		}
 	}
 </script>
-<link href="css/landing.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="js/vanillatextmask.js"></script>
 <title>Edmonton Fitness Studio Pass: Redeem Free 2 Week Trial | Fitset</title>
 </head>
 
@@ -22,68 +21,27 @@
 <div id="wrapper">
 	<div id="form" class="step-3">
 		<div class="center">
-			<h1>Complete your trial</h1>
-			<p>Enter your billing information</p>
+			<h1>New member bonus offer</h1>
+			<p>Add an additional credit pack, enough to book at least two more classes. That's only $12.50 a class!</p>
 		</div>
-		<div class="credit-card-accept"><img src="images/visa.png" width="67" height="37" alt=""/><img src="images/mastercard.png" width="67" height="37" alt=""/><img src="images/amex.png" width="67" height="37" alt=""/><img src="images/discover.png" width="67" height="37" alt=""/> </div>
-		<div class="field">
-			<label for="credit-card-number">Credit card number</label>
-			<input id="credit-card-number" placeholder="4242 4242 4242 4242" type="text">
+		<div class="offer">
+			<div class="credits">
+				<h1>20</h1>
+				<h2>Credits For $25</h2>
+				<p>Boost your trial!</p>
+				<p>14 day expiry</p>
+			</div>
 		</div>
-		<div class="field">
-			<label for="credit-card-expiration">Expiration date (MM/YY)</label>
-			<input id="credit-card-expiration" placeholder="12/20" type="text">
+		<div class="center">
+			<p>Get the most out of your trial and experience twice as many studios or classes!</p>
 		</div>
-		<div class="field">
-			<label for="credit-card-cvv">CVV code</label>
-			<div class="flex">
-				<div>
-					<input id="credit-card-cvv" placeholder="424" type="text">
-				</div>
-				<div> <img src="images/cvv.png" width="67" height="37" alt=""/> </div>
-			</div>
-			<div class="checkbox">
-				<input type="checkbox" id="agree">
-				<label for="subscribe">I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</label>
-				<br>
-				<input type="checkbox" id="subscribe">
-				<label for="subscribe">Send me email updates and offers about Fitset.</label>
-			</div>
-			<div class="error">Oops. Please enter a valid credit card number.</div>
-			<a href="step-4.html">
-			<div class="button">Complete</div>
-			</a>
-			<div class="terms">
-				<p>By signing up for Fitset I agree to receive 20 complimentary credits, enough for 2-3 classes, valid for 14 days. The average class cost in your area is 9 credits.</p>
-				<p>I understand in 14 days my membership will automatically renew for $45 plus gst per month (25 booking credits plan) unless I cancel.</p>
-				<p>Your credit card will be charged $15 for late cancellations and no shows. Studio cancellation policies are shown before you make a booking.</p>
-			</div>
+		<a href="step-4.html">
+		<div class="button">Yes! Add bonus offer</div>
+		</a>
+		<div class="center terms">
+			<p><a href="step-4.html">No thanks, not today</a></p>
 		</div>
 	</div>
 </div>
-<script>
-	// Credit card number input mask
-	var creditCardNumberMask = [/\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/]
-	var creditCardNumberInput = document.querySelector('#credit-card-number')
-	var maskedInputController = vanillaTextMask.maskInput({
-		inputElement: creditCardNumberInput,
-		mask: creditCardNumberMask,
-	})
-	// Credit card expiration date input mask
-	var creditCardExpirationMask = [/[0-1]/i, /[0-2]/i, '/', /[0-2]/i, /\d/]
-	var creditCardExpirationInput = document.querySelector('#credit-card-expiration')
-	var maskedInputController = vanillaTextMask.maskInput({
-		inputElement: creditCardExpirationInput,
-		mask: creditCardExpirationMask,
-	})
-	// Credit card expiration date input mask
-	var cvvMask = [/[0-9]/i, /[0-9]/i, /[0-9]/i, /[0-9]/i]
-	var cvvInput = document.querySelector('#credit-card-cvv')
-	var maskedInputController = vanillaTextMask.maskInput({
-		inputElement: cvvInput,
-		mask: cvvMask,
-		guide: false
-	})
-</script>
 </body>
 </html>
