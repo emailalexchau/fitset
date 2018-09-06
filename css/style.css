@@ -5,7 +5,7 @@
 @import url(forms.css);
 @import url(https://use.fontawesome.com/releases/v5.2.0/css/all.css);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
-#hamburger:before, .accordion:after, .slick-prev:before, .slick-next:before, .slick-dots li button:before { font-family: 'Font Awesome 5 Free' !important; font-weight: 900 !important; }
+#menu.mobile ul li:before, #hamburger:before, .accordion:after, .slick-prev:before, .slick-next:before, .slick-dots li button:before { font-family: 'Font Awesome 5 Free' !important; font-weight: 900 !important; }
 
 body, button { font: 1em "Source Sans Pro", Helvetica, sans-serif; }
 
@@ -26,13 +26,15 @@ strong { font-weight: 700; }
 #menu { float: right; display: inline-block; position: relative; top: 5px; }
 #menu ul { display: inline-block; }
 #menu ul li { display: inline-block; padding: 0 10px; }
-#menu ul li a { color: white; text-decoration: none; }
-#menu ul li a:hover { text-decoration: underline; }
+#menu ul a { color: white; text-decoration: none; }
+#menu ul a:hover { text-decoration: underline; }
 
 #menu.mobile { display: none; position: fixed; z-index: 9999; top: 70px; left: 0; width: 100%; height: 100%; background: white; }
 #menu.mobile ul { width: 100%; }
+#menu.mobile ul a { color: rgba(0, 0, 0, 0.6); text-decoration: none; }
+#menu.mobile ul a:hover { text-decoration: underline; }
 #menu.mobile ul li { display: block; border-bottom: 1px solid rgba(0, 0, 0, 0.1); padding: 20px; }
-#menu.mobile ul li a { color: rgba(0, 0, 0, 0.6); }
+#menu.mobile ul li:before { float: right; content: '\f0da'; color: rgba(0, 0, 0, 0.2); }
 
 .get, #hamburger { float: right; display: inline-block; position: relative; top: 5px; padding: 0 10px; }
 .get .button, #hamburger .button { margin: -5px 0 0 0; }
@@ -58,7 +60,7 @@ strong { font-weight: 700; }
 .button.secondary { background: white; color: rgba(0, 0, 0, 0.6); }
 .button.secondary:hover { background: #2f1945; color: white; }
 
-#top { position: relative; padding: 20px; background: url(../images/fitset-background-one.jpg) 50% 50% no-repeat; background-size: cover; height: 550px; }
+#top { position: relative; padding: 20px; background: url(../images/fitset-background-one.jpg) 50% 50% no-repeat; background-size: cover; }
 #top #logo { position: absolute; top: 20px; left: 20px; background: url(../images/fitset-logo.svg) no-repeat; width: 100px; height: 50px; }
 #top h1, #top h2, #top h3 { color: white; }
 #top .section { position: absolute; bottom: 0; left: 0; right: 0; }
@@ -137,8 +139,7 @@ strong { font-weight: 700; }
   .locations .location { min-width: 300px; text-align: center; }
   .section .steps { display: block; }
   .section .steps .arrow { display: none; } }
-@media screen and (max-width: 800px) { #top .section.main { bottom: 0; }
-  .section { display: block; }
+@media screen and (max-width: 800px) { .section { display: block; }
   .section .left img { padding: 0; margin-bottom: 20px; }
   .section .right { text-align: center; }
   .section .logos { display: block; }
@@ -146,13 +147,15 @@ strong { font-weight: 700; }
   .locations { display: block; }
   .locations .location { min-width: 0; }
   #hamburger { display: inline-block; } }
-@media screen and (max-width: 375px) { h1 { font-size: 1.7rem; }
+@media screen and (max-width: 500px) { h1 { font-size: 1.7rem; }
+  .accordion { font-size: 1.1rem; }
+  .panel p { font-size: 1.0rem; } }
+@media screen and (max-width: 375px) { #top { height: 400px; }
+  #top .section { padding: 30px 0; }
+  #top .section.main { padding: 30px 20px; bottom: 0; }
   .section { padding: 30px 15px; }
   .section .logos { display: block; }
   .section .logos div { width: 200px; margin: auto; }
-  #top { height: 400px; }
-  #top .section { padding: 30px 0; }
-  #top .section.main { padding: 20px; }
   .clock { margin-bottom: 10px; }
   .quotes h3 { font-size: 1.2rem; }
   .section .links { display: block; }

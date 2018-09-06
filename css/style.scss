@@ -70,12 +70,12 @@ strong { font-weight: 700; }
 		li {
 			display: inline-block;
 			padding: 0 10px;
-			a {
-				color: white;
-				text-decoration: none;
-				&:hover {
-					text-decoration: underline;
-				}
+		}
+		a {
+			color: white;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 	}
@@ -91,12 +91,22 @@ strong { font-weight: 700; }
 	background: white;
 	ul {
 		width: 100%;
+		a {
+			color: $transparent-black-medium;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 		li {
 			display: block;
 			border-bottom: 1px solid $transparent-black-extra-thin;
 			padding: 20px;
-			a {
-				color: $transparent-black-medium;
+			&:before {
+				@extend %font-awesome;
+				float: right;
+				content: '\f0da';
+				color: $transparent-black-thin;
 			}
 		}
 	}
@@ -184,7 +194,6 @@ strong { font-weight: 700; }
 	padding: 20px;
 	background: url(../images/fitset-background-one.jpg) 50% 50% no-repeat;
 	background-size: cover;
-	height: 550px;
 	#logo {
 		position: absolute;
 		top: 20px;
@@ -387,7 +396,6 @@ strong { font-weight: 700; }
 		}
 	}
 }
-
 .accordion {
 	/* Begin Reset Button Style */
 	width: 100%;
@@ -509,11 +517,6 @@ strong { font-weight: 700; }
 }
 
 @media screen and (max-width: 800px) {
-	#top {
-		.section.main {
-			bottom: 0;
-		}
-	}
 	.section {
 		display: block;
 		.left img {
@@ -539,11 +542,30 @@ strong { font-weight: 700; }
 		display: inline-block;
 	}
 }
-	
-@media screen and (max-width: 375px) {
+
+@media screen and (max-width: 500px) {
 	h1 {
 		font-size: 1.7rem;
 	}
+	.accordion {
+		font-size: 1.1rem;
+	}
+	.panel p {
+		font-size: 1.0rem;
+	}
+}
+	
+@media screen and (max-width: 375px) {
+	#top {
+		height: 400px;
+		.section { 
+			padding: 30px 0;
+		}
+		.section.main {
+			padding: 30px 20px;
+			bottom: 0;
+		}
+	}	
 	.section {
 		padding: 30px 15px;
 		.logos {
@@ -552,15 +574,6 @@ strong { font-weight: 700; }
 				width: 200px;
 				margin: auto;
 			}
-		}
-	}
-	#top {
-		height: 400px;
-		.section { 
-			padding: 30px 0;
-		}
-		.section.main {
-			padding: 20px;
 		}
 	}
 	.clock {

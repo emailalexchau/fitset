@@ -56,12 +56,9 @@ html.full-background {
 		content: 'Step Two';
 	}
 	&.step-3:before {
-		content: 'Step Three';
-	}
-	&.step-4:before {
 		content: 'Final Step';
 	}
-	&.step-5:before {
+	&.step-4:before {
 		content: 'Yay!';
 	}
 	a {

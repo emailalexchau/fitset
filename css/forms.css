@@ -11,9 +11,8 @@ html.full-background { background: url(../images/fitset-background-four.jpg) no-
 #form:before { position: absolute; width: 160px; top: -20px; left: 0; right: 0; margin: auto; padding: 5px; background: #2f1945; border-radius: 3px; font-size: 1.4rem; text-align: center; color: white; }
 #form.step-1:before { content: 'Step One'; }
 #form.step-2:before { content: 'Step Two'; }
-#form.step-3:before { content: 'Step Three'; }
-#form.step-4:before { content: 'Final Step'; }
-#form.step-5:before { content: 'Yay!'; }
+#form.step-3:before { content: 'Final Step'; }
+#form.step-4:before { content: 'Yay!'; }
 #form a { color: #ef483e; text-decoration: none; }
 #form h1 { margin-top: 10px; padding: 0; font-size: 1.6rem; font-weight: 700; line-height: 2.0rem; color: #2f1945; }
 #form .center { text-align: center; margin-bottom: 5px; }

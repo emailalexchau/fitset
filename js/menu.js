@@ -12,7 +12,7 @@ $(window).resize(function(){
 	if ($(window).width() <= 800) {
 		$('#menu').addClass('mobile');
 		if (sessionStorage.getItem('menuIsVisible') === 'true') {
-			$('#menu').show();
+			$('#menu').slideDown(300);
 			$('#hamburger').addClass('close');
 			$('body').css('overflow', 'hidden');
 		} else {
@@ -30,14 +30,14 @@ $('#hamburger').click(function() {
 	'use strict';
 	if (sessionStorage.getItem('menuIsVisible') === 'true') {
 		sessionStorage.setItem('menuIsVisible', 'false');
-		$('#menu').hide();
+		$('#menu').slideUp(300);
 		$('#hamburger').removeClass('close');
 
 		$('body').css('overflow', 'auto');
 		
 	} else {
 		sessionStorage.setItem('menuIsVisible', 'true');
-		$('#menu').show();
+		$('#menu').slideDown(300);
 		$('#hamburger').addClass('close');
 		$('body').css('overflow', 'hidden');
 	}
