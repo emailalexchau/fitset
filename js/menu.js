@@ -15,6 +15,7 @@ $(window).resize(function(){
 			$('#menu').slideDown(300);
 			$('#hamburger').addClass('close');
 			$('body').css('overflow', 'hidden');
+			$('body').css('position', 'fixed');
 		} else {
 			$('#menu').hide();
 			$('#hamburger').removeClass('close');
@@ -23,6 +24,7 @@ $(window).resize(function(){
 		$('#menu').removeClass('mobile');
 		$('#menu').show();
 		$('body').css('overflow', 'auto');
+		$('body').css('position', 'static');
 	}
 });
 
@@ -32,14 +34,15 @@ $('#hamburger').click(function() {
 		sessionStorage.setItem('menuIsVisible', 'false');
 		$('#menu').slideUp(300);
 		$('#hamburger').removeClass('close');
-
 		$('body').css('overflow', 'auto');
+		$('body').css('position', 'static');
 		
 	} else {
 		sessionStorage.setItem('menuIsVisible', 'true');
 		$('#menu').slideDown(300);
 		$('#hamburger').addClass('close');
 		$('body').css('overflow', 'hidden');
+		$('body').css('position', 'fixed');
 	}
 });
 

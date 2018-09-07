@@ -44,7 +44,7 @@ h1 {
 
 h2 {
 	font-size: 1.6rem;
-	font-weight: 300;
+	font-weight: 400;
 	padding-bottom: 0.5rem;
 }
 
@@ -72,11 +72,9 @@ strong { font-weight: 700; }
 
 #menu {
 	float: right;
-	display: inline-block;
 	position: relative;
 	top: 5px;
 	ul {
-		display: inline-block;
 		li {
 			display: inline-block;
 			padding: 0 10px;
@@ -84,7 +82,7 @@ strong { font-weight: 700; }
 		a {
 			color: white;
 			text-decoration: none;
-			&:hover {
+			li:hover {
 				text-decoration: underline;
 			}
 		}
@@ -102,13 +100,6 @@ strong { font-weight: 700; }
 	background: white;
 	ul {
 		width: 100%;
-		a {
-			color: $transparent-black-medium;
-			text-decoration: none;
-			&:hover {
-				text-decoration: underline;
-			}
-		}
 		li {
 			display: block;
 			border-bottom: 1px solid $transparent-black-extra-thin;
@@ -119,6 +110,9 @@ strong { font-weight: 700; }
 				content: '\f0da';
 				color: $transparent-black-thin;
 			}
+		}
+		a {
+			color: $transparent-black-medium;
 		}
 	}
 }
@@ -208,10 +202,13 @@ strong { font-weight: 700; }
 
 #top {
 	position: relative;
-	height: 550px;
+	height: 500px;
 	padding: 20px;
 	background: url(../images/fitset-background-one.jpg) 50% 50% no-repeat;
 	background-size: cover;
+	h1, h2, h3 {
+		color: white;
+	}
 	#logo {
 		position: absolute;
 		top: 20px;
@@ -220,17 +217,18 @@ strong { font-weight: 700; }
 		width: 100px;
 		height: 50px;
 	}
-	h1, h2, h3 {
-		color: white;
+	
+	&.pricing {
+		height: 30px;
+		background: $brand-secondary-color;
 	}
 	.section {
 		position: absolute;
 		bottom: 0;
 		left: 0;
 		right: 0;
-		&.main {
+		&.cover {
 			max-width: 896px;
-			
 			.buttons {
 				width: 100%;
 				margin-top: 5px;
@@ -250,7 +248,7 @@ strong { font-weight: 700; }
 	background: rgba(0,0,0,0.05);
 	&.purple {
 		background: linear-gradient(to bottom right,$brand-secondary-color,$brand-primary-color);
-		h1 {
+		h1, h2 {
 			color: white;
 		}
 		.how-it-works {
@@ -261,6 +259,12 @@ strong { font-weight: 700; }
 		background: url(../images/fitset-background-four.jpg);
 		background-size: cover;
 		background-position: 50% 50%;
+		&.pricing {
+			background: rgba(0,0,0,0.05);
+			h2 {
+				color: $transparent-black-medium;
+			}
+		}
 	}
 	&.footer {
 		background: $transparent-black-extra-thick;
@@ -272,7 +276,7 @@ strong { font-weight: 700; }
 	flex-wrap: wrap;
 	margin: auto;
 	clear: both;
-	padding: 60px 30px;
+	padding: 40px 30px;
 	max-width: 1000px;
 	.left {
 		flex: 1;
@@ -291,6 +295,14 @@ strong { font-weight: 700; }
 	.center {
 		flex: 1;
 		text-align: center;
+		h2.class-cost {
+			font-size: 1.4rem; 
+			font-weight: 300;
+			padding: 10px 20px 0 20px;
+		}
+	}
+	&.shift-up {
+		padding-top: 5px;
 	}
 }
 
@@ -316,6 +328,7 @@ strong { font-weight: 700; }
 		flex: 0.1;
 		display: flex;
 		align-items: center;
+		padding-top: 10px;
 		i {
 			font-size: 1.3rem;
 			color: $transparent-white-medium;
@@ -354,12 +367,10 @@ strong { font-weight: 700; }
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 5px;
-	.location {
-		padding: 10px;
+	> div {
+		flex: auto;
+		padding: 10px 0;
 		text-align: left;
-		flex: 1;
-		&:first-of-type { padding-left: 0; }
-		&:last-of-type { padding-right: 0; }
 		h1 {
 			font-size: 1.4rem;
 			font-weight: 300;
@@ -373,17 +384,51 @@ strong { font-weight: 700; }
 	}
 }
 
+.benefits {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 20px 0 5px 0;
+	> div {
+		flex: auto;
+		padding: 10px 30px 10px 0;
+		text-align: left;
+		width: 35%;
+		h1 {
+			font-size: 1.4rem;
+			font-weight: 300;
+			color: $brand-primary-color;
+		}
+		div {
+			padding: 5px 0;
+			font-size: 1.2rem;
+			font-weight: 300;
+			color: $transparent-black-medium;
+		}
+	}
+}
+
 .cta {
 	h1, h2, p {
 		color: white;
 	}
 	.cta {
+		display: inline-block;
 		position: relative;
 		max-width: 220px;
 		margin: 40px auto 20px auto;
 		padding: 40px;
 		background: white;
 		border-radius: 3px;
+		transition: transform 0.2s ease-in-out;
+		text-align: center;
+		a {
+			text-decoration: none;
+		}
+		&:hover {
+			box-shadow: 0 0 5px 0 $transparent-black-thin;
+			transform: scale(1.05);
+			transition: transform 0.2s ease-in-out;
+		}
 		h1 {
 			font-size: 5.0rem;
 			line-height: 4.5rem;
@@ -400,6 +445,11 @@ strong { font-weight: 700; }
 			padding: 10px 0;
 			margin: 0;
 			color: $transparent-black-medium;
+			&.per-month {
+				margin-top: -10px;
+				padding-bottom: 0;
+				font-size: 1.0rem;
+			}
 		}
 		&:before {
 			position: absolute;
@@ -416,6 +466,42 @@ strong { font-weight: 700; }
 			font-weight: 300;
 			color: white;
 		}
+		
+		&.jog:before {
+			content: 'Jog';
+		}
+		&.run:before {
+			content: 'Run';
+		}
+		&.sprint:before {
+			content: 'Sprint';
+		}
+	}
+	.align-right {
+		text-align: right;
+	}
+	.align-left {
+		text-align: left;
+	}
+}
+
+.cta.pricing {
+	text-align: center;
+	.cta {
+		margin-top: 50px;
+	}
+	h2 {
+		margin-top:-30px;
+		padding: 0 20px 30px 20px;
+		font-size: 1.4rem; 
+		font-weight: 300;
+	}
+	.center {
+		display: flex;
+		flex-wrap: wrap;
+		div {
+			flex: auto;
+		}	
 	}
 }
 
@@ -524,11 +610,9 @@ strong { font-weight: 700; }
 		max-width: 375px !important;
 		width: 100% !important;
 	}
-	.locations .location {
+	.locations div {
 		min-width: 300px;
 		text-align: center;
-		&:first-of-type { padding-left: 10px; }
-		&:last-of-type { padding-right: 10px; }
 	}
 	.section {
 		.steps {
@@ -537,7 +621,22 @@ strong { font-weight: 700; }
 				display: none;
 			}
 		}
-		
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.cta.pricing {
+		text-align: center;
+		.center {
+			display: block;
+			width: 100%;
+			> div	.cta {
+				width: 100%;
+				padding-left: 0;
+				padding-right: 0;
+				max-width: none;
+			}
+		}
 	}
 }
 
@@ -559,8 +658,15 @@ strong { font-weight: 700; }
 	}
 	.locations {
 		display: block;
-		.location {
+		div {
 			min-width: 0;
+		}
+	}
+	.benefits {
+		display: block;
+		> div {
+			width: 100%;
+			text-align: center;
 		}
 	}
 	#hamburger {
@@ -574,11 +680,11 @@ strong { font-weight: 700; }
 		.section { 
 			padding: 30px 0;
 		}
-		.section.main {
+		.section.cover {
 			padding: 30px 20px;
 			bottom: 0;
 		}
-	}	
+	}
 	h1 {
 		font-size: 1.7rem;
 	}
