@@ -2,7 +2,7 @@
 @import url(include/flipclock.css);
 @import url(include/slick.css);
 @import url(include/slick-theme.css);
-@import url(include/slidein.css);
+@import url(include/aos.css);
 @import url(forms.css);
 @import url(https://use.fontawesome.com/releases/v5.2.0/css/all.css);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
@@ -168,7 +168,7 @@ strong { font-weight: 700; }
 }
 
 .flip-clock-label {
-    display: none;
+	display: none;
 }
 
 .flip-clock-dot {
@@ -420,14 +420,12 @@ strong { font-weight: 700; }
 }
 
 .accordion {
-	/* Begin Reset Button Style */
 	width: 100%;
 	border: none;
 	outline: none;
 	background: white;
 	text-align: left;
 	cursor: pointer;
-	/* End Reset Button Style */
 	padding: 15px 0 10px 0;
 	border-top: 1px solid $transparent-black-extra-thin;
 	font-size: 1.4rem;
@@ -617,19 +615,3 @@ strong { font-weight: 700; }
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

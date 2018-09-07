@@ -5,9 +5,9 @@
 <meta name="viewport" id="vp" content="width=device-width, initial-scale=1">
 <script>
 	window.onload = function () {
-		if ( screen.width < 320 ) {
-			var mvp = document.getElementById( 'vp' );
-			mvp.setAttribute( 'content', 'width=320' );
+		if (screen.width < 320) {
+			var mvp = document.getElementById('vp');
+			mvp.setAttribute('content','width=320');
 		}
 	}
 </script>
@@ -26,43 +26,43 @@
 		<div id="hamburger" class="fa-fw"></div>
 		<div class="get">
 			<a href="#">
-				<div class="button small">Get Fitset</div>
+				<div class="button small" data-aos="fade-down" data-aos-delay="600">Get Fitset</div>
 			</a>
 		</div>
 		<div id="menu">
 			<ul>
 				<a href="#">
-					<li class="item">Home</li>
+					<li class="item" data-aos="fade-down" data-aos-delay="100">Home</li>
 				</a>
 				<a href="#">
-					<li class="item">Discover Studios</li>
+					<li class="item" data-aos="fade-down" data-aos-delay="200">Discover Studios</li>
 				</a>
 				<a href="#">
-					<li class="item">How it works</li>
+					<li class="item" data-aos="fade-down" data-aos-delay="300">How it works</li>
 				</a>
 				<a href="#">
-					<li class="item">Pricing</li>
+					<li class="item" data-aos="fade-down" data-aos-delay="400">Pricing</li>
 				</a>
 				<a href="#">
-					<li class="item">Login</li>
+					<li class="item" data-aos="fade-down" data-aos-delay="500">Login</li>
 				</a>
 			</ul>
 		</div>
-		<div class="section main slide">
-			<h1>Edmonton's most engaging fitness membership.</h1>
-			<p>Fitness isn't your pastime, it's your passion. Fitset lets you discover, book, and sweat in Edmonton's top fitness studios.</p>
+		<div class="section main">
+			<h1 data-aos="fade-down">Edmonton's most engaging fitness membership.</h1>
+			<p data-aos="fade-up" data-aos-delay="200">Fitness isn't your pastime, it's your passion. Fitset lets you discover, book, and sweat in Edmonton's top fitness studios.</p>
 			<div class="buttons">
 				<a href="step-1.html">
-					<div class="button margin-right">Start a free trial</div>
+					<div class="button margin-right" data-aos="zoom-in" data-aos-delay="400">Start a free trial</div>
 				</a>
 				<a href="step-1.html">
-					<div class="button secondary">See studios</div>
+					<div class="button secondary" data-aos="zoom-in" data-aos-delay="600">See studios</div>
 				</a>
 			</div>
 		</div>
 	</div>
 	<div class="section">
-		<div class="left"><img src="images/macbook.png" alt=""/></div>
+		<div class="left" data-aos="flip-left" data-aos-offset="-400"><img src="images/macbook.png" alt=""/></div>
 		<div class="right">
 			<div>
 				<h1>86 fitness studios. One membership.</h1>
@@ -75,7 +75,7 @@
 		</div>
 	</div>
 	<div class="dark-background purple">
-		<div class="section" id="howitworks">
+		<div class="section">
 			<div class="center">
 				<h1>How it works:</h1>
 				<div class="steps">
@@ -248,7 +248,7 @@
 		</div>
 	</div>
 	<div class="dark-background footer">
-		<div class="section animate-none">
+		<div class="section">
 			<div class="center">
 				<div class="links">
 					<div>2018 &copy; Fitset</div>
@@ -267,18 +267,22 @@
 		</div>
 	</div>
 </div>
+<script src="js/aos.min.js"></script>
 <script src="js/menu.js"></script>
-<script src="js/slidein.js"></script>
 <script type="text/javascript">
-	// Slick Carousel
-	$(document).ready(function(){
-		$('.slick-quotes').slick({
-			autoplay: true,
-			autoplaySpeed: 7000,
-			dots: true,
-			speed: 200
-		});
+	// Initialize AOS (Animate On Scroll)
+	AOS.init({
+		once: true
 	});
+
+	// Slick Carousel
+	$('.slick-quotes').slick({
+		autoplay: true,
+		autoplaySpeed: 7000,
+		dots: true,
+		speed: 200
+	});
+
 	// FAQ Accordion
 	var accordion = document.getElementsByClassName("accordion");
 	for (var i = 0; i < accordion.length; i++) {

@@ -20,19 +20,24 @@
 <body>
 <div id="top">
 	<div id="logo" class="main"></div>
-	<div class="section slide">
+	<div class="get">
+		<a href="step-1.html">
+			<div class="button small" data-aos="fade-down" data-aos-delay="500">Get Deal</div>
+		</a>
+	</div>
+	<div class="section">
 		<div class="center">
-			<div class="clock"></div>
-			<h1>Grab a two week free trial while you can!</h1>
-			<h2>This limited-time offer ends soon.</h2>
+			<div class="clock" data-aos="fade-down" data-aos-delay="200"></div>
+			<h1 data-aos="zoom-in" data-aos-delay="100">Grab a two week free trial while you can!</h1>
+			<h2 data-aos="fade-up" data-aos-delay="300">This limited-time offer ends soon.</h2>
 			<a href="step-1.html">
-				<div class="button">Get Deal</div>
+				<div class="button" data-aos="zoom-in" data-aos-delay="400">Get Deal</div>
 			</a>
 		</div>
 	</div>
 </div>
 <div class="section">
-	<div class="left"><img src="images/macbook.png" alt=""/></div>
+	<div class="left" data-aos="flip-left" data-aos-offset="-400"><img src="images/macbook.png" alt=""/></div>
 	<div class="right">
 		<div>
 			<h1>86 fitness studios. One membership.</h1>
@@ -193,7 +198,7 @@
 	</div>
 </div>
 <div class="dark-background featured">
-	<div class="section animate-none">
+	<div class="section">
 		<div class="center">
 			<h2>Fitset is an Edmonton-based service. Supporting local business and fitness studios never got easier.</h2>
 			<div class="logos">
@@ -206,7 +211,7 @@
 	</div>
 </div>
 <div class="dark-background footer">
-	<div class="section animate-none">
+	<div class="section">
 		<div class="center">
 			<div class="links">
 				<div>2018 &copy; Fitset</div>
@@ -224,31 +229,34 @@
 		</div>
 	</div>
 </div>
-<script src="js/slidein.js"></script>
+<script src="js/aos.min.js"></script>
 <script type="text/javascript">
+	// Initialize AOS (Animate On Scroll)
+	AOS.init({
+		once: true
+	});
+
 	// Flip Clock
 	var clock;
-	$(document).ready(function() {
-		clock = new FlipClock($('.clock'), 720, {
-			clockFace: 'MinuteCounter',
-			autoStart: true,
-			countdown: true,
-			// Flip Clock Restart At 0
-			stop: function() {
-				clock.setTime(720);
-				clock.start;
-			}
-		});
+	clock = new FlipClock($('.clock'), 720, {
+		clockFace: 'MinuteCounter',
+		autoStart: true,
+		countdown: true,
+		// Flip Clock Restarts At 0
+		stop: function() {
+			clock.setTime(720);
+			clock.start;
+		}
 	});
+
 	// Slick Carousel
-	$(document).ready(function(){
-		$('.slick-quotes').slick({
-			autoplay: true,
-			autoplaySpeed: 7000,
-			dots: true,
-			speed: 200
-		});
+	$('.slick-quotes').slick({
+		autoplay: true,
+		autoplaySpeed: 7000,
+		dots: true,
+		speed: 200
 	});
+
 	// FAQ Accordion
 	var accordion = document.getElementsByClassName("accordion");
 	for (var i = 0; i < accordion.length; i++) {

@@ -2,7 +2,7 @@
 @import url(include/flipclock.css);
 @import url(include/slick.css);
 @import url(include/slick-theme.css);
-@import url(include/slidein.css);
+@import url(include/aos.css);
 @import url(forms.css);
 @import url(https://use.fontawesome.com/releases/v5.2.0/css/all.css);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
@@ -111,7 +111,7 @@ strong { font-weight: 700; }
 .cta .cta p { padding: 10px 0; margin: 0; color: rgba(0, 0, 0, 0.6); }
 .cta .cta:before { position: absolute; width: 160px; top: -20px; left: 0; right: 0; margin: auto; padding: 5px; background: #2f1945; border-radius: 3px; content: '2 Weeks Free'; font-size: 1.4rem; font-weight: 300; color: white; }
 
-.accordion { /* Begin Reset Button Style */ width: 100%; border: none; outline: none; background: white; text-align: left; cursor: pointer; /* End Reset Button Style */ padding: 15px 0 10px 0; border-top: 1px solid rgba(0, 0, 0, 0.1); font-size: 1.4rem; font-weight: 300; color: rgba(0, 0, 0, 0.6); }
+.accordion { width: 100%; border: none; outline: none; background: white; text-align: left; cursor: pointer; padding: 15px 0 10px 0; border-top: 1px solid rgba(0, 0, 0, 0.1); font-size: 1.4rem; font-weight: 300; color: rgba(0, 0, 0, 0.6); }
 .accordion:first-of-type { border-top: none; }
 .accordion:after { content: '\f0d7'; float: right; color: rgba(0, 0, 0, 0.4); transition: all 0.2s ease-in-out; }
 .accordion.active:after { transform: rotate(-180deg); }
