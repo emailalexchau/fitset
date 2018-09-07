@@ -2,6 +2,7 @@
 @import url(include/flipclock.css);
 @import url(include/slick.css);
 @import url(include/slick-theme.css);
+@import url(include/slidein.css);
 @import url(forms.css);
 @import url(https://use.fontawesome.com/releases/v5.2.0/css/all.css);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
@@ -207,6 +208,7 @@ strong { font-weight: 700; }
 
 #top {
 	position: relative;
+	height: 550px;
 	padding: 20px;
 	background: url(../images/fitset-background-one.jpg) 50% 50% no-repeat;
 	background-size: cover;
@@ -227,7 +229,8 @@ strong { font-weight: 700; }
 		left: 0;
 		right: 0;
 		&.main {
-			max-width: 898px;
+			max-width: 896px;
+			
 			.buttons {
 				width: 100%;
 				margin-top: 5px;
@@ -268,6 +271,7 @@ strong { font-weight: 700; }
 	display: flex;
 	flex-wrap: wrap;
 	margin: auto;
+	clear: both;
 	padding: 60px 30px;
 	max-width: 1000px;
 	.left {
@@ -354,6 +358,8 @@ strong { font-weight: 700; }
 		padding: 10px;
 		text-align: left;
 		flex: 1;
+		&:first-of-type { padding-left: 0; }
+		&:last-of-type { padding-right: 0; }
 		h1 {
 			font-size: 1.4rem;
 			font-weight: 300;
@@ -452,6 +458,7 @@ strong { font-weight: 700; }
 .featured {
 	background: $brand-secondary-color;
 	h2 {
+		font-size: 1.4rem;
 		color: white;
 	}
 	.logos {
@@ -492,13 +499,13 @@ strong { font-weight: 700; }
 .slick-prev:before {
 	@extend %font-awesome;
 	content: '\f060' !important;
-	color: $transparent-black-thin !important;
+	color: $transparent-black-medium !important;
 }
 
 .slick-next:before {
 	@extend %font-awesome;
 	content: '\f061' !important;
-	color: $transparent-black-thin !important;
+	color: $transparent-black-medium !important;
 }
 
 .slick-dots li button:before {
@@ -522,6 +529,8 @@ strong { font-weight: 700; }
 	.locations .location {
 		min-width: 300px;
 		text-align: center;
+		&:first-of-type { padding-left: 10px; }
+		&:last-of-type { padding-right: 10px; }
 	}
 	.section {
 		.steps {
@@ -575,6 +584,7 @@ strong { font-weight: 700; }
 	
 @media screen and (max-width: 375px) {
 	#top {
+		height: 420px;
 		.section { 
 			padding: 30px 0;
 		}

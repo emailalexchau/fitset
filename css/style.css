@@ -2,6 +2,7 @@
 @import url(include/flipclock.css);
 @import url(include/slick.css);
 @import url(include/slick-theme.css);
+@import url(include/slidein.css);
 @import url(forms.css);
 @import url(https://use.fontawesome.com/releases/v5.2.0/css/all.css);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
@@ -60,11 +61,11 @@ strong { font-weight: 700; }
 .button.secondary { background: white; color: rgba(0, 0, 0, 0.6); }
 .button.secondary:hover { background: #2f1945; color: white; }
 
-#top { position: relative; padding: 20px; background: url(../images/fitset-background-one.jpg) 50% 50% no-repeat; background-size: cover; }
+#top { position: relative; height: 550px; padding: 20px; background: url(../images/fitset-background-one.jpg) 50% 50% no-repeat; background-size: cover; }
 #top #logo { position: absolute; top: 20px; left: 20px; background: url(../images/fitset-logo.svg) no-repeat; width: 100px; height: 50px; }
 #top h1, #top h2, #top h3 { color: white; }
 #top .section { position: absolute; bottom: 0; left: 0; right: 0; }
-#top .section.main { max-width: 898px; }
+#top .section.main { max-width: 896px; }
 #top .section.main .buttons { width: 100%; margin-top: 5px; }
 #top .section.main h1 { max-width: 600px; }
 #top .section.main p { color: white; max-width: 500px; }
@@ -76,7 +77,7 @@ strong { font-weight: 700; }
 .dark-background.cta { background: url(../images/fitset-background-four.jpg); background-size: cover; background-position: 50% 50%; }
 .dark-background.footer { background: rgba(0, 0, 0, 0.9); }
 
-.section { display: flex; flex-wrap: wrap; margin: auto; padding: 60px 30px; max-width: 1000px; }
+.section { display: flex; flex-wrap: wrap; margin: auto; clear: both; padding: 60px 30px; max-width: 1000px; }
 .section .left { flex: 1; align-items: center; text-align: center; }
 .section .left img { width: 550px; padding-right: 40px; }
 .section .right { flex: 1; display: flex; align-items: center; }
@@ -98,6 +99,8 @@ strong { font-weight: 700; }
 
 .locations { display: flex; flex-wrap: wrap; margin-bottom: 5px; }
 .locations .location { padding: 10px; text-align: left; flex: 1; }
+.locations .location:first-of-type { padding-left: 0; }
+.locations .location:last-of-type { padding-right: 0; }
 .locations .location h1 { font-size: 1.4rem; font-weight: 300; color: #ef483e; }
 .locations .location div { padding: 5px 0; font-weight: 300; color: rgba(0, 0, 0, 0.6); }
 
@@ -116,7 +119,7 @@ strong { font-weight: 700; }
 .panel { max-height: 0; overflow: hidden; margin-bottom: 5px; transition: max-height 0.2s ease-in-out; }
 
 .featured { background: #2f1945; }
-.featured h2 { color: white; }
+.featured h2 { font-size: 1.4rem; color: white; }
 .featured .logos { display: flex; align-items: center; }
 .featured .logos div { flex: auto; margin-top: 20px; }
 
@@ -128,15 +131,17 @@ strong { font-weight: 700; }
 
 .slick-prev, .slick-next { margin-top: -40px; }
 
-.slick-prev:before { content: '\f060' !important; color: rgba(0, 0, 0, 0.2) !important; }
+.slick-prev:before { content: '\f060' !important; color: rgba(0, 0, 0, 0.6) !important; }
 
-.slick-next:before { content: '\f061' !important; color: rgba(0, 0, 0, 0.2) !important; }
+.slick-next:before { content: '\f061' !important; color: rgba(0, 0, 0, 0.6) !important; }
 
 .slick-dots li button:before { content: '\f111' !important; font-size: 0.5rem !important; color: rgba(0, 0, 0, 0.6) !important; }
 
 @media screen and (max-width: 1200px) { .left img { width: 450px !important; } }
 @media screen and (max-width: 1000px) { .left img { max-width: 375px !important; width: 100% !important; }
   .locations .location { min-width: 300px; text-align: center; }
+  .locations .location:first-of-type { padding-left: 10px; }
+  .locations .location:last-of-type { padding-right: 10px; }
   .section .steps { display: block; }
   .section .steps .arrow { display: none; } }
 @media screen and (max-width: 800px) { .section { display: block; }
@@ -150,7 +155,8 @@ strong { font-weight: 700; }
 @media screen and (max-width: 550px) { h1 { font-size: 1.7rem; }
   .accordion { font-size: 1.05rem; }
   .panel p { font-size: 1.0rem; } }
-@media screen and (max-width: 375px) { #top .section { padding: 30px 0; }
+@media screen and (max-width: 375px) { #top { height: 420px; }
+  #top .section { padding: 30px 0; }
   #top .section.main { padding: 30px 20px; bottom: 0; }
   .section { padding: 30px 15px; }
   .section .logos { display: block; }

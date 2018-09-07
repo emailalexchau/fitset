@@ -1,0 +1,21 @@
+.scale {
+	transform: scale(0.8);
+	animation: scale 0.8s ease forwards;
+}
+.slide {
+	transform: translateY(-400px);
+	animation: slide 0.8s ease forwards;
+}
+.animate-none {
+	transform: scale(1.0);
+	transform: translateY(0);
+	animation: none;
+}
+
+@keyframes scale {
+  to { transform: scale(1.0); }
+}
+
+@keyframes slide {
+  to { transform: translateY(0); }
+}
