@@ -638,6 +638,11 @@ strong { font-weight: 700; }
 			}
 		}
 	}
+	.cta .cta {
+		&:hover {
+			transform: none;
+		}
+	}
 }
 
 @media screen and (max-width: 800px) {
