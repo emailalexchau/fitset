@@ -152,13 +152,13 @@ strong { font-weight: 700; }
   .locations { display: block; }
   .locations .location { min-width: 0; }
   #hamburger { display: inline-block; } }
-@media screen and (max-width: 550px) { h1 { font-size: 1.7rem; }
-  .accordion { font-size: 1.05rem; }
-  .panel p { font-size: 1.0rem; } }
-@media screen and (max-width: 375px) { #top { height: 420px; }
+@media screen and (max-width: 550px) { #top { height: 420px; }
   #top .section { padding: 30px 0; }
   #top .section.main { padding: 30px 20px; bottom: 0; }
-  .section { padding: 30px 15px; }
+  h1 { font-size: 1.7rem; }
+  .accordion { font-size: 1.05rem; }
+  .panel p { font-size: 1.0rem; } }
+@media screen and (max-width: 375px) { .section { padding: 30px 15px; }
   .section .logos { display: block; }
   .section .logos div { width: 200px; margin: auto; }
   .clock { margin-bottom: 10px; }

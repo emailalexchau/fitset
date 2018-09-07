@@ -569,6 +569,16 @@ strong { font-weight: 700; }
 }
 
 @media screen and (max-width: 550px) {
+	#top {
+		height: 420px;
+		.section { 
+			padding: 30px 0;
+		}
+		.section.main {
+			padding: 30px 20px;
+			bottom: 0;
+		}
+	}	
 	h1 {
 		font-size: 1.7rem;
 	}
@@ -581,16 +591,6 @@ strong { font-weight: 700; }
 }
 	
 @media screen and (max-width: 375px) {
-	#top {
-		height: 420px;
-		.section { 
-			padding: 30px 0;
-		}
-		.section.main {
-			padding: 30px 20px;
-			bottom: 0;
-		}
-	}	
 	.section {
 		padding: 30px 15px;
 		.logos {
