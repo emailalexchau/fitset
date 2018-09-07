@@ -626,6 +626,9 @@ strong { font-weight: 700; }
 
 @media screen and (max-width: 900px) {
 	.cta.pricing {
+		h2 {
+			margin-top: -20px;
+		}
 		text-align: center;
 		.center {
 			display: block;
@@ -639,6 +642,7 @@ strong { font-weight: 700; }
 		}
 	}
 	.cta .cta {
+		margin: 0;
 		&:hover {
 			transform: none;
 		}
