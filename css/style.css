@@ -163,7 +163,7 @@ strong { font-weight: 700; }
   .section .steps { display: block; }
   .section .steps .arrow { display: none; } }
 @media screen and (max-width: 900px) { .cta.pricing { text-align: center; }
-  .cta.pricing h2 { margin-top: -20px; }
+  .cta.pricing h2 { margin-top: 0; }
   .cta.pricing .center { display: block; width: 100%; }
   .cta.pricing .center > div .cta { width: 100%; padding-left: 0; padding-right: 0; max-width: none; }
   .cta.pricing .cta { margin-bottom: 0px; }
