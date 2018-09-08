@@ -105,7 +105,7 @@ strong { font-weight: 700; }
 .locations > div h1 { font-size: 1.4rem; font-weight: 300; color: #ef483e; }
 .locations > div div { padding: 5px 0; font-weight: 300; color: rgba(0, 0, 0, 0.6); }
 
-.benefits { display: flex; flex-wrap: wrap; margin: 20px 0 5px 0; }
+.benefits { display: flex; flex-wrap: wrap; }
 .benefits > div { flex: auto; padding: 10px 30px 10px 0; text-align: left; width: 35%; }
 .benefits > div h1 { font-size: 1.4rem; font-weight: 300; color: #ef483e; }
 .benefits > div div { padding: 5px 0; font-size: 1.2rem; font-weight: 300; color: rgba(0, 0, 0, 0.6); }
