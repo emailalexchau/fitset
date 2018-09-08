@@ -166,8 +166,8 @@ strong { font-weight: 700; }
   .cta.pricing h2 { margin-top: -20px; }
   .cta.pricing .center { display: block; width: 100%; }
   .cta.pricing .center > div .cta { width: 100%; padding-left: 0; padding-right: 0; max-width: none; }
-  .cta .cta { margin: 0; }
-  .cta .cta:hover { transform: none; } }
+  .cta.pricing .cta { margin-bottom: 0px; }
+  .cta.pricing .cta:hover { transform: none; } }
 @media screen and (max-width: 800px) { .section { display: block; }
   .section .left img { padding: 0; margin-bottom: 20px; }
   .section .right { text-align: center; }

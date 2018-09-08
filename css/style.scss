@@ -641,8 +641,8 @@ strong { font-weight: 700; }
 			}
 		}
 	}
-	.cta .cta {
-		margin: 0;
+	.cta.pricing .cta {
+		margin-bottom:0px;
 		&:hover {
 			transform: none;
 		}
