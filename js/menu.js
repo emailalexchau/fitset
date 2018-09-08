@@ -22,7 +22,7 @@ $(window).resize(function(){
 	} else {
 		$('#menu').removeClass('mobile');
 		$('#menu').show();
-		$('body').css('overflow', 'auto');
+		$('body').css('overflow', 'scroll');
 	}
 });
 
@@ -32,7 +32,7 @@ $('#hamburger').click(function() {
 		sessionStorage.setItem('menuIsVisible', 'false');
 		$('#menu').slideUp(300);
 		$('#hamburger').removeClass('close');
-		$('body').css('overflow', 'auto');
+		$('body').css('overflow', 'scroll');
 		
 	} else {
 		sessionStorage.setItem('menuIsVisible', 'true');
