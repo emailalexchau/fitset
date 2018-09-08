@@ -41,6 +41,7 @@ strong { font-weight: 700; }
 .get a:hover, #hamburger a:hover { text-decoration: underline; }
 
 .get { padding-right: 0; }
+.get:hover .button { background: #ef483e; }
 
 #hamburger { display: none; padding: 0 0 0 20px; cursor: pointer; }
 #hamburger:before { content: '\f0c9'; color: white; width: 22px; }
@@ -126,15 +127,15 @@ strong { font-weight: 700; }
 .cta .align-left { text-align: left; }
 
 .cta.pricing { text-align: center; }
-.cta.pricing .cta { margin-top: 50px; }
-.cta.pricing h2 { margin-top: -30px; padding: 0 20px 30px 20px; font-size: 1.4rem; font-weight: 300; }
-.cta.pricing .center { display: flex; flex-wrap: wrap; }
-.cta.pricing .center div { flex: auto; }
+.cta.pricing h2 { font-size: 1.4rem; font-weight: 300; }
+.cta.pricing .pricing-container { display: flex; flex-wrap: wrap; }
+.cta.pricing .pricing-container div { flex: auto; }
 
 .accordion { width: 100%; border: none; outline: none; background: white; text-align: left; cursor: pointer; padding: 15px 0 10px 0; border-top: 1px solid rgba(0, 0, 0, 0.1); font-size: 1.4rem; font-weight: 300; color: rgba(0, 0, 0, 0.6); }
 .accordion:first-of-type { border-top: none; }
 .accordion:after { content: '\f0d7'; float: right; color: rgba(0, 0, 0, 0.4); transition: all 0.2s ease-in-out; }
 .accordion.active:after { transform: rotate(-180deg); }
+.accordion:hover { color: rgba(0, 0, 0, 0.8); }
 
 .panel { max-height: 0; overflow: hidden; margin-bottom: 5px; transition: max-height 0.2s ease-in-out; }
 
@@ -163,10 +164,8 @@ strong { font-weight: 700; }
   .section .steps { display: block; }
   .section .steps .arrow { display: none; } }
 @media screen and (max-width: 900px) { .cta.pricing { text-align: center; }
-  .cta.pricing h2 { margin-top: 0; }
-  .cta.pricing .center { display: block; width: 100%; }
-  .cta.pricing .center > div .cta { width: 100%; padding-left: 0; padding-right: 0; max-width: none; }
-  .cta.pricing .cta { margin-bottom: 0px; }
+  .cta.pricing .pricing-container { display: block; width: 100%; }
+  .cta.pricing .pricing-container > div .cta { width: 100%; padding-left: 0; padding-right: 0; max-width: none; }
   .cta.pricing .cta:hover { transform: none; } }
 @media screen and (max-width: 800px) { .section { display: block; }
   .section .left img { padding: 0; margin-bottom: 20px; }

@@ -9,7 +9,6 @@
 
 $font-stack: 'Source Sans Pro', Helvetica, sans-serif;
 $brand-primary-color: #ef483e;
-$brand-primary-color-hover: #ff8c65;
 $brand-secondary-color: #2f1945;
 
 $transparent-black-extra-extra-thin: rgba(0,0,0,0.025);
@@ -137,6 +136,9 @@ strong { font-weight: 700; }
 
 .get {
 	padding-right: 0;
+	&:hover .button {
+		background: $brand-primary-color;
+	}
 }
 
 #hamburger {
@@ -486,16 +488,11 @@ strong { font-weight: 700; }
 
 .cta.pricing {
 	text-align: center;
-	.cta {
-		margin-top: 50px;
-	}
 	h2 {
-		margin-top:-30px;
-		padding: 0 20px 30px 20px;
 		font-size: 1.4rem; 
 		font-weight: 300;
 	}
-	.center {
+	.pricing-container {
 		display: flex;
 		flex-wrap: wrap;
 		div {
@@ -528,6 +525,9 @@ strong { font-weight: 700; }
 	}
 	&.active:after {
 		transform: rotate(-180deg);
+	}
+	&:hover {
+		color: $transparent-black-thick;
 	}
 }
 
@@ -625,11 +625,8 @@ strong { font-weight: 700; }
 
 @media screen and (max-width: 900px) {
 	.cta.pricing {
-		h2 {
-			margin-top: 0;
-		}
 		text-align: center;
-		.center {
+		.pricing-container {
 			display: block;
 			width: 100%;
 			> div	.cta {
@@ -641,7 +638,6 @@ strong { font-weight: 700; }
 		}
 	}
 	.cta.pricing .cta {
-		margin-bottom:0px;
 		&:hover {
 			transform: none;
 		}
