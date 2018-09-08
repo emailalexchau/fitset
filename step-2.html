@@ -20,7 +20,7 @@
 <body>
 <div id="logo" class="shift"></div>
 <div id="wrapper">
-	<div id="form" class="step-2">
+	<div id="form" class="step-2" data-aos="zoom-in" data-aos-duration="500">
 		<div class="center">
 			<h1>Complete your trial</h1>
 			<p>Enter your billing information</p>
@@ -65,6 +65,13 @@
 		</div>
 	</div>
 </div>
+<script src="js/aos.min.js"></script>
+<script type="text/javascript">
+	// Initialize AOS (Animate On Scroll)
+	AOS.init({
+		once: true,
+	});
+</script>
 <script>
 	// Credit card number input mask
 	var creditCardNumberMask = [/\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/]
