@@ -14,7 +14,6 @@ $(window).resize(function(){
 		if (sessionStorage.getItem('menuIsVisible') === 'true') {
 			$('#menu').slideDown(300);
 			$('#hamburger').addClass('close');
-			$('body').css('overflow', 'hidden');
 		} else {
 			$('#menu').hide();
 			$('#hamburger').removeClass('close');
@@ -23,6 +22,7 @@ $(window).resize(function(){
 		$('#menu').removeClass('mobile');
 		$('#menu').show();
 		$('body').css('overflow', 'scroll');
+		$('body').css('position', 'static');
 	}
 });
 
@@ -33,12 +33,16 @@ $('#hamburger').click(function() {
 		$('#menu').slideUp(300);
 		$('#hamburger').removeClass('close');
 		$('body').css('overflow', 'scroll');
+		$('body').css('position', 'static');
+		$('.quotes').css('display','block');
 		
 	} else {
 		sessionStorage.setItem('menuIsVisible', 'true');
 		$('#menu').slideDown(300);
 		$('#hamburger').addClass('close');
 		$('body').css('overflow', 'hidden');
+		$('body').css('position', 'fixed');
+		$('.quotes').css('display','none');
 	}
 });
 
