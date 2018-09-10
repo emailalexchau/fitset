@@ -33,7 +33,7 @@ $(document).ready(function () {
 	
 	$('#hamburger').click(function () {
 		if (menuIsVisible === true) {
-			$('#menu').slideUp(300);
+			$('#menu').hide();
 			$('#hamburger').removeClass('close');
 			menuIsVisible = false;
 			// Unlock Screen Position
@@ -52,7 +52,7 @@ $(document).ready(function () {
 			$('body').css('position', 'fixed');
 			$('.quotes').css('display', 'none');
 			
-			$('#menu').slideDown(300);
+			$('#menu').show();
 			$('#hamburger').addClass('close');
 			menuIsVisible = true;
 		}
