@@ -44,7 +44,7 @@ strong { font-weight: 700; }
 .get:hover .button { background: #ef483e; }
 
 #hamburger { display: none; padding: 0 0 0 20px; cursor: pointer; }
-#hamburger:before { content: '\f0c9'; color: white; width: 22px; cursor: pointer; }
+#hamburger:before { content: '\f0c9'; color: white; width: 22px; }
 #hamburger.close:before { content: '\f00d'; }
 
 .clock { left: 0; right: 0; margin: 30px auto 10px; width: 300px; }

@@ -21,7 +21,7 @@ $(document).ready(function () {
 		} else {
 			$('#menu').removeClass('mobile');
 			$('#menu').show();
-			$('body').css('overflow-y', 'scroll');
+			$('body').css('overflow', 'scroll');
 			$('body').css('position', 'static');
 			if (scroll === 0) {
 				$("#top").removeClass("opaque");
@@ -33,21 +33,18 @@ $(document).ready(function () {
 	
 	$('#hamburger').click(function () {
 		if (menuIsVisible === true) {
-			$('#menu').hide();
 			$('#hamburger').removeClass('close');
-			menuIsVisible = false;
 			// Unlock Screen Position
-			$('body').css('overflow-y', 'scroll');
+			$('body').css('overflow', 'scroll');
 			$('body').css('position', 'static');
 			$('.quotes').css('display', 'block');
 			scroll = window.scrollTo(0, scroll);
-			
+			menuIsVisible = false;
+			$('#menu').hide();
 		} else {
-			$('#menu').show();
 			scroll = $(window).scrollTop();
-			
 			// Lock Screen Position
-			$('body').css('overflow-y', 'hidden');
+			$('body').css('overflow', 'hidden');
 			$('body').css('position', 'fixed');
 			$('.quotes').css('display', 'none');
 			$('#hamburger').addClass('close');
@@ -55,6 +52,7 @@ $(document).ready(function () {
 			$('#menu').show();
 		}
 	});
+	
 	// Add Dark Background to Menu on Scroll
 	$(window).scroll(function () {
 		var y = $(window).scrollTop();
@@ -63,11 +61,6 @@ $(document).ready(function () {
 			$("#top").addClass("opaque");
 		} else {
 			$("#top").removeClass("opaque");
-		}
-
-		if (menuIsVisible === true) {
-			$("#top").addClass("opaque");
-			$('#menu').show();
 		}
 	});
 });
