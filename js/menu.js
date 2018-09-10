@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	'use strict';
-	var scroll = 0;
-	var menuIsVisible = null;
+	var scroll;
+	var menuIsVisible;
 	
 	if ($(window).width() <= 800) {
 		$('#menu').addClass('mobile');
@@ -47,15 +47,14 @@ $(document).ready(function () {
 			}
 		} else {
 			scroll = $(window).scrollTop();
-			$('#menu').slideDown(300);
-			$('#hamburger').addClass('close');
-			menuIsVisible = true;
 			// Lock Screen Position
 			$('body').css('overflow-y', 'hidden');
 			$('body').css('position', 'fixed');
 			$('.quotes').css('display', 'none');
-			// Scroll Window Back to Original Position
 			
+			$('#menu').slideDown(300);
+			$('#hamburger').addClass('close');
+			menuIsVisible = true;
 		}
 	});
 	// Add Dark Background to Menu on Scroll
