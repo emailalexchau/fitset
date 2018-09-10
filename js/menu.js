@@ -42,19 +42,17 @@ $(document).ready(function () {
 			$('.quotes').css('display', 'block');
 			scroll = window.scrollTo(0, scroll);
 			
-			if (scroll < 70) {
-				$("#top").addClass("opaque");
-			}
 		} else {
+			$('#menu').show();
 			scroll = $(window).scrollTop();
+			
 			// Lock Screen Position
 			$('body').css('overflow-y', 'hidden');
 			$('body').css('position', 'fixed');
 			$('.quotes').css('display', 'none');
-			
-			$('#menu').show();
 			$('#hamburger').addClass('close');
 			menuIsVisible = true;
+			$('#menu').show();
 		}
 	});
 	// Add Dark Background to Menu on Scroll
@@ -69,6 +67,7 @@ $(document).ready(function () {
 
 		if (menuIsVisible === true) {
 			$("#top").addClass("opaque");
+			$('#menu').show();
 		}
 	});
 });
