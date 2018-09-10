@@ -58,12 +58,11 @@ $(document).ready(function () {
 			
 		}
 	});
-	
 	// Add Dark Background to Menu on Scroll
 	$(window).scroll(function () {
-		scroll = $(window).scrollTop();
+		var y = $(window).scrollTop();
 
-		if (scroll >= 70) {
+		if (y >= 70) {
 			$("#top").addClass("opaque");
 		} else {
 			$("#top").removeClass("opaque");
@@ -72,10 +71,9 @@ $(document).ready(function () {
 		if (menuIsVisible === true) {
 			$("#top").addClass("opaque");
 		}
-
 	});
-
 });
+
 
 
 
