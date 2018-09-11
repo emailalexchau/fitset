@@ -31,7 +31,12 @@ $(document).ready(function () {
 			
 			$('body').css('overflow', 'scroll');
 			$('body').css('overflow-x', 'hidden');
-			$('body').css('height', '');
+			
+			// Enable scrolling.
+			document.ontouchmove = function (e) {
+			  return true;
+			};
+			
 			window.scrollTo(0, scroll);
 			menuIsVisible = false;
 			
@@ -44,8 +49,13 @@ $(document).ready(function () {
 			}
 		} else {
 			scroll = $(window).scrollTop();
+			
+			// Disable scrolling.
+			document.ontouchmove = function (e) {
+			  e.preventDefault();
+			};
+			
 			$('body').css('overflow', 'hidden');
-			$('body').css('height', '100%');
 			$('#hamburger').addClass('close');
 			$("#top").addClass("opaque");
 			$('#menu').show();
