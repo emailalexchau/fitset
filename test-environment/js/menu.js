@@ -30,15 +30,15 @@ $(document).ready(function () {
 			$('#menu').hide();
 			$('#hamburger').removeClass('close');
 			// Unlock Screen Position
-			$('body').css('overflow-y', 'scroll');
-			$('body').css('position', 'static');
+			$('html').css('overflow-y', 'scroll');
+			$('html').css('position', 'static');
 			$('.quotes').css('display', 'block');
 			scroll = window.scrollTo(0, scroll);
 		} else {
 			scroll = $(window).scrollTop();
 			// Lock Screen Position
-			$('body').css('overflow-y', 'hidden');
-			$('body').css('position', 'fixed');
+			$('html').css('overflow-y', 'hidden');
+			$('html').css('position', 'fixed');
 			$('.quotes').css('display', 'none');
 			$('#hamburger').addClass('close');
 			
@@ -60,8 +60,8 @@ $(document).ready(function () {
 		} else {
 			$('#menu').removeClass('mobile');
 			$('#menu').show();
-			$('body').css('overflow-y', 'scroll');
-			$('body').css('position', 'static');
+			$('html').css('overflow-y', 'scroll');
+			$('html').css('position', 'static');
 			if (scroll === 0) {
 				$("#top").removeClass("opaque");
 			}
