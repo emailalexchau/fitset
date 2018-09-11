@@ -1,10 +1,16 @@
+$(document).addEventListener('DOMContentLoaded', function() {
+	'use strict';
+   document.ontouchmove = function (e) {
+		return true;
+	};
+}, false);
+
+
 $(document).ready(function () {
 	'use strict';
 	var menuIsVisible;
 	
-	document.ontouchmove = function (e) {
-		return true;
-	};
+	
 
 	if ($(window).width() <= 800) {
 		$('#menu').addClass('mobile');
