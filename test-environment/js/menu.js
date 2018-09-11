@@ -2,15 +2,16 @@ $(document).ready(function () {
 	'use strict';
 	var menuIsVisible;
 	
+	// Initialize ontouchmove Scrolling For First Page Load
 	// Disable Scrolling
-			document.ontouchmove = function (e) {
-				e.preventDefault();
-			};
+	document.ontouchmove = function (e) {
+		e.preventDefault();
+	};
 	
 	// Enable Scrolling
-			document.ontouchmove = function (e) {
-				return true;
-			};
+	document.ontouchmove = function () {
+		return true;
+	};
 	
 	if ($(window).width() <= 800) {
 		$('#menu').addClass('mobile');
@@ -37,7 +38,7 @@ $(document).ready(function () {
 			$('body').css('overflow', '');
 
 			// Enable Scrolling
-			document.ontouchmove = function (e) {
+			document.ontouchmove = function () {
 				return true;
 			};
 
