@@ -42,13 +42,14 @@ $(document).ready(function () {
 			$('#hamburger').addClass('close');
 			$('#menu').show();
 			$('body').css('overflow', 'hidden');
-
 			$("#top").addClass("opaque");
 
 			// Disable Scrolling
-			document.ontouchmove = function (e) {
+			document.addEventListener('touchmove', function (e) {
 				e.preventDefault();
-			};
+			}, {
+				passive: false
+			});
 
 			menuIsVisible = true;
 		}
