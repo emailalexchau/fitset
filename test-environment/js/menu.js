@@ -26,24 +26,18 @@ $(document).ready(function () {
 	$('#hamburger').click(function () {
 		
 		if (menuIsVisible === true) {
-			menuIsVisible = false;
 			$('#menu').hide();
 			$('#hamburger').removeClass('close');
 			// Unlock Screen Position
-			$('html').css('overflow-y', 'scroll');
-			$('html').css('position', 'static');
-			$('.quotes').css('display', 'block');
+			$('body').css('overflow-y', 'scroll');
 			scroll = window.scrollTo(0, scroll);
+			menuIsVisible = false;
 		} else {
 			scroll = $(window).scrollTop();
 			// Lock Screen Position
-			$('html').css('overflow-y', 'hidden');
-			$('html').css('position', 'fixed');
-			$('.quotes').css('display', 'none');
+			$('body').css('overflow-y', 'hidden');
 			$('#hamburger').addClass('close');
-			
 			$('#menu').show();
-			
 			menuIsVisible = true;
 		}
 	});
@@ -60,12 +54,10 @@ $(document).ready(function () {
 		} else {
 			$('#menu').removeClass('mobile');
 			$('#menu').show();
-			$('html').css('overflow-y', 'scroll');
-			$('html').css('position', 'static');
+			$('body').css('overflow-y', 'scroll');
 			if (scroll === 0) {
 				$("#top").removeClass("opaque");
 			}
-			$('.quotes').css('display', 'block');
 			menuIsVisible = false;
 		}
 	});
