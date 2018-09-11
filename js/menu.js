@@ -9,7 +9,7 @@ $(document).ready(function () {
 	};
 	
 	// Enable Scrolling
-	document.ontouchmove = function () {
+	document.ontouchmove = function (e) {
 		return true;
 	};
 	
@@ -38,7 +38,7 @@ $(document).ready(function () {
 			$('body').css('overflow', '');
 
 			// Enable Scrolling
-			document.ontouchmove = function () {
+			document.ontouchmove = function (e) {
 				return true;
 			};
 
