@@ -1,19 +1,25 @@
 $(document).ready(function () {
 	'use strict';
-	var scroll;
 	var menuIsVisible;
+	
+	// Initialize ontouchmove Scrolling For First Page Load
+	// Disable Scrolling
+	document.ontouchmove = function (e) {
+		e.preventDefault();
+	};
+	
+	// Enable Scrolling
+	document.ontouchmove = true;
+	
 	
 	if ($(window).width() <= 800) {
 		$('#menu').addClass('mobile');
 	} else {
 		$('#menu').removeClass('mobile');
 	}
-	
-	// Add Dark Background to Menu on Scroll
-	$(window).scroll(function () {
-		var y = $(window).scrollTop();
 
-		if (y >= 70) {
+	$(window).scroll(function () {
+		if ($(window).scrollTop() > 0) {
 			$("#top").addClass("opaque");
 		} else {
 			$("#top").removeClass("opaque");
@@ -22,61 +28,53 @@ $(document).ready(function () {
 			$("#top").addClass("opaque");
 		}
 	});
-	
+
 	$('#hamburger').click(function () {
-		
 		if (menuIsVisible === true) {
-			menuIsVisible = false;
-			$('#menu').hide();
+			// Close Menu
 			$('#hamburger').removeClass('close');
-			// Unlock Screen Position
-			$('body').css('overflow', 'scroll');
-			$('body').css('position', 'static');
-			$('.quotes').css('display', 'block');
-			scroll = window.scrollTo(0, scroll);
+			$('#menu').hide();
+			$('body').css('overflow', '');
+
+			// Enable Scrolling
+			document.ontouchmove = true;
+
+			menuIsVisible = false;
+
+			if ($(window).scrollTop() === 0) {
+				$("#top").removeClass("opaque");
+			}
+
 		} else {
-			scroll = $(window).scrollTop();
-			// Lock Screen Position
-			$('body').css('overflow', 'hidden');
-			$('body').css('position', 'fixed');
-			$('.quotes').css('display', 'none');
+			// Open Menu
 			$('#hamburger').addClass('close');
-			
 			$('#menu').show();
-			
+			$('body').css('overflow', 'hidden');
+			$("#top").addClass("opaque");
+
+			// Disable Scrolling
+			document.ontouchmove = function (e) {
+				e.preventDefault();
+			};
+
 			menuIsVisible = true;
 		}
 	});
-	
+
 	$(window).resize(function () {
 		if ($(window).width() <= 800) {
 			$('#menu').addClass('mobile');
-			if (menuIsVisible === 'true') {
+
+			if (menuIsVisible === true) {
 				$('#hamburger').addClass('close');
+				$('#menu').show();
 			} else {
 				$('#menu').hide();
-				$('#hamburger').removeClass('close');
 			}
+
 		} else {
 			$('#menu').removeClass('mobile');
 			$('#menu').show();
-			$('body').css('overflow', 'scroll');
-			$('body').css('position', 'static');
-			if (scroll === 0) {
-				$("#top").removeClass("opaque");
-			}
-			$('.quotes').css('display', 'block');
-			menuIsVisible = false;
 		}
 	});
-
 });
-
-
-
-
-
-
-
-
-
