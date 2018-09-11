@@ -1,19 +1,15 @@
 $(document).ready(function () {
 	'use strict';
-	var scroll;
 	var menuIsVisible;
-	
+
 	if ($(window).width() <= 800) {
 		$('#menu').addClass('mobile');
 	} else {
 		$('#menu').removeClass('mobile');
 	}
-	
-	// Add Dark Background to Menu on Scroll
-	$(window).scroll(function () {
-		var y = $(window).scrollTop();
 
-		if (y > 5) {
+	$(window).scroll(function () {
+		if ($(window).scrollTop() > 0) {
 			$("#top").addClass("opaque");
 		} else {
 			$("#top").removeClass("opaque");
@@ -22,74 +18,56 @@ $(document).ready(function () {
 			$("#top").addClass("opaque");
 		}
 	});
-	
+
 	$('#hamburger').click(function () {
 		if (menuIsVisible === true) {
-			$('#menu').hide();
+			// Close Menu
 			$('#hamburger').removeClass('close');
-			
-			
-			$('body').css('overflow', 'scroll');
-			$('body').css('overflow-x', 'hidden');
-			
-			// Enable scrolling.
-			document.ontouchmove = function (e) {
-			  return true;
-			};
-			
-			window.scrollTo(0, scroll);
-			menuIsVisible = false;
-			
-			var y = $(window).scrollTop();
+			$('#menu').hide();
+			$('body').css('overflow', '');
 
-			if (y > 5) {
-				$("#top").addClass("opaque");
-			} else {
+			// Enable Scrolling
+			document.ontouchmove = function (e) {
+				return true;
+			};
+
+			menuIsVisible = false;
+
+			if ($(window).scrollTop() === 0) {
 				$("#top").removeClass("opaque");
 			}
+
 		} else {
-			scroll = $(window).scrollTop();
-			
-			// Disable scrolling.
-			document.ontouchmove = function (e) {
-			  e.preventDefault();
-			};
-			
-			$('body').css('overflow', 'hidden');
+			// Open Menu
 			$('#hamburger').addClass('close');
-			$("#top").addClass("opaque");
 			$('#menu').show();
+			$('body').css('overflow', 'hidden');
+
+			$("#top").addClass("opaque");
+
+			// Disable Scrolling
+			document.ontouchmove = function (e) {
+				e.preventDefault();
+			};
+
 			menuIsVisible = true;
 		}
 	});
-	
+
 	$(window).resize(function () {
 		if ($(window).width() <= 800) {
 			$('#menu').addClass('mobile');
-			if (menuIsVisible === 'true') {
+
+			if (menuIsVisible === true) {
 				$('#hamburger').addClass('close');
+				$('#menu').show();
 			} else {
 				$('#menu').hide();
-				$('#hamburger').removeClass('close');
 			}
+
 		} else {
 			$('#menu').removeClass('mobile');
 			$('#menu').show();
-			$('body').css('overflow', 'scroll');
-			if (scroll === 0) {
-				$("#top").removeClass("opaque");
-			}
-			menuIsVisible = false;
 		}
 	});
-
 });
-
-
-
-
-
-
-
-
-
