@@ -1,11 +1,12 @@
-
-
 $(document).ready(function () {
 	'use strict';
 	var menuIsVisible;
 	
+	// Enable Scrolling
+			document.ontouchmove = function (e) {
+				return true;
+			};
 	
-
 	if ($(window).width() <= 800) {
 		$('#menu').addClass('mobile');
 	} else {
