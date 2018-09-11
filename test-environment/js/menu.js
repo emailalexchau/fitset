@@ -1,9 +1,3 @@
-$(document).addEventListener('DOMContentLoaded', function() {
-	'use strict';
-   document.ontouchmove = function (e) {
-		return true;
-	};
-}, false);
 
 
 $(document).ready(function () {
