@@ -2,6 +2,11 @@ $(document).ready(function () {
 	'use strict';
 	var menuIsVisible;
 	
+	// Disable Scrolling
+			document.ontouchmove = function (e) {
+				e.preventDefault();
+			};
+	
 	// Enable Scrolling
 			document.ontouchmove = function (e) {
 				return true;
