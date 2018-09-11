@@ -31,7 +31,7 @@ $(document).ready(function () {
 			$('#hamburger').removeClass('close');
 			// Unlock Screen Position
 			$('body').css('overflow-y', 'scroll');
-			$('body').css('position', 'fixed');
+			$('body').css('position', 'static');
 			$('.quotes').css('display', 'block');
 			scroll = window.scrollTo(0, scroll);
 		} else {
@@ -61,7 +61,7 @@ $(document).ready(function () {
 			$('#menu').removeClass('mobile');
 			$('#menu').show();
 			$('body').css('overflow-y', 'scroll');
-			$('body').css('position', 'fixed');
+			$('body').css('position', 'static');
 			if (scroll === 0) {
 				$("#top").removeClass("opaque");
 			}
