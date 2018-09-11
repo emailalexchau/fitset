@@ -9,8 +9,9 @@ $(document).ready(function () {
 	};
 	
 	// Enable Scrolling
-	document.ontouchmove = true;
-	
+	document.ontouchmove = function () {
+		return true;
+	};
 	
 	if ($(window).width() <= 800) {
 		$('#menu').addClass('mobile');
@@ -37,7 +38,9 @@ $(document).ready(function () {
 			$('body').css('overflow', '');
 
 			// Enable Scrolling
-			document.ontouchmove = true;
+			document.ontouchmove = function () {
+				return true;
+			};
 
 			menuIsVisible = false;
 
