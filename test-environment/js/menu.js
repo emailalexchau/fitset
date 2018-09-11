@@ -1,6 +1,10 @@
 $(document).ready(function () {
 	'use strict';
 	var menuIsVisible;
+	
+	document.ontouchmove = function (e) {
+		return true;
+	};
 
 	if ($(window).width() <= 800) {
 		$('#menu').addClass('mobile');
@@ -45,11 +49,9 @@ $(document).ready(function () {
 			$("#top").addClass("opaque");
 
 			// Disable Scrolling
-			document.addEventListener('touchmove', function (e) {
+			document.ontouchmove = function (e) {
 				e.preventDefault();
-			}, {
-				passive: false
-			});
+			};
 
 			menuIsVisible = true;
 		}
