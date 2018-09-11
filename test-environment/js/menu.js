@@ -31,6 +31,7 @@ $(document).ready(function () {
 			
 			$('body').css('overflow', 'scroll');
 			$('body').css('overflow-x', 'hidden');
+			$('body').css('height', '');
 			window.scrollTo(0, scroll);
 			menuIsVisible = false;
 			
@@ -44,6 +45,7 @@ $(document).ready(function () {
 		} else {
 			scroll = $(window).scrollTop();
 			$('body').css('overflow', 'hidden');
+			$('body').css('height', '100%');
 			$('#hamburger').addClass('close');
 			$("#top").addClass("opaque");
 			$('#menu').show();
