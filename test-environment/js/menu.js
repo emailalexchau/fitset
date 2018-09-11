@@ -27,7 +27,10 @@ $(document).ready(function () {
 		if (menuIsVisible === true) {
 			$('#menu').hide();
 			$('#hamburger').removeClass('close');
-			$('body').css('overflow-y', 'scroll');
+			
+			
+			$('body').css('overflow', 'scroll');
+			$('body').css('overflow-x', 'hidden');
 			window.scrollTo(0, scroll);
 			menuIsVisible = false;
 			
@@ -40,7 +43,7 @@ $(document).ready(function () {
 			}
 		} else {
 			scroll = $(window).scrollTop();
-			$('body').css('overflow-y', 'hidden');
+			$('body').css('overflow', 'hidden');
 			$('#hamburger').addClass('close');
 			$("#top").addClass("opaque");
 			$('#menu').show();
@@ -60,7 +63,7 @@ $(document).ready(function () {
 		} else {
 			$('#menu').removeClass('mobile');
 			$('#menu').show();
-			$('body').css('overflow-y', 'scroll');
+			$('body').css('overflow', 'scroll');
 			if (scroll === 0) {
 				$("#top").removeClass("opaque");
 			}
