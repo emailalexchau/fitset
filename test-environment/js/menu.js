@@ -24,19 +24,25 @@ $(document).ready(function () {
 	});
 	
 	$('#hamburger').click(function () {
-		
 		if (menuIsVisible === true) {
 			$('#menu').hide();
 			$('#hamburger').removeClass('close');
-			// Unlock Screen Position
 			$('body').css('overflow-y', 'scroll');
-			scroll = window.scrollTo(0, scroll);
+			window.scrollTo(0, scroll);
 			menuIsVisible = false;
+			
+			var y = $(window).scrollTop();
+
+			if (y > 5) {
+				$("#top").addClass("opaque");
+			} else {
+				$("#top").removeClass("opaque");
+			}
 		} else {
 			scroll = $(window).scrollTop();
-			// Lock Screen Position
 			$('body').css('overflow-y', 'hidden');
 			$('#hamburger').addClass('close');
+			$("#top").addClass("opaque");
 			$('#menu').show();
 			menuIsVisible = true;
 		}
