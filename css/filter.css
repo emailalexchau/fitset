@@ -1,0 +1,19 @@
+@import url(https://use.fontawesome.com/releases/v5.2.0/css/all.css);
+#filter { background: rgba(0, 0, 0, 0.025); overflow: auto; }
+#filter a { color: rgba(0, 0, 0, 0.6); text-decoration: none; }
+#filter a:hover { text-decoration: underline; }
+#filter .number { margin-left: 0.2rem; font-weight: 400; color: rgba(0, 0, 0, 0.4); }
+#filter .clear { margin-left: 0.5rem; font-weight: 400; color: rgba(0, 0, 0, 0.4); }
+#filter .arrow { position: absolute; top: 12px; right: 10px; color: rgba(0, 0, 0, 0.4); cursor: pointer; transition: all 0.2s ease-in-out; }
+#filter .arrow.closed { transform: rotate(-180deg); transition: all 0.2s ease-in-out; }
+#filter .filter { position: relative; padding: 14px 8px 8px 20px; border-top: 1px solid rgba(0, 0, 0, 0.1); }
+#filter .filter:first-child { border-top: 0; }
+#filter .filter h1 { font-size: 1.0rem; font-weight: 600; line-height: 1.0rem; }
+#filter .filter #filter-studios-options ul li { padding-left: 0; }
+#filter .filter #filter-studios-options ul li:before { border: none; }
+#filter .filter ul { /* Checkboxes */ overflow: auto; }
+#filter .filter ul li { position: relative; padding: 5px 0 5px 25px; }
+#filter .filter ul li:first-child { margin-top: 5px; }
+#filter .filter ul li:before { position: absolute; top: 5px; left: 0; width: 15px; height: 15px; content: ''; border: 1px solid rgba(0, 0, 0, 0.6); margin-right: 10px; }
+#filter .filter ul li.selected:before { background: #2f1945; border: 1px solid #2f1945; }
+#filter .filter ul li.diagonal-fill:before { background-image: linear-gradient(135deg, rgba(0, 0, 0, 0) 50%, #2f1945 50%); border: 1px solid #646464; }

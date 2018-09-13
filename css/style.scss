@@ -4,6 +4,7 @@
 @import url(include/slicktheme.css);
 @import url(include/aos.css);
 @import url(forms.css);
+@import url(filter.css);
 @import url(https://use.fontawesome.com/releases/v5.2.0/css/all.css);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
 
@@ -31,43 +32,42 @@ body, button {
 	font: 1.0em $font-stack;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, p {
 	color: $transparent-black-thick;
 }
 
 h1 {
 	font-size: 3.0rem;
 	font-weight: 700;
-	padding-bottom: 0.5rem;
 }
 
 h2 {
 	font-size: 1.6rem;
 	font-weight: 400;
-	padding-bottom: 0.5rem;
 }
 
 h3 {
 	font-size: 2.0rem;
 	font-weight: 700;
-	padding-bottom: 0.5rem;
 }
-
-h4 { 
-	font-size: 1.5rem;
-	font-weight: 700;
-	padding-bottom: 0.5rem;
-}
-
 p {
 	font-size: 1.2rem;
-	line-height: 1.6rem;
-	padding-bottom: 0.5rem;
-	color: $transparent-black-medium;
 	font-weight: 300;
+	line-height: 1.5;
+	color: $transparent-black-medium;
 }
 
-strong { font-weight: 700; }
+strong {
+	font-weight: 700;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-right {
+	text-align: right;
+}
 
 #menu {
 	float: right;
@@ -97,6 +97,7 @@ strong { font-weight: 700; }
 	width: 100%;
 	height: 100%;
 	background: white;
+	overflow-x: hidden;
 	ul {
 		width: 100%;
 		li {
@@ -116,7 +117,7 @@ strong { font-weight: 700; }
 	}
 }
 
-.get, #hamburger {
+#get, #hamburger {
 	float: right;
 	display: inline-block;
 	position: relative;
@@ -134,7 +135,7 @@ strong { font-weight: 700; }
 	}
 }
 
-.get {
+#get {
 	padding-right: 0;
 	&:hover .button {
 		background: $brand-primary-color;
@@ -202,12 +203,17 @@ strong { font-weight: 700; }
 	}
 }
 
+#cover {
+	background: url(../images/fitset-background-one.jpg) 50% 50% no-repeat;
+	background-size: cover;
+}
+
 #top {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 1;
+	z-index: 9999;
 	padding: 20px;
 	box-sizing: border-box;
 	height: 70px;
@@ -229,11 +235,6 @@ strong { font-weight: 700; }
 	}
 }
 
-.cover {
-	background: url(../images/fitset-background-one.jpg) 50% 50% no-repeat;
-	background-size: cover;
-}
-
 .first {
 	padding-top: 70px;
 }
@@ -251,6 +252,9 @@ strong { font-weight: 700; }
 			.buttons {
 				width: 100%;
 				margin-top: 5px;
+				a {
+					text-decoration: none;
+				}
 			}
 			h1 {
 				max-width: 600px;
@@ -272,18 +276,134 @@ strong { font-weight: 700; }
 		}
 	}
 	&.cta {
-		background: url(../images/fitset-background-four.jpg);
-		background-size: cover;
-		background-position: 50% 50%;
-		&.pricing {
-			background: rgba(0,0,0,0.05);
-			h2 {
-				color: $transparent-black-medium;
+		background: rgba(0,0,0,0.05);
+		text-align: center;
+		h1, p {
+			color: white;
+		}	
+		h2 {
+			font-size: 1.4rem; 
+			font-weight: 300;
+			color: $transparent-black-medium;
+		}
+		.options {
+			display: flex;
+			div {
+				flex: auto;
+			}	
+		}
+	}
+	&.studio-image {
+		text-align: center;
+		h1 {
+			margin: -20px auto 20px auto;
+		}
+	}
+	&.featured {
+		background: $brand-secondary-color;
+		h2 {
+			font-size: 1.4rem;
+			color: white;
+		}
+		.logos {
+			display: flex;
+			align-items: center;
+			div {
+				flex: auto;
+				margin-top:20px;
 			}
 		}
 	}
 	&.footer {
 		background: $transparent-black-extra-thick;
+		.section {
+			padding: 20px 0;
+		}
+		.links {
+			display: flex;
+			max-width: 300px;
+			margin: auto;
+			font-size: 0.8rem;
+			div {
+				flex: auto;
+				margin: 20px auto;
+				text-align: center;
+				color: $transparent-white-medium;
+				a {
+					color: $transparent-white-medium;
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+.dark-background.cta .options .option {
+	display: inline-block;
+	position: relative;
+	max-width: 220px;
+	margin: 40px auto 20px auto;
+	padding: 40px;
+	background: white;
+	border-radius: 3px;
+	transition: transform 0.2s ease-in-out;
+	text-align: center;
+	&:before {
+		position: absolute;
+		width: 160px;
+		top: -20px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		padding: 5px;
+		background: $brand-secondary-color;
+		border-radius: 3px;
+		content: '2 Weeks Free';
+		font-size: 1.4rem;
+		font-weight: 300;
+		color: white;
+	}
+	&:hover {
+		box-shadow: 0 0 5px 0 $transparent-black-thin;
+		transform: scale(1.05);
+		transition: transform 0.2s ease-in-out;
+	}
+
+	a {
+		text-decoration: none;
+	}
+	h1 {
+		font-size: 5.0rem;
+		line-height: 1;
+		font-weight: 600;
+		color: $brand-secondary-color;
+		.superscript {
+			display: inline-block;
+			font-size: 2.5rem;
+			vertical-align: top;
+		}
+	}
+	p {
+		padding: 10px 0;
+		margin: 0;
+		color: $transparent-black-medium;
+		&.per-month {
+			margin-top: -10px;
+			padding-bottom: 0;
+			font-size: 1.0rem;
+		}
+	}
+	&.jog:before {
+		content: 'Jog';
+	}
+	&.run:before {
+		content: 'Run';
+	}
+	&.sprint:before {
+		content: 'Sprint';
 	}
 }
 
@@ -291,7 +411,6 @@ strong { font-weight: 700; }
 	display: flex;
 	flex-wrap: wrap;
 	margin: auto;
-	clear: both;
 	padding: 40px 30px;
 	max-width: 1000px;
 	.left {
@@ -320,9 +439,12 @@ strong { font-weight: 700; }
 	&.shift-up {
 		padding-top: 5px;
 	}
+	&.shift-down {
+		padding-bottom: 0;
+	}
 }
 
-.steps {
+#steps {
 	display: flex;
 	.step {
 		flex: 1;
@@ -352,7 +474,7 @@ strong { font-weight: 700; }
 	}
 }
 
-.quotes {
+#quotes {
 	max-width: 720px;
 	padding: 0 20px;
 	margin: auto;
@@ -371,15 +493,14 @@ strong { font-weight: 700; }
 	p {
 		font-size: 1.5rem;
 		color: $transparent-black-medium;
-		&.thin {
-			margin-top: -0.5rem;
+		&.thin {	
 			font-size: 1.0rem;
 			font-weight: 300;
 		}
 	}
 }
 
-.locations {
+#locations {
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 5px;
@@ -400,7 +521,7 @@ strong { font-weight: 700; }
 	}
 }
 
-.benefits {
+#benefits {
 	display: flex;
 	flex-wrap: wrap;
 	> div {
@@ -411,6 +532,7 @@ strong { font-weight: 700; }
 		h1 {
 			font-size: 1.4rem;
 			font-weight: 300;
+			margin-top: 0.5rem;
 			color: $brand-primary-color;
 		}
 		div {
@@ -419,99 +541,6 @@ strong { font-weight: 700; }
 			font-weight: 300;
 			color: $transparent-black-medium;
 		}
-	}
-}
-
-.cta {
-	h1, h2, p {
-		color: white;
-	}
-	.cta {
-		display: inline-block;
-		position: relative;
-		max-width: 220px;
-		margin: 40px auto 20px auto;
-		padding: 40px;
-		background: white;
-		border-radius: 3px;
-		transition: transform 0.2s ease-in-out;
-		text-align: center;
-		a {
-			text-decoration: none;
-		}
-		&:hover {
-			box-shadow: 0 0 5px 0 $transparent-black-thin;
-			transform: scale(1.05);
-			transition: transform 0.2s ease-in-out;
-		}
-		h1 {
-			font-size: 5.0rem;
-			line-height: 4.5rem;
-			font-weight: 600;
-			color: $brand-secondary-color;
-			.superscript {
-				display: inline-block;
-				font-size: 3.0rem;
-				vertical-align: top;
-				margin-top: -0.6rem;
-			}
-		}
-		p {
-			padding: 10px 0;
-			margin: 0;
-			color: $transparent-black-medium;
-			&.per-month {
-				margin-top: -10px;
-				padding-bottom: 0;
-				font-size: 1.0rem;
-			}
-		}
-		&:before {
-			position: absolute;
-			width: 160px;
-			top: -20px;
-			left: 0;
-			right: 0;
-			margin: auto;
-			padding: 5px;
-			background: $brand-secondary-color;
-			border-radius: 3px;
-			content: '2 Weeks Free';
-			font-size: 1.4rem;
-			font-weight: 300;
-			color: white;
-		}
-		
-		&.jog:before {
-			content: 'Jog';
-		}
-		&.run:before {
-			content: 'Run';
-		}
-		&.sprint:before {
-			content: 'Sprint';
-		}
-	}
-	.align-right {
-		text-align: right;
-	}
-	.align-left {
-		text-align: left;
-	}
-}
-
-.cta.pricing {
-	text-align: center;
-	h2 {
-		font-size: 1.4rem; 
-		font-weight: 300;
-	}
-	.pricing-container {
-		display: flex;
-		flex-wrap: wrap;
-		div {
-			flex: auto;
-		}	
 	}
 }
 
@@ -552,41 +581,89 @@ strong { font-weight: 700; }
 	transition: max-height 0.2s ease-in-out;
 }
 
-.featured {
-	background: $brand-secondary-color;
-	h2 {
-		font-size: 1.4rem;
-		color: white;
+.panel.open {
+	max-height: none;
+	overflow: auto;
+}
+
+#flex-vertical-fill {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+#studios {
+	flex: 1;
+	display: flex;
+	#filter {
+		flex-shrink: 1;
+		flex-grow: 0;
+		height: auto;
+		min-width: 300px;
 	}
-	.logos {
-		display: flex;
-		align-items: center;
-		div {
-			flex: auto;
-			margin-top:20px;
+	#map {
+		flex-grow: 1;
+		height: auto;
+		z-index: 1;
+	}
+}
+
+#studio-anchor {
+	display: block;
+	position: relative;
+	top: -69px;
+	visibility: none;
+}
+
+#studio-image {
+	width: 100%;
+	max-width: 1000px;
+	height: 300px;
+	background: url(../images/studio-be-hot-yoga.jpg) 50% 50% $transparent-black-extra-thin;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 20px 0;
+	margin: auto;
+	border-radius: 3px;
+}
+
+#tilted {
+	display: flex;
+	overflow-x: hidden;
+	.left {
+		flex: 1;
+		text-align: left !important;
+		align-self: flex-end;
+		padding: 0 20px 50px 0;
+	}
+	.right {
+		flex:1;
+		align-self: flex-end;
+		img {
+			width: 100%;
+			height: auto;
 		}
 	}
 }
 
-.footer {
-	.section {
-		padding: 20px 0;
-	}
-	h1 {
-		color: white;
-	}
-	.links {
-		display: flex;
-		max-width: 400px;
+#phone {
+	flex: 1;
+	align-items: center;
+	text-align: center;
+	margin: auto;
+	position: relative;
+	height: 550px;
+	display: block;
+	> img {
+		position: absolute;
 		margin: auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		&.active { z-index: 3; }
 	}
-	.links div {
-		flex: auto;
-		margin: 20px auto;
-		text-align: center;
-		color: rgba(255,255,255,0.6);
-		a { color: rgba(255,255,255,0.6); text-decoration: none; }
-	}
+
 }
 
 .slick-prev, .slick-next {
@@ -612,48 +689,40 @@ strong { font-weight: 700; }
 	color: $transparent-black-medium !important;
 }
 
-@media screen and (max-width: 1200px) {
-	.left img {
-		width: 450px !important;
-	}
-}
-
 @media screen and (max-width: 1000px) {
-	.left img {
-		max-width: 375px !important;
-		width: 100% !important;
+	.left {
+		padding-right: 20px;
+		img {
+			max-width: 375px;
+			width: 100% !important;
+		}
 	}
-	.locations div {
+	#locations div {
 		min-width: 300px;
 		text-align: center;
 	}
-	.section {
-		.steps {
-			display: block;
-			.arrow {
-				display: none;
-			}
+	#steps {
+		display: block;
+		.arrow {
+			display: none;
 		}
 	}
 }
 
 @media screen and (max-width: 900px) {
-	.cta.pricing {
-		text-align: center;
-		.pricing-container {
+	.dark-background.cta {
+		.options {
 			display: block;
-			width: 100%;
-			> div	.cta {
+			.option {
 				width: 100%;
 				padding-left: 0;
 				padding-right: 0;
 				max-width: none;
+				box-sizing: border-box;
+				&:hover {
+					transform: none;
+				}
 			}
-		}
-	}
-	.cta.pricing .cta {
-		&:hover {
-			transform: none;
 		}
 	}
 }
@@ -665,22 +734,42 @@ strong { font-weight: 700; }
 			padding: 0;
 			margin-bottom: 20px;
 		}
-		.right { text-align: center; }
-		.logos {
-			display: block;
-			div {
-				width: 300px;
-				margin: auto;
-			}
+		.right {
+			text-align: center;
+		}
+		.phone {
+			margin-bottom: 20px;
 		}
 	}
-	.locations {
+	#tilted .right {
+		display: none;
+	}
+	#locations {
 		display: block;
 		div {
 			min-width: 0;
 		}
 	}
-	.benefits {
+	#flex-vertical-fill {
+		height: 100%;
+	}
+	#studios {
+		display: block;
+		height: auto;
+		#filter {
+			flex: 1;
+		}
+		#map {
+			flex: 1;
+			height: 400px;
+		}
+		.filter {
+			max-height: 300px;
+			overflow: auto;
+		}
+		
+	}
+	#benefits {
 		display: block;
 		> div {
 			width: 100%;
@@ -692,6 +781,7 @@ strong { font-weight: 700; }
 	#hamburger {
 		display: inline-block;
 	}
+	
 }
 
 @media screen and (max-width: 550px) {
@@ -716,30 +806,16 @@ strong { font-weight: 700; }
 	.panel p {
 		font-size: 1.0rem;
 	}
+	#studio-image {
+		height: 180px;
+	}
 }
 	
 @media screen and (max-width: 375px) {
 	.section {
 		padding: 30px 15px;
-		.logos {
-			display: block;
-			div {
-				width: 200px;
-				margin: auto;
-			}
-		}
 	}
 	.clock {
 		margin-bottom: 10px;
-	}
-	
-	.quotes h3 {
-		font-size: 1.2rem;
-	}
-	.section .links {
-		display: block;
-		div {
-			width: 200px;
-		}
 	}
 }
