@@ -18,23 +18,27 @@
 <script src="js/slick.min.js"></script>
 </head>
 <body>
-<div id="top">
-	<a href="index.html">
-		<div id="logo" class="main" data-aos="fade-down" data-aos-duration="1000"></div>
-	</a>
-	<div id="get">
-		<a href="step-1.html">
-			<div class="button small" data-aos="fade-down" data-aos-delay="500">Get Deal</div>
+<div id="cover">
+	<div id="top">
+		<a href="index.html">
+			<div id="logo" class="main" data-aos="fade-right" data-aos-duration="1000"></div>
 		</a>
-	</div>
-	<div class="section">
-		<div class="center">
-			<div class="clock" data-aos="fade-down" data-aos-delay="400"></div>
-			<h1 data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">Grab a two week free trial while you can!</h1>
-			<h2 data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">This limited-time offer ends soon</h2>
+		<div id="get">
 			<a href="step-1.html">
-				<div class="button" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="2000">Get Deal</div>
+				<div class="button small" data-aos="fade" data-aos-delay="800">Get Deal</div>
 			</a>
+		</div>
+	</div>
+	<div class="dark-background cover">
+		<div class="section has-clock">
+			<div class="center align-center">
+				<div class="clock" data-aos="fade-down" data-aos-delay="400"></div>
+				<h1 data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">Grab a two week free trial while you can!</h1>
+				<h2 data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">This limited-time offer ends soon</h2>
+				<a href="step-1.html">
+					<div class="button" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="2000">Get Deal</div>
+				</a>
+			</div>
 		</div>
 	</div>
 </div>
@@ -55,7 +59,7 @@
 	<div class="section">
 		<div class="center">
 			<h1>How it works</h1>
-			<div class="steps">
+			<div id="steps">
 				<div class="step">
 					<i class="fas fa-map-marker-alt" data-aos="fade" data-aos-duration="1000"></i>
 					<h1>Find A Studio</h1>
@@ -63,13 +67,13 @@
 				</div>
 				<div class="arrow"><i class="fas fa-arrow-right"></i></div>
 				<div class="step">
-					<i class="fas fa-dumbbell" data-aos="fade" data-aos-delay="200" data-aos-duration="1000"></i>
+					<i class="fas fa-dumbbell" data-aos="fade" data-aos-duration="1000"></i>
 					<h1>Choose A Class</h1>
 					<p>Pick an activity you love or want to try, and a time and date.</p>
 				</div>
 				<div class="arrow"><i class="fas fa-arrow-right"></i></div>
 				<div class="step">
-					<i class="fas fa-heart" data-aos="fade" data-aos-delay="400" data-aos-duration="1000"></i>
+					<i class="fas fa-heart" data-aos="fade" data-aos-duration="1000"></i>
 					<h1>Enjoy Fitset</h1>
 					<p>Show up, have fun, sweat a little or a lot and get fit!</p>
 				</div>
@@ -81,7 +85,7 @@
 	<div class="section">
 		<div class="center">
 			<h1>Fitset members love it!</h1>
-			<div class="quotes"><i class="fas fa-quote-left"></i>
+			<div id="quotes"><i class="fas fa-quote-left"></i>
 				<div class="slick-quotes">
 					<div>
 						<h3>Having access to so many studios means I can always find a class during a time that works for me. There are so many studios I never would have visited if it wasn't for Fitset!</h3>
@@ -112,7 +116,7 @@
 	<div class="center">
 		<h1>Life is full of experiences</h1>
 		<h2>Just a few of Fitset's 86 partner studios</h2>
-		<div class="locations">
+		<div id="locations">
 			<div>
 				<h1>North Edmonton</h1>
 				<div>Castle Downs Family YMCA</div>
@@ -156,17 +160,20 @@
 <div class="dark-background cta">
 	<div class="section">
 		<div class="center">
-			<h1>Ready to grab your free two week trial?</h1>
-			<h2>This offer won't last forever, so hurry!</h2>
-			<a href="step-1.html">
-				<div class="cta" data-aos="zoom-out" data-aos-duration="1000">
-					<h1>$0<span class="superscript">.00</span></h1>
-					<p>Includes <strong>20 free credits</strong> to<br>
-						book about <strong>2-3 classes</strong></p>
-					<div class="button">Get Deal</div>
+			<h2>Edmonton's premier fitness membership.</h2>
+			<div class="options">
+				<div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+					<a href="step-1.html">
+						<div class="option">
+							<h1>$0<span class="superscript">.00</span></h1>
+							<p>Includes <strong>20 free credits</strong> to<br>
+								book about <strong>2-3 classes</strong></p>
+							<div class="button">Get Deal</div>
+						</div>
+					</a>
 				</div>
-			</a>
-			<h2 class="class-cost">The average class cost in Edmonton is 9 credits.</h2>
+			</div>
+			<h2>The average class cost in Edmonton is 9 credits.</h2>
 		</div>
 	</div>
 </div>
@@ -232,6 +239,7 @@
 	</div>
 </div>
 <script src="js/aos.min.js"></script>
+<script src="js/menu.js"></script>
 <script type="text/javascript">
 	// Initialize AOS (Animate On Scroll)
 	AOS.init({

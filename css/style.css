@@ -11,7 +11,7 @@
 
 body, button { font: 1em "Source Sans Pro", Helvetica, sans-serif; }
 
-h1, h2, h3, p { color: rgba(0, 0, 0, 0.8); }
+h1, h2, h3 { color: rgba(0, 0, 0, 0.8); }
 
 h1 { font-size: 3.0rem; font-weight: 700; }
 
@@ -25,6 +25,9 @@ strong { font-weight: 700; }
 
 .align-left { text-align: left; }
 
+.align-center { text-align: center; }
+.align-center h1, .align-center h2 { margin: auto; max-width: none !important; }
+
 .align-right { text-align: right; }
 
 #menu { float: right; position: relative; top: 5px; }
@@ -34,7 +37,7 @@ strong { font-weight: 700; }
 
 #menu.mobile { display: none; position: fixed; z-index: 9999; top: 70px; left: 0; width: 100%; height: 100%; background: white; overflow-x: hidden; }
 #menu.mobile ul { width: 100%; }
-#menu.mobile ul li { display: block; border-bottom: 1px solid rgba(0, 0, 0, 0.1); padding: 20px; }
+#menu.mobile ul li { display: block; padding: 20px; border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 #menu.mobile ul li:before { float: right; content: '\f0da'; color: rgba(0, 0, 0, 0.2); }
 #menu.mobile ul a { color: rgba(0, 0, 0, 0.6); }
 
@@ -50,7 +53,7 @@ strong { font-weight: 700; }
 #hamburger:before { content: '\f0c9'; color: white; width: 22px; }
 #hamburger.close:before { content: '\f00d'; }
 
-.clock { left: 0; right: 0; margin: 30px auto 10px; width: 300px; }
+.clock { left: 0; right: 0; margin: 30px auto 10px auto; width: 300px; }
 
 .flip-clock-label { display: none; }
 
@@ -77,7 +80,7 @@ strong { font-weight: 700; }
 .dark-background.cover .section { position: absolute; bottom: 0; left: 0; right: 0; }
 .dark-background.cover .section .buttons { width: 100%; margin-top: 5px; }
 .dark-background.cover .section .buttons a { text-decoration: none; }
-.dark-background.cover .section h1 { max-width: 600px; color: white; }
+.dark-background.cover .section h1, .dark-background.cover .section h2 { max-width: 600px; color: white; }
 .dark-background.cover .section p { color: white; max-width: 500px; }
 .dark-background.purple { background: linear-gradient(to bottom right, #2f1945, #ef483e); }
 .dark-background.purple h1, .dark-background.purple h2 { color: white; }
@@ -102,7 +105,7 @@ strong { font-weight: 700; }
 
 .dark-background.cta .options .option { display: inline-block; position: relative; max-width: 220px; margin: 40px auto 20px auto; padding: 40px; background: white; border-radius: 3px; transition: transform 0.2s ease-in-out; text-align: center; }
 .dark-background.cta .options .option:before { position: absolute; width: 160px; top: -20px; left: 0; right: 0; margin: auto; padding: 5px; background: #2f1945; border-radius: 3px; content: '2 Weeks Free'; font-size: 1.4rem; font-weight: 300; color: white; }
-.dark-background.cta .options .option:hover { box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2); transform: scale(1.05); transition: transform 0.2s ease-in-out; }
+.dark-background.cta .options .option:hover { transform: scale(1.05); transition: transform 0.2s ease-in-out; }
 .dark-background.cta .options .option a { text-decoration: none; }
 .dark-background.cta .options .option h1 { font-size: 5.0rem; line-height: 1; font-weight: 600; color: #2f1945; }
 .dark-background.cta .options .option h1 .superscript { display: inline-block; font-size: 2.5rem; vertical-align: top; }
@@ -117,7 +120,6 @@ strong { font-weight: 700; }
 .section .left img { width: 550px; padding-right: 40px; }
 .section .right { flex: 1; display: flex; align-items: center; }
 .section .center { flex: 1; text-align: center; }
-.section .center h2.class-cost { font-size: 1.4rem; font-weight: 300; padding: 10px 20px 0 20px; }
 .section.shift-up { padding-top: 5px; }
 .section.shift-down { padding-bottom: 0; }
 
@@ -126,7 +128,7 @@ strong { font-weight: 700; }
 #steps .step i { font-size: 3.0rem; color: #ef483e; margin-bottom: 25px; }
 #steps .step h1 { color: white; font-size: 1.5rem; }
 #steps .step p { color: rgba(255, 255, 255, 0.8); }
-#steps .arrow { flex: 0.1; display: flex; align-items: center; padding-top: 10px; }
+#steps .arrow { flex: 0.1; display: flex; align-items: center; justify-content: center; padding-top: 20px; }
 #steps .arrow i { font-size: 1.3rem; color: rgba(255, 255, 255, 0.5); }
 
 #quotes { max-width: 720px; padding: 0 20px; margin: auto; }
@@ -186,31 +188,34 @@ strong { font-weight: 700; }
   .left img { max-width: 375px; width: 100% !important; }
   #locations div { min-width: 300px; text-align: center; }
   #steps { display: block; }
-  #steps .arrow { display: none; } }
+  #steps .arrow { padding-top: 0; }
+  #steps .arrow i { transform: rotate(90deg); } }
 @media screen and (max-width: 900px) { .dark-background.cta .options { display: block; }
   .dark-background.cta .options .option { width: 100%; padding-left: 0; padding-right: 0; max-width: none; box-sizing: border-box; }
   .dark-background.cta .options .option:hover { transform: none; } }
 @media screen and (max-width: 800px) { .section { display: block; }
   .section .left img { padding: 0; margin-bottom: 20px; }
   .section .right { text-align: center; }
-  .section .phone { margin-bottom: 20px; }
+  .section #phone { margin-bottom: 20px; }
   #tilted .right { display: none; }
   #locations { display: block; }
   #locations div { min-width: 0; }
   #flex-vertical-fill { height: 100%; }
   #studios { display: block; height: auto; }
-  #studios #filter { flex: 1; }
+  #studios #filter { flex: 1; max-height: 300px; overflow: auto; }
   #studios #map { flex: 1; height: 400px; }
-  #studios .filter { max-height: 300px; overflow: auto; }
   #benefits { display: block; }
   #benefits > div { width: 100%; text-align: center; padding-left: 0; padding-right: 0; }
   #hamburger { display: inline-block; } }
-@media screen and (max-width: 550px) { .dark-background.cover { height: 450px; }
-  #top .section { padding: 30px 0; }
+@media screen and (max-width: 550px) { h1 { font-size: 1.7rem; }
+  .dark-background.cover { height: 450px; }
+  #top .section { padding: 30px 0px; }
   #top .section.cover { padding: 30px 20px; bottom: 0; }
-  h1 { font-size: 1.7rem; }
   .accordion { font-size: 1.05rem; }
   .panel p { font-size: 1.0rem; }
-  #studio-image { height: 180px; } }
+  #studio-image { height: 180px; }
+  #quotes h3 { font-size: 1.2rem; } }
 @media screen and (max-width: 375px) { .section { padding: 30px 15px; }
+  .has-clock { padding: 30px 0; }
+  .has-clock h2 { padding-left: 5px; padding-right: 5px; }
   .clock { margin-bottom: 10px; } }

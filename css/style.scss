@@ -25,14 +25,15 @@ $transparent-white-medium: rgba(255,255,255,0.5);
 $transparent-white-thick:rgba(255,255,255,0.8);
 
 %font-awesome {
-	font-family: 'Font Awesome 5 Free' !important; font-weight: 900 !important;
+	font-family: 'Font Awesome 5 Free' !important;
+	font-weight: 900 !important;
 }
 
 body, button {
 	font: 1.0em $font-stack;
 }
 
-h1, h2, h3, p {
+h1, h2, h3 {
 	color: $transparent-black-thick;
 }
 
@@ -63,6 +64,14 @@ strong {
 
 .align-left {
 	text-align: left;
+}
+
+.align-center {
+	text-align: center;
+	h1, h2 {
+		margin: auto;
+		max-width: none !important;
+	}
 }
 
 .align-right {
@@ -102,8 +111,8 @@ strong {
 		width: 100%;
 		li {
 			display: block;
-			border-bottom: 1px solid $transparent-black-extra-thin;
 			padding: 20px;
+			border-bottom: 1px solid $transparent-black-extra-thin;
 			&:before {
 				@extend %font-awesome;
 				float: right;
@@ -160,7 +169,7 @@ strong {
 .clock {
 	left: 0;
 	right: 0;
-	margin: 30px auto 10px;
+	margin: 30px auto 10px auto;
 	width: 300px;
 }
 
@@ -256,7 +265,7 @@ strong {
 					text-decoration: none;
 				}
 			}
-			h1 {
+			h1, h2 {
 				max-width: 600px;
 				color: white;
 			}
@@ -367,7 +376,6 @@ strong {
 		color: white;
 	}
 	&:hover {
-		box-shadow: 0 0 5px 0 $transparent-black-thin;
 		transform: scale(1.05);
 		transition: transform 0.2s ease-in-out;
 	}
@@ -430,11 +438,6 @@ strong {
 	.center {
 		flex: 1;
 		text-align: center;
-		h2.class-cost {
-			font-size: 1.4rem; 
-			font-weight: 300;
-			padding: 10px 20px 0 20px;
-		}
 	}
 	&.shift-up {
 		padding-top: 5px;
@@ -466,7 +469,8 @@ strong {
 		flex: 0.1;
 		display: flex;
 		align-items: center;
-		padding-top: 10px;
+		justify-content: center;
+		padding-top: 20px;
 		i {
 			font-size: 1.3rem;
 			color: $transparent-white-medium;
@@ -704,24 +708,25 @@ strong {
 	#steps {
 		display: block;
 		.arrow {
-			display: none;
+			padding-top: 0;
+			i {
+				transform: rotate(90deg);
+			}
 		}
 	}
 }
 
 @media screen and (max-width: 900px) {
-	.dark-background.cta {
-		.options {
-			display: block;
-			.option {
-				width: 100%;
-				padding-left: 0;
-				padding-right: 0;
-				max-width: none;
-				box-sizing: border-box;
-				&:hover {
-					transform: none;
-				}
+	.dark-background.cta .options {
+		display: block;
+		.option {
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+			max-width: none;
+			box-sizing: border-box;
+			&:hover {
+				transform: none;
 			}
 		}
 	}
@@ -737,7 +742,7 @@ strong {
 		.right {
 			text-align: center;
 		}
-		.phone {
+		#phone {
 			margin-bottom: 20px;
 		}
 	}
@@ -758,16 +763,13 @@ strong {
 		height: auto;
 		#filter {
 			flex: 1;
+			max-height: 300px;
+			overflow: auto;
 		}
 		#map {
 			flex: 1;
 			height: 400px;
 		}
-		.filter {
-			max-height: 300px;
-			overflow: auto;
-		}
-		
 	}
 	#benefits {
 		display: block;
@@ -785,20 +787,20 @@ strong {
 }
 
 @media screen and (max-width: 550px) {
+	h1 {
+		font-size: 1.7rem;
+	}
 	.dark-background.cover {
 		height: 450px;
 	}
 	#top {
 		.section { 
-			padding: 30px 0;
+			padding: 30px 0px;
 		}
 		.section.cover {
 			padding: 30px 20px;
 			bottom: 0;
 		}
-	}
-	h1 {
-		font-size: 1.7rem;
 	}
 	.accordion {
 		font-size: 1.05rem;
@@ -809,11 +811,21 @@ strong {
 	#studio-image {
 		height: 180px;
 	}
+	#quotes h3 {
+		font-size: 1.2rem;
+	}
 }
 	
 @media screen and (max-width: 375px) {
 	.section {
 		padding: 30px 15px;
+	}
+	.has-clock {
+		padding: 30px 0;
+		h2 {
+			padding-left: 5px;
+			padding-right: 5px;
+		}
 	}
 	.clock {
 		margin-bottom: 10px;
