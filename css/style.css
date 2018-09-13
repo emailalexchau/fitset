@@ -21,6 +21,9 @@ h3 { font-size: 2.0rem; font-weight: 700; }
 
 p { font-size: 1.2rem; font-weight: 300; line-height: 1.5; color: rgba(0, 0, 0, 0.6); }
 
+a { color: rgba(0, 0, 0, 0.6); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
 strong { font-weight: 700; }
 
 .align-left { text-align: left; }
@@ -32,7 +35,7 @@ strong { font-weight: 700; }
 
 #menu { float: right; position: relative; top: 5px; }
 #menu ul li { display: inline-block; padding: 0 10px; }
-#menu ul a { color: white; text-decoration: none; }
+#menu ul a { color: white; }
 #menu ul a li:hover { text-decoration: underline; }
 
 #menu.mobile { display: none; position: fixed; z-index: 9999; top: 70px; left: 0; width: 100%; height: 100%; background: white; overflow-x: hidden; }
@@ -43,8 +46,7 @@ strong { font-weight: 700; }
 
 #get, #hamburger { float: right; display: inline-block; position: relative; top: 5px; padding: 0 10px; }
 #get .button, #hamburger .button { margin: -5px 0 0 0; }
-#get a, #hamburger a { color: white; text-decoration: none; }
-#get a:hover, #hamburger a:hover { text-decoration: underline; }
+#get a, #hamburger a { color: white; }
 
 #get { padding-right: 0; }
 #get:hover .button { background: #ef483e; }
@@ -59,7 +61,7 @@ strong { font-weight: 700; }
 
 .flip-clock-dot { background: #cbcbcb; }
 
-.button { position: relative; display: inline-block; margin-top: 10px; padding: 10px 25px; border-radius: 3px; background: #ef483e; font-size: 1.1rem; font-weight: 700; color: white; transition: 0.25s ease-in-out; }
+.button { position: relative; display: inline-block; margin-top: 10px; padding: 10px 25px; border-radius: 3px; background: #ef483e; font-size: 1.1rem; font-weight: 700; color: white; transition: 0.25s ease-in-out; cursor: pointer; }
 .button:hover { background: #2f1945; }
 .button.small { font-size: 1.0rem; padding: 5px 15px; }
 .button.margin-right { margin-right: 20px; }
@@ -79,7 +81,6 @@ strong { font-weight: 700; }
 .dark-background.cover { position: relative; height: 550px; }
 .dark-background.cover .section { position: absolute; bottom: 0; left: 0; right: 0; }
 .dark-background.cover .section .buttons { width: 100%; margin-top: 5px; }
-.dark-background.cover .section .buttons a { text-decoration: none; }
 .dark-background.cover .section h1, .dark-background.cover .section h2 { max-width: 600px; color: white; }
 .dark-background.cover .section p { color: white; max-width: 500px; }
 .dark-background.purple { background: linear-gradient(to bottom right, #2f1945, #ef483e); }
@@ -100,13 +101,11 @@ strong { font-weight: 700; }
 .dark-background.footer .section { padding: 20px 0; }
 .dark-background.footer .links { display: flex; max-width: 300px; margin: auto; font-size: 0.8rem; }
 .dark-background.footer .links div { flex: auto; margin: 20px auto; text-align: center; color: rgba(255, 255, 255, 0.5); }
-.dark-background.footer .links div a { color: rgba(255, 255, 255, 0.5); text-decoration: none; }
-.dark-background.footer .links div a:hover { text-decoration: underline; }
+.dark-background.footer .links div a { color: rgba(255, 255, 255, 0.5); }
 
 .dark-background.cta .options .option { display: inline-block; position: relative; max-width: 220px; margin: 40px auto 20px auto; padding: 40px; background: white; border-radius: 3px; transition: transform 0.2s ease-in-out; text-align: center; }
 .dark-background.cta .options .option:before { position: absolute; width: 160px; top: -20px; left: 0; right: 0; margin: auto; padding: 5px; background: #2f1945; border-radius: 3px; content: '2 Weeks Free'; font-size: 1.4rem; font-weight: 300; color: white; }
 .dark-background.cta .options .option:hover { transform: scale(1.05); transition: transform 0.2s ease-in-out; }
-.dark-background.cta .options .option a { text-decoration: none; }
 .dark-background.cta .options .option h1 { font-size: 5.0rem; line-height: 1; font-weight: 600; color: #2f1945; }
 .dark-background.cta .options .option h1 .superscript { display: inline-block; font-size: 2.5rem; vertical-align: top; }
 .dark-background.cta .options .option p { padding: 10px 0; margin: 0; color: rgba(0, 0, 0, 0.6); }
@@ -158,6 +157,7 @@ strong { font-weight: 700; }
 .panel.open { max-height: none; overflow: auto; }
 
 #flex-vertical-fill { display: flex; flex-direction: column; height: 100vh; }
+#flex-vertical-fill .flex-fill-height { flex: auto; }
 
 #studios { flex: 1; display: flex; }
 #studios #filter { flex-shrink: 1; flex-grow: 0; height: auto; min-width: 300px; }
@@ -175,6 +175,22 @@ strong { font-weight: 700; }
 #phone { flex: 1; align-items: center; text-align: center; margin: auto; position: relative; height: 550px; display: block; }
 #phone > img { position: absolute; margin: auto; top: 0; left: 0; right: 0; z-index: 1; }
 #phone > img.active { z-index: 3; }
+
+#pricing-grid { margin: 30px auto; max-width: 450px; }
+#pricing-grid .option { display: flex; flex-wrap: wrap; background: white; margin-bottom: 15px; border-radius: 3px; cursor: pointer; }
+#pricing-grid .option.active .selected { background: rgba(0, 0, 0, 0.4); }
+#pricing-grid .option.active:hover .selected { background: rgba(0, 0, 0, 0.4); }
+#pricing-grid .option:hover .selected { background: rgba(0, 0, 0, 0.2); }
+#pricing-grid .option h1 { color: #2f1945; font-size: 1.8rem; }
+#pricing-grid .option p { color: rgba(0, 0, 0, 0.6); line-height: 1.4rem; }
+#pricing-grid .option > div { display: flex; padding: 10px 20px; align-items: center; }
+#pricing-grid .option .name { flex: 1; align-items: center; }
+#pricing-grid .option .price { flex: 1; display: flex; justify-content: center; }
+#pricing-grid .option .price .gst { font-size: 1.0rem; margin-left: 5px; text-transform: uppercase; vertical-align: middle; display: inline-block; margin-top: -3px; color: rgba(0, 0, 0, 0.2); }
+#pricing-grid .option .credits { flex: 1; display: flex; justify-content: flex-end; }
+#pricing-grid .option .selected { width: 100%; display: flex; justify-content: center; background: rgba(0, 0, 0, 0.1); }
+#pricing-grid .button { width: 80px; display: flex; justify-content: center; margin-top: 0; background-color: #2f1945; }
+#pricing-grid .button.active { background-color: #ef483e; }
 
 .slick-prev, .slick-next { margin-top: -40px; }
 
@@ -200,7 +216,7 @@ strong { font-weight: 700; }
   #tilted .right { display: none; }
   #locations { display: block; }
   #locations div { min-width: 0; }
-  #flex-vertical-fill { height: 100%; }
+  #flex-vertical-fill.discover { height: 100%; }
   #studios { display: block; height: auto; }
   #studios #filter { flex: 1; max-height: 300px; overflow: auto; }
   #studios #map { flex: 1; height: 400px; }

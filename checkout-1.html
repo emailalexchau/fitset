@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" id="vp" content="width=device-width, initial-scale=1">
+<script>
+	window.onload = function () {
+		if (screen.width < 320) {
+			var mvp = document.getElementById('vp');
+			mvp.setAttribute('content','width=320');
+		}
+	}
+</script>
+<title>Edmonton Fitness Studio Pass: Yoga, Spin, Barre | Fitset</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/flipclock.min.js"></script>
+<script src="js/slick.min.js"></script>
+</head>
+<body>
+<div id="top">
+	<a href="index.html">
+		<div id="logo" class="main" data-aos="fade-right" data-aos-duration="1000"></div>
+	</a>
+	<div id="hamburger" class="fa-fw"></div>
+	<div id="get">
+		<a href="trial.html">
+			<div class="button small" data-aos="fade" data-aos-delay="800">Free Trial</div>
+		</a>
+	</div>
+	<div id="menu">
+		<ul>
+			<a href="index.html" data-aos="fade-down" data-aos-delay="300">
+				<li>Home</li>
+			</a>
+			<a href="howitworks.html" data-aos="fade" data-aos-delay="500">
+				<li>How it works</li>
+			</a>
+			<a href="discover.html" data-aos="fade" data-aos-delay="400">
+				<li>Discover studios</li>
+			</a>
+			<a href="pricing.html" data-aos="fade" data-aos-delay="600">
+				<li>Pricing</li>
+			</a>
+			<a href="login.html" data-aos="fade" data-aos-delay="700">
+				<li>Login</li>
+			</a>
+		</ul>
+	</div>
+</div>
+<div id="flex-vertical-fill">
+	<div class="dark-background purple first">
+		<div class="section">
+			<div class="center">
+				<h1 data-aos="fade-down" data-aos-duration="1000">Let's get fitset together!</h1>
+			</div>
+		</div>
+	</div>
+	<div class="dark-background cta flex-fill-height">
+		<div class="section shift-up">
+			<div class="center">
+				<div id="form" class="step-1 shift-up" data-aos="zoom-in" data-aos-duration="500">
+					<div class="center">
+						<h1>Let's get going</h1>
+						<p>Sign up with your email address</p>
+					</div>
+					<div class="field">
+						<label for="first-name">First name</label>
+						<input id="first-name" placeholder="Hermione" type="text">
+					</div>
+					<div class="field">
+						<label for="last-name">Last name</label>
+						<input id="last-name" placeholder="Granger" type="text">
+					</div>
+					<div class="field">
+						<label for="email">Email address</label>
+						<input id="email" placeholder="hermione@hogwarts.com" type="email">
+					</div>
+					<div class="field">
+						<label for="password">Password</label>
+						<input id="password" type="password">
+					</div>
+					<div class="error">Oops. You forgot to enter your first name.</div>
+					<a href="checkout-2.html">
+						<div class="button">Next step</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dark-background footer">
+		<div class="section">
+			<div class="center">
+				<div class="links">
+					<div>2018 &copy; Fitset</div>
+					<div>
+						<a href="#">
+							Privacy
+						</a>
+					</div>
+					<div>
+						<a href="#">
+							Terms
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/aos.min.js"></script>
+<script src="js/menu.js"></script>
+<script type="text/javascript">
+	// Initialize AOS (Animate On Scroll)
+	AOS.init({
+		startEvent: 'load',
+		once: true
+	});
+
+	// Slick Carousel
+	$('.slick-quotes').slick({
+		autoplay: false,
+		autoplaySpeed: 7000,
+		dots: true,
+		speed: 200
+	});
+
+	// FAQ Accordion
+	var accordion = document.getElementsByClassName("accordion");
+	for (var i = 0; i < accordion.length; i++) {
+		accordion[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+			} else {
+				panel.style.maxHeight = panel.scrollHeight + "px";
+			} 
+		});
+	}
+</script>
+</body>
+</html>

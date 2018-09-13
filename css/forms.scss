@@ -37,7 +37,10 @@ html.full-background {
 	border-radius: 3px;
 	box-sizing: border-box;
 	font-weight: 300;
-	z-index: 9999;
+	text-align: left;
+	p {
+		color: $transparent-black-medium;
+	}
 	&:before {
 		position: absolute;
 		width: 160px;
@@ -63,6 +66,13 @@ html.full-background {
 	}
 	&.step-4:before {
 		content: 'Yay!';
+	}
+	&.login:before {
+		content: 'Login';
+	}
+	&.shift-up {
+		margin-top: 50px;
+		padding-top: 30px;
 	}
 	a {
 		color: $brand-primary-color;

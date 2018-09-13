@@ -57,7 +57,13 @@ p {
 	line-height: 1.5;
 	color: $transparent-black-medium;
 }
-
+a {
+	color: $transparent-black-medium;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
 strong {
 	font-weight: 700;
 }
@@ -89,7 +95,6 @@ strong {
 		}
 		a {
 			color: white;
-			text-decoration: none;
 			li:hover {
 				text-decoration: underline;
 			}
@@ -137,10 +142,6 @@ strong {
 	}
 	a {
 		color: white;
-		text-decoration: none;
-		&:hover {
-			text-decoration: underline;
-		}
 	}
 }
 
@@ -192,6 +193,7 @@ strong {
 	font-weight: 700;
 	color: white;
 	transition: 0.25s ease-in-out;
+	cursor: pointer;
 	&:hover {
 		background: $brand-secondary-color;
 	}
@@ -261,9 +263,6 @@ strong {
 			.buttons {
 				width: 100%;
 				margin-top: 5px;
-				a {
-					text-decoration: none;
-				}
 			}
 			h1, h2 {
 				max-width: 600px;
@@ -340,10 +339,6 @@ strong {
 				color: $transparent-white-medium;
 				a {
 					color: $transparent-white-medium;
-					text-decoration: none;
-					&:hover {
-						text-decoration: underline;
-					}
 				}
 			}
 		}
@@ -378,10 +373,6 @@ strong {
 	&:hover {
 		transform: scale(1.05);
 		transition: transform 0.2s ease-in-out;
-	}
-
-	a {
-		text-decoration: none;
 	}
 	h1 {
 		font-size: 5.0rem;
@@ -594,8 +585,10 @@ strong {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
+	.flex-fill-height {
+		flex: auto;
+	}
 }
-
 #studios {
 	flex: 1;
 	display: flex;
@@ -668,6 +661,89 @@ strong {
 		&.active { z-index: 3; }
 	}
 
+}
+
+#pricing-grid {
+	margin: 30px auto;
+	max-width: 450px;
+	.option {
+		display: flex;
+		flex-wrap: wrap;
+		background: white;
+		margin-bottom: 15px;
+		border-radius: 3px;
+		cursor: pointer;
+		&.active {
+			.selected {
+				background: $transparent-black-medium-thin;
+			}
+			&:hover {
+				.selected {
+					background: $transparent-black-medium-thin;
+				}
+			}
+		}
+		&:hover {
+			.selected {
+				background: $transparent-black-thin;
+			}
+		}
+		h1 {
+			color: $brand-secondary-color;
+			font-size: 1.8rem;
+		}
+		p {
+			color: $transparent-black-medium;
+			line-height: 1.4rem;
+		}
+		> div {
+			display: flex;
+			padding: 10px 20px;
+			align-items: center;
+			
+		}
+		.name {
+			flex: 1;
+			align-items: center;
+		}
+		.price {
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			.gst {
+				font-size: 1.0rem;
+				margin-left: 5px;
+				text-transform: uppercase;
+				vertical-align: middle;
+				display: inline-block;
+				margin-top: -3px;
+				color: $transparent-black-thin;
+			}
+		}
+		.credits {
+			flex: 1;
+			display: flex;
+			justify-content: flex-end;
+			
+		}
+		.selected {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			background: $transparent-black-extra-thin;
+		}
+	}
+	.button {
+		width: 80px;
+		display: flex;
+		justify-content: center;
+		margin-top: 0;
+		background-color: $brand-secondary-color;
+		&.active {
+			background-color: $brand-primary-color;
+		}
+	}
+	
 }
 
 .slick-prev, .slick-next {
@@ -755,7 +831,7 @@ strong {
 			min-width: 0;
 		}
 	}
-	#flex-vertical-fill {
+	#flex-vertical-fill.discover {
 		height: 100%;
 	}
 	#studios {
