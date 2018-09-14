@@ -16,7 +16,7 @@ html.full-background { background: url(../images/fitset-background-four.jpg) no-
 .form.login:before { content: 'Login'; }
 .form.shift-up { margin-top: 50px; padding-top: 30px; }
 .form a { color: #ef483e; text-decoration: none; }
-.form h1 { margin-top: 10px; padding: 0; font-size: 1.6rem; font-weight: 700; line-height: 2.0rem; color: #2f1945 !important; }
+.form h1 { padding: 0; font-size: 1.6rem; font-weight: 700; line-height: 2.0rem; color: #2f1945 !important; }
 .form p { color: rgba(0, 0, 0, 0.6) !important; }
 .form .center { text-align: center; margin-bottom: 5px; }
 .form .center .check i { margin: 15px 0; font-size: 9.0rem; color: #36b47a; }
