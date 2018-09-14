@@ -59,31 +59,32 @@
 	<div class="dark-background cta flex-fill-height">
 		<div class="section shift-up">
 			<div class="center">
-				<div class="form step-1 shift-up" data-aos="zoom-in" data-aos-duration="500">
+				<div class="form step-3" data-aos="zoom-in" data-aos-duration="500">
 					<div class="center">
-						<h1>Let's get going</h1>
-						<p>Sign up with your email address</p>
+						<h1>New member bonus offer</h1>
+						<p>Add an additional credit pack, enough to book at least two more classes. That's only $12.50 a class!</p>
 					</div>
-					<div class="field">
-						<label for="first-name">First name</label>
-						<input id="first-name" placeholder="Hermione" type="text">
+					<div class="offer">
+						<div class="bonus">
+							<h1>20</h1>
+							<h2>Credits For $25</h2>
+							<p>Boost your trial!</p>
+							<p>14 day expiry</p>
+						</div>
 					</div>
-					<div class="field">
-						<label for="last-name">Last name</label>
-						<input id="last-name" placeholder="Granger" type="text">
+					<div class="center">
+						<p>Get the most out of your trial and experience twice as many studios or classes!</p>
 					</div>
-					<div class="field">
-						<label for="email">Email address</label>
-						<input id="email" placeholder="hermione@hogwarts.com" type="email">
-					</div>
-					<div class="field">
-						<label for="password">Password</label>
-						<input id="password" type="password">
-					</div>
-					<div class="error">Oops. You forgot to enter your first name.</div>
-					<a href="checkout-2.html">
-						<div class="button">Next step</div>
+					<a href="trial-checkout-4.html">
+						<div class="button">Yes! Add bonus offer</div>
 					</a>
+					<div class="center terms">
+						<p>
+							<a href="trial-checkout-4.html">
+								No thanks, not today
+							</a>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -111,6 +112,19 @@
 <script src="js/aos.min.js"></script>
 <script src="js/menu.js"></script>
 <script type="text/javascript">
+	// Change Div Background on Radio Click
+	$('#radio-options input:radio').click(function() {
+		$('div.active').removeClass('active');
+		$(this).parent().parent().addClass('active');
+		if (event.target.id === 'radio-jog') {
+			$('.order-total').html('$47.25')
+		} else if (event.target.id === 'radio-run') {
+			$('.order-total').html('$68.25')
+		} else if (event.target.id === 'radio-sprint') {
+			$('.order-total').html("$110.25")
+		}
+	});
+	
 	// Initialize AOS (Animate On Scroll)
 	AOS.init({
 		startEvent: 'load',

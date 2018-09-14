@@ -59,30 +59,14 @@
 	<div class="dark-background cta flex-fill-height">
 		<div class="section shift-up">
 			<div class="center">
-				<div class="form step-1 shift-up" data-aos="zoom-in" data-aos-duration="500">
+				<div class="form step-4" data-aos="zoom-in" data-aos-duration="500">
 					<div class="center">
-						<h1>Let's get going</h1>
-						<p>Sign up with your email address</p>
+						<h1>You're all set</h1>
+						<div class="check"><i class="fas fa-check-circle"></i></div>
+						<p>Your account has been created and we've added your first set of credits.</p>
 					</div>
-					<div class="field">
-						<label for="first-name">First name</label>
-						<input id="first-name" placeholder="Hermione" type="text">
-					</div>
-					<div class="field">
-						<label for="last-name">Last name</label>
-						<input id="last-name" placeholder="Granger" type="text">
-					</div>
-					<div class="field">
-						<label for="email">Email address</label>
-						<input id="email" placeholder="hermione@hogwarts.com" type="email">
-					</div>
-					<div class="field">
-						<label for="password">Password</label>
-						<input id="password" type="password">
-					</div>
-					<div class="error">Oops. You forgot to enter your first name.</div>
-					<a href="checkout-2.html">
-						<div class="button">Next step</div>
+					<a href="https://app.fitset.ca/">
+						<div class="button">Book my first class</div>
 					</a>
 				</div>
 			</div>
@@ -111,6 +95,19 @@
 <script src="js/aos.min.js"></script>
 <script src="js/menu.js"></script>
 <script type="text/javascript">
+	// Change Div Background on Radio Click
+	$('#radio-options input:radio').click(function() {
+		$('div.active').removeClass('active');
+		$(this).parent().parent().addClass('active');
+		if (event.target.id === 'radio-jog') {
+			$('.order-total').html('$47.25')
+		} else if (event.target.id === 'radio-run') {
+			$('.order-total').html('$68.25')
+		} else if (event.target.id === 'radio-sprint') {
+			$('.order-total').html("$110.25")
+		}
+	});
+	
 	// Initialize AOS (Animate On Scroll)
 	AOS.init({
 		startEvent: 'load',

@@ -16,7 +16,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/flipclock.min.js"></script>
 <script src="js/slick.min.js"></script>
-<script src="js/vanillatextmask.min.js"></script>
 </head>
 <body>
 <div id="top">
@@ -61,64 +60,8 @@
 		<div class="section shift-up">
 			<div class="center">
 				<div class="form step-2 shift-up" data-aos="zoom-in" data-aos-duration="500">
-					<h2>Choose your monthly membership option:</h2>
-					<div id="pricing-grid">
-						<div id="radio-options">
-							<label>
-							<div class="option active">
-								<div class="radio">
-									<input type="radio" name="radio-group" value="radio" id="radio-jog" checked>
-								</div>
-								<div class="name">
-									<h1>Jog</h1>
-								</div>
-								<div class="price">
-									<h2>$45<span class="gst">+ gst</span></h2>
-								</div>
-								<div class="credits">
-									<h2>25 credits</h2>
-								</div>
-							</div>
-							</label>
-							<label>
-							<div class="option">
-								<div class="radio">
-									<input type="radio" name="radio-group" value="radio" id="radio-run">
-								</div>
-								<div class="name">
-									<h1>Run</h1>
-								</div>
-								<div class="price">
-									<h2>$65<span class="gst">+ gst</span></h2>
-								</div>
-								<div class="credits">
-									<h2>50 credits</h2>
-								</div>
-							</div>
-							</label>
-							<label>
-							<div class="option">
-								<div class="radio">
-									<input type="radio" name="radio-group" value="radio" id="radio-sprint">
-								</div>
-								<div class="name">
-									<h1>Sprint</h1>
-								</div>
-								<div class="price">
-									<h2>$105<span class="gst">+ gst</span></h2>
-								</div>
-								<div class="credits">
-									<h2>75 credits</h2>
-								</div>
-							</div>
-							</label>
-						</div>
-					</div>
-				</div>
-				<h2>Your order total is <span class="order-total">$45</span> plus gst.</h2>
-				<div class="form step-3 shift-up" data-aos="zoom-in" data-aos-duration="500" data-aos-offset="-1000">
 					<div class="center">
-						<h1>Complete your sign up</h1>
+						<h1>Complete your trial</h1>
 						<p>Enter your billing information</p>
 					</div>
 					<div class="credit-card-accept"><img src="images/visa.png" width="67" height="37" alt=""/><img src="images/mastercard.png" width="67" height="37" alt=""/><img src="images/amex.png" width="67" height="37" alt=""/><img src="images/discover.png" width="67" height="37" alt=""/>
@@ -160,11 +103,13 @@
 						<label for="subscribe">Send me email updates and offers about Fitset.</label>
 					</div>
 					<div class="error">Oops. Please enter a valid credit card number.</div>
-					<a href="checkout-3.html">
+					<a href="trial-checkout-3.html">
 						<div class="button">Complete</div>
 					</a>
 					<div class="terms">
-						<p>I understand in one month and every month thereafter my membership will automatically renew for <span class="order-total">$45</span> plus gst until I cancel.</p>
+						<p>By signing up for Fitset I agree to receive 20 complimentary credits, enough for 2-3 classes, valid for 14 days. The average class cost in your area is 9 credits.</p>
+						<p>I understand in 14 days my membership will automatically renew and every month thereafter for $45 plus GST (25 booking credits plan) until I cancel.</p>
+						<p>Your credit card will be charged $15 for late cancellations and no shows. Studio cancellation policies are shown before you make a booking.</p>
 					</div>
 				</div>
 			</div>
@@ -198,11 +143,11 @@
 		$('div.active').removeClass('active');
 		$(this).parent().parent().addClass('active');
 		if (event.target.id === 'radio-jog') {
-			$('.order-total').html('$45')
+			$('.order-total').html('$47.25')
 		} else if (event.target.id === 'radio-run') {
-			$('.order-total').html('$65')
+			$('.order-total').html('$68.25')
 		} else if (event.target.id === 'radio-sprint') {
-			$('.order-total').html("$105")
+			$('.order-total').html("$110.25")
 		}
 	});
 	
@@ -233,7 +178,7 @@
 			} 
 		});
 	}
-	
+
 	// Credit card number input mask
 	var creditCardNumberMask = [/\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/]
 	var creditCardNumberInput = document.querySelector('#credit-card-number')
