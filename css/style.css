@@ -68,7 +68,7 @@ strong { font-weight: 700; }
 .button.secondary { background: white; color: rgba(0, 0, 0, 0.6); }
 .button.secondary:hover { background: #2f1945; color: white; }
 
-#cover { background: url(../images/fitset-background-one.jpg) 50% 50% no-repeat; background-size: cover; }
+#cover { background: url(../images/fitset-background-1.jpg) 50% 50% no-repeat; background-size: cover; }
 
 #top { position: fixed; top: 0; left: 0; width: 100%; z-index: 9999; padding: 20px; box-sizing: border-box; height: 70px; transition: background 0.5s ease-in-out; }
 #top h1, #top h2, #top h3 { color: white; }

@@ -12,37 +12,37 @@
 	}
 </script>
 <title>Edmonton Fitness Studio Pass: Yoga, Spin, Barre | Fitset</title>
-<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="js/flipclock.min.js"></script>
-<script src="js/slick.min.js"></script>
+<script src="../js/flipclock.min.js"></script>
+<script src="../js/slick.min.js"></script>
 </head>
-<body>	
+<body>
 <div id="top">
-	<a href="index.html">
+	<a href="../index.html">
 		<div id="logo" class="main" data-aos="fade-right" data-aos-duration="1000"></div>
 	</a>
 	<div id="hamburger" class="fa-fw"></div>
 	<div id="get">
-		<a href="trial.html">
+		<a href="index.html">
 			<div class="button small" data-aos="fade" data-aos-delay="800">Free Trial</div>
 		</a>
 	</div>
 	<div id="menu">
 		<ul>
-			<a href="index.html" data-aos="fade-down" data-aos-delay="300">
+			<a href="../index.html" data-aos="fade-down" data-aos-delay="300">
 				<li>Home</li>
 			</a>
-			<a href="howitworks.html" data-aos="fade" data-aos-delay="400">
+			<a href="../how-it-works/index.html" data-aos="fade" data-aos-delay="400">
 				<li>How it works</li>
 			</a>
-			<a href="discover.html" data-aos="fade" data-aos-delay="500">
+			<a href="../discover/index.html" data-aos="fade" data-aos-delay="500">
 				<li>Discover studios</li>
 			</a>
-			<a href="pricing.html" data-aos="fade" data-aos-delay="600">
+			<a href="../pricing/index.html" data-aos="fade" data-aos-delay="600">
 				<li>Pricing</li>
 			</a>
-			<a href="login.html" data-aos="fade" data-aos-delay="700">
+			<a href="../login/index.html" data-aos="fade" data-aos-delay="700">
 				<li>Login</li>
 			</a>
 		</ul>
@@ -52,30 +52,23 @@
 	<div class="dark-background purple first">
 		<div class="section">
 			<div class="center">
-				<h1 data-aos="fade-down" data-aos-duration="1000">Well, hello again!</h1>
+				<h1 data-aos="fade-down" data-aos-duration="1000">Let's get Fitset together!</h1>
 			</div>
 		</div>
 	</div>
 	<div class="dark-background cta flex-fill-height">
 		<div class="section shift-up">
 			<div class="center">
-				<div class="form login shift-up" data-aos="zoom-in" data-aos-duration="500">
-					<div class="field">
-						<label for="email">Email address</label>
-						<input id="email" placeholder="hermione@hogwarts.com" type="email">
+				<div class="form step-4 shift-up" data-aos="zoom-in" data-aos-duration="500">
+					<div class="center">
+						<h1>You're all set</h1>
+						<div class="check"><i class="fas fa-check-circle"></i></div>
+						<p>Your account has been created and we've added your complimentary 20 credits. If you added any additional credit packs, we've added those too.</p>
 					</div>
-					<div class="field">
-						<label for="password">Password</label>
-						<input id="password" type="password">
-					</div>
-					<div class="error">Oops. You forgot to enter your first name.</div>
-					<a href="#">
-						<div class="button">Login</div>
+					<a href="https://app.fitset.ca/">
+						<div class="button">Book my first class</div>
 					</a>
 				</div>
-				<a href="#">
-					Forgot password?
-				</a>
 			</div>
 		</div>
 	</div>
@@ -99,9 +92,22 @@
 		</div>
 	</div>
 </div>
-<script src="js/aos.min.js"></script>
-<script src="js/menu.js"></script>
+<script src="../js/aos.min.js"></script>
+<script src="../js/menu.js"></script>
 <script type="text/javascript">
+	// Change Div Background on Radio Click
+	$('#radio-options input:radio').click(function() {
+		$('div.active').removeClass('active');
+		$(this).parent().parent().addClass('active');
+		if (event.target.id === 'radio-jog') {
+			$('.order-total').html('$47.25')
+		} else if (event.target.id === 'radio-run') {
+			$('.order-total').html('$68.25')
+		} else if (event.target.id === 'radio-sprint') {
+			$('.order-total').html("$110.25")
+		}
+	});
+	
 	// Initialize AOS (Animate On Scroll)
 	AOS.init({
 		startEvent: 'load',
