@@ -215,8 +215,12 @@ strong {
 }
 
 #cover {
-	background: url(../images/fitset-background-one.jpg) 50% 50% no-repeat;
+	background: url(../images/fitset-background-1.jpg) 50% 50% no-repeat;
 	background-size: cover;
+	h1 {
+		max-width: none;
+		width: 100%;
+	}
 }
 
 #top {
@@ -324,19 +328,24 @@ strong {
 	}
 	&.footer {
 		background: $transparent-black-extra-thick;
-		.section {
-			padding: 20px 0;
+		color: white;
+		h3 {
+			margin-bottom: 20px;
+			font-size: 1.0rem;
+			color: white;
+		}
+		p { 
+			margin-bottom: 10px;
+			font-size: 1.0rem;
+		}
+		p:last-child {
+			margin-bottom: 40px;
 		}
 		.links {
 			display: flex;
-			max-width: 300px;
-			margin: auto;
-			font-size: 0.8rem;
+			width: 100%;
 			div {
 				flex: auto;
-				margin: 20px auto;
-				text-align: center;
-				color: $transparent-white-medium;
 				a {
 					color: $transparent-white-medium;
 				}
@@ -435,6 +444,34 @@ strong {
 	}
 	&.shift-down {
 		padding-bottom: 0;
+	}
+}
+
+.about {
+	h1, h2, p {
+		display: block;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	a {
+		color: $brand-primary-color;
+		&:hover {
+			text-decoration: underline !important;
+		}
+	}
+	i {
+		font-size: 1.0rem;
+		vertical-align: top;
+		margin-top: 7px;
+		color: $transparent-black-thin;
+	}
+	.image {
+		border-radius: 6px;
+		margin: 20px auto 40px auto;
+		width: 100%;
+		height: 500px;
+		background: url(../images/studio-barre.jpg) 50% 90% no-repeat; 
+		background-size: cover;
 	}
 }
 
@@ -874,6 +911,9 @@ strong {
 	.dark-background.cover {
 		height: 450px;
 	}
+	.dark-background.footer .links {
+		display: block;
+	}
 	#top {
 		.section { 
 			padding: 30px 0px;
@@ -894,6 +934,9 @@ strong {
 	}
 	#quotes h3 {
 		font-size: 1.2rem;
+	}
+	.about .image {
+		height: 300px;
 	}
 }
 	

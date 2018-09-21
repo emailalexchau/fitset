@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" id="vp" content="width=device-width, initial-scale=1">
+<script>
+	window.onload = function () {
+		if (screen.width < 320) {
+			var mvp = document.getElementById('vp');
+			mvp.setAttribute('content','width=320');
+		}
+	}
+</script>
+<title>Edmonton Fitness Studio Pass: Yoga, Spin, Barre | Fitset</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../js/flipclock.min.js"></script>
+<script src="../js/slick.min.js"></script>
+</head>
+<body>
+<div id="cover">
+	<div id="top">
+		<a href="../index.html">
+			<div id="logo" class="main" data-aos="fade-right" data-aos-duration="1000"></div>
+		</a>
+		<div id="hamburger" class="fa-fw"></div>
+		<div id="get">
+			<a href="../trial/index.html">
+				<div class="button small" data-aos="fade" data-aos-delay="800">Free Trial</div>
+			</a>
+		</div>
+		<div id="menu">
+			<ul>
+				<a href="../index.html" data-aos="fade-down" data-aos-delay="300">
+					<li>Home</li>
+				</a>
+				<a href="../how-itworks/index.html" data-aos="fade" data-aos-delay="400">
+					<li>How it works</li>
+				</a>
+				<a href="../discover/index.html" data-aos="fade" data-aos-delay="500">
+					<li>Discover studios</li>
+				</a>
+				<a href="../pricing/index.html" data-aos="fade" data-aos-delay="600">
+					<li>Pricing</li>
+				</a>
+				<a href="../login/index.html" data-aos="fade" data-aos-delay="700">
+					<li>Login</li>
+				</a>
+			</ul>
+		</div>
+	</div>
+	<div class="dark-background cover">
+		<div class="section">
+			<h1 data-aos="fade-down" data-aos-duration="1000">About Fitset</h1>
+			<p data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">Edmonton founded, made, and run.</p>
+			<div class="buttons">
+				<a href="trial/index.html">
+					<div class="button margin-right" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000">Start a free trial</div>
+				</a>
+				<a href="discover/index.html">
+					<div class="button secondary" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1000">See studios</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="dark-background">
+	<div class="section about">
+		<h1>Our origins</h1>
+		<p>Fitset, founded in 2015, is an Edmonton-based, and Edmonton-run wellness startup created by Tim Gourlay, a University of Alberta Graduate and MBA. With a passion for living a healthy and active lifestyle, Tim developed Fitset after experiencing the cost barrier and inconvenience of holding multiple studio memberships. Fitset was founded on the belief that life is better when you are physically acitve.</p>
+		<p>Whether it's a spin class, a challenging boulder climb, or a restorative yoga class, Fitset connects members to unique fitness experiences at an affordable cost. With a hard-working customer service team, and a growing community of users, Fitset is the most impactful way for Edmontonians to train and enhance their physical and mental being.</p>
+		<div class="image"></div>
+		<h2><i class="fas fa-quote-left"></i>&nbsp;Life is better when you are physically active. Wellness impacts every aspect of your life.&nsbp;<i class="fas fa-quote-right"></i></h2>
+		<p>– Tim Gourlay, Founder</p>
+	</div>
+</div>
+<div class="section about">
+	<h1>Partner with us</h1>
+	<p>At Fitset, we partner with high-quality studios across the city to provide our members fitness opportunities through diverse activites and locations. If you feel your studio meets our philosophy, please
+		<a href="../contact/">
+			contact us
+		</a>
+		for a chat.</p>
+</div>
+<div class="dark-background">
+	<div class="section about">
+		<h1>Work with us</h1>
+		<h2>Communications Assistant</h2>
+		<p>Branding is no longer simply about visual appeal (or the cherry in the apple pie example, as given in my earlier article). Unfortunately, many graphic design firms who position themselves as advertising agencies believe that branding your corporate identity is all about developing great looking visual solutions.</p>
+		<p>
+			<a href="#">
+				Go to job posting
+			</a>
+		</p>
+		<h2>Front-end Developer</h2>
+		<p>It's hard to say when in our lives each of us become aware of this thing called "astronomy". But it is safe to say that at some point on our lives, each and every one of us has that moment when we are suddenly stunned when we come face to face with the enormity of the universe that we see in the night sky. For many of us who are city dwellers.</p>
+		<p>
+			<a href="#">
+				Go to job posting
+			</a>
+		</p>
+		<h2>Community Outreach Assistant</h2>
+		<p>One of the best ways to make a great vacation quickly horrible is to choose the wrong accommodations for your trip. There is nothing quite as bad as spending a great day of vacation only to come back to a less-than-great place to stay for the night. Anytime you are away from home it is important to choose the best accommodations for your comfort and enjoyment.</p>
+		<p>
+			<a href="#">
+				Go to job posting
+			</a>
+		</p>
+	</div>
+</div>
+<div class="dark-background footer">
+	<div class="section">
+		<div class="center">
+			<div class="links">
+				<div>2018 &copy; Fitset</div>
+				<div>
+					<a href="#">
+						Privacy
+					</a>
+				</div>
+				<div>
+					<a href="#">
+						Terms
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="../js/aos.min.js"></script>
+<script src="../js/menu.js"></script>
+<script type="text/javascript">
+	// Initialize AOS (Animate On Scroll)
+	AOS.init({
+		startEvent: 'load',
+		once: true
+	});
+
+	// Slick Carousel
+	$('.slick-quotes').slick({
+		autoplay: false,
+		autoplaySpeed: 7000,
+		dots: true,
+		speed: 200
+	});
+
+	// FAQ Accordion
+	var accordion = document.getElementsByClassName("accordion");
+	for (var i = 0; i < accordion.length; i++) {
+		accordion[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+			} else {
+				panel.style.maxHeight = panel.scrollHeight + "px";
+			} 
+		});
+	}
+</script>
+</body>
+</html>

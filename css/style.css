@@ -69,6 +69,7 @@ strong { font-weight: 700; }
 .button.secondary:hover { background: #2f1945; color: white; }
 
 #cover { background: url(../images/fitset-background-1.jpg) 50% 50% no-repeat; background-size: cover; }
+#cover h1 { max-width: none; width: 100%; }
 
 #top { position: fixed; top: 0; left: 0; width: 100%; z-index: 9999; padding: 20px; box-sizing: border-box; height: 70px; transition: background 0.5s ease-in-out; }
 #top h1, #top h2, #top h3 { color: white; }
@@ -97,10 +98,12 @@ strong { font-weight: 700; }
 .dark-background.featured h2 { font-size: 1.4rem; color: white; }
 .dark-background.featured .logos { display: flex; align-items: center; }
 .dark-background.featured .logos div { flex: auto; margin-top: 20px; }
-.dark-background.footer { background: rgba(0, 0, 0, 0.9); }
-.dark-background.footer .section { padding: 20px 0; }
-.dark-background.footer .links { display: flex; max-width: 300px; margin: auto; font-size: 0.8rem; }
-.dark-background.footer .links div { flex: auto; margin: 20px auto; text-align: center; color: rgba(255, 255, 255, 0.5); }
+.dark-background.footer { background: rgba(0, 0, 0, 0.9); color: white; }
+.dark-background.footer h3 { margin-bottom: 20px; font-size: 1.0rem; color: white; }
+.dark-background.footer p { margin-bottom: 10px; font-size: 1.0rem; }
+.dark-background.footer p:last-child { margin-bottom: 40px; }
+.dark-background.footer .links { display: flex; width: 100%; }
+.dark-background.footer .links div { flex: auto; }
 .dark-background.footer .links div a { color: rgba(255, 255, 255, 0.5); }
 
 .dark-background.cta .options .option { display: inline-block; position: relative; max-width: 220px; margin: 40px auto 20px auto; padding: 30px; background: white; border-radius: 3px; transition: transform 0.2s ease-in-out; text-align: center; }
@@ -121,6 +124,12 @@ strong { font-weight: 700; }
 .section .center { flex: 1; text-align: center; }
 .section.shift-up { padding-top: 5px; }
 .section.shift-down { padding-bottom: 0; }
+
+.about h1, .about h2, .about p { display: block; width: 100%; margin-bottom: 10px; }
+.about a { color: #ef483e; }
+.about a:hover { text-decoration: underline !important; }
+.about i { font-size: 1.0rem; vertical-align: top; margin-top: 7px; color: rgba(0, 0, 0, 0.2); }
+.about .image { border-radius: 6px; margin: 20px auto 40px auto; width: 100%; height: 500px; background: url(../images/studio-barre.jpg) 50% 90% no-repeat; background-size: cover; }
 
 #steps { display: flex; }
 #steps .step { flex: 1; margin: 30px 15px; text-align: center; }
@@ -228,12 +237,14 @@ strong { font-weight: 700; }
   #hamburger { display: inline-block; } }
 @media screen and (max-width: 550px) { h1 { font-size: 1.7rem; }
   .dark-background.cover { height: 450px; }
+  .dark-background.footer .links { display: block; }
   #top .section { padding: 30px 0px; }
   #top .section.cover { padding: 30px 20px; bottom: 0; }
   .accordion { font-size: 1.05rem; }
   .panel p { font-size: 1.0rem; }
   #studio-image { height: 180px; }
-  #quotes h3 { font-size: 1.2rem; } }
+  #quotes h3 { font-size: 1.2rem; }
+  .about .image { height: 300px; } }
 @media screen and (max-width: 375px) { .section { padding: 30px 15px; }
   .has-clock { padding: 30px 0; }
   .has-clock h2 { padding-left: 5px; padding-right: 5px; }
